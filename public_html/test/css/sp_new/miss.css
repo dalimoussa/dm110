@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* miss */
+/* ============================================================ */
+
+body h2 {
+	background: none !important;
+	border: none !important;
+	margin: 0 0 20px 0!important;
+	padding: 0!important;
+}
+
+
+/* 	テーブル */
+body table {
+	border: none !important;
+	width: 100%;
+	table-layout:fixed;
+	word-break:break-all;
+	word-wrap:break-word;
+	white-space: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+body table th ,
+body table td {
+	border: none !important;
+	padding: 0;
+	margin: 0;
+}
+
+/*body table td img {
+	width: 100%;
+}*/
+
+body table td br {
+	display: none;
+}
+
+body table td h2 {
+	padding: 0!important;
+	margin: 0!important;
+}
+
+body table td h2 img {
+	width: 100% !important;
+}
+
+body table td img[src*="images/11-04dm-mages/spacer.gif"] {
+	display: none;
+	width: 0;
+}
+
+body table td img[alt*="顧客イメージ"] {
+	width: 100% !important;
+}
+
+
+/*body table:nth-child(1) table td.miss:nth-last-of-type(2) {
+	width: 500px !important;
+	background: #989696;
+}*/
+
+
+body table td img[alt*="1"] ,
+body table td img[alt*="2"] ,
+body table td img[alt*="3"] {
+	width: 80% !important;
+}
+
+body table:nth-child(6) td.miss02:nth-child(3) {
+	text-align: right !important;
+}
+
+body table:nth-child(5) td img ,
+body table:nth-child(7) td img {
+	width: 80% !important;
+}
+
+body table:nth-child(6) td:nth-child(1) ,
+body table:nth-child(5) td:nth-child(1) ,
+body table:nth-child(7) td:nth-child(1) {
+	width: 20% !important;
+}
+
+body table td.miss02 img {
+	width: 80% !important;
+}
+
+body table td[valign*="bottom"] {
+	vertical-align: top;
+	text-align: right;
+}
+
+body table td[bgcolor="#f5edfe"] {
+	background: #f5edfe;
+}
+
+body table td[bgcolor="#EAEFEB"] {
+	background: #EAEFEB;
+}
+
+body table td[bgcolor="#E8F2F9"] {
+	background: #E8F2F9;
+}
+
+body table td[bgcolor="#E9F0EB"] {
+	background: #E9F0EB;
+}
+
+body table td[bgcolor="#E7F3F9"] {
+	background: #E7F3F9;
+}
+
+body table td[width*="464"] {
+	width: 90% !important;
+	padding: 10px;
+}
+
+body table td.miss {
+	width: 70% !important;
+}
+
+body table td.miss02 {
+	padding: 10px;
+}
+
+body table td[width*="111"] {
+	width: 30% !important;
+	padding: 10px 0 0 0;
+}
+
+body table td[width*="110"] {
+	width: 10% !important;
+}
+
+body table td[width*="100"] {
+	width: 20% !important;
+	padding: 0;
+}
+
+body table td[width*="100"] img {
+	width: 100%;
+}
+

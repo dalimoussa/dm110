@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* merit */
+/* ============================================================ */
+
+body table h2 {
+	border: none !important;
+	background: none !important;
+	padding: 5px 0 0 0 !important;
+}
+
+/* 	テーブル */
+body table {
+	border: none !important;
+}
+
+body table th ,
+body table td {
+	/*border: none !important;*/
+	padding: 0;
+	margin: 0;
+}
+
+body table td table td {
+	border: none !important;
+	padding: 2px;
+}
+
+body table:first-child {
+	margin: 0;
+}
+
+body table td img[src*="images/11-04dm-mages/spacer.gif"] {
+	display: none;
+}
+
+body table:first-child td ,
+body table:last-child td {
+	border: none !important;
+}
+
+body table:nth-child(2) {
+	width: 100%;
+	table-layout:fixed;
+	word-break:break-all;
+	word-wrap:break-word;
+	white-space: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body td.meritbox table {
+	width: 100%;
+	table-layout:fixed;
+	word-break:break-all;
+	word-wrap:break-word;
+	white-space: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 1.2rem;
+}
+
+body td.meritbox table td {
+	width: 10%!important;
+}
+
+body table:nth-child(2) td img {
+	width: 100%;
+}
+
+body table td img[alt*="○"] ,
+body table td img[alt*="△"] ,
+body table td img[alt*="◎"] ,
+body table td img[src*="/merit/jisha-batu.gif"] ,
+body table td img[alt*="×"] {
+	width: 100% !important;
+	text-align: center;
+	vertical-align: middle;
+}
+
+body table:nth-child(2) td:nth-child(2)[width*="51"] {
+	width: 4%!important;
+	background: #d9d9d9;
+}
+
+body table:nth-child(2) td:nth-child(4)[width*="51"] {
+	width: 4%!important;
+	background: #bed3e7;
+}
+
+body table:nth-child(2) td[width*="188"] {
+}
+
+body table:nth-child(2) td[width*="109"] {
+}
+
+body table:nth-child(2) .box03 {
+}
+
+body table:nth-child(2) td[align*="right"] {
+	text-align: left;
+}
+
+
+

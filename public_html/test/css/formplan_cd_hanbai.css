@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+#main {
+	padding-top: 230px !important;
+}
+
+#main-contents2 {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+#main-in p {
+	margin: 20px 0;
+}
+
+#main-in p:first-child {
+	margin-top: 0;
+}
+
+#main-in em {
+	font-weight: bold;
+}
+
+.price {
+	color: #ff001b;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.img_center {
+	display: block;
+	margin: 0 auto 30px;
+}
+
+
+#main .ttl01 {
+	position: relative;
+	width: auto;
+	height: auto;
+	margin: 40px 0 15px !important;
+	padding: 15px 20px 15px 70px;
+	background: #00a0e8;
+	border: none;
+	border-radius: 6px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+#main .ttl01::before {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	content: "";
+	border: 1px solid rgba(255, 255, 255, .5);
+	border-radius: 4px;
+}
+
+#main .ttl01::after {
+	position: absolute;
+	top: -15px;
+	left: 8px;
+	content: url(../images/formplan_CD_hanbai/ico_ttl01.png);
+}
+
+#main .ttl02 {
+	margin: 0 0 20px;
+	padding: 0 0 5px;
+	background: none;
+	border-bottom: 3px solid #00a0e9;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#main .ttl02:before {
+	display: none;
+}
+
+#main .ttl03 {
+	margin: 0 0 15px;
+	padding: 0 0 5px;
+	background: none;
+	border-bottom: 1px dotted #ccc;
+	color: #0153a7;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.box01 {
+	margin: 30px 0;
+	padding: 20px;
+	background: #e0f0fc;
+	border: 1px solid #c4d6e4;
+}
+
+.list_disc {
+	margin: 0 0 0 30px;
+}
+
+.list_disc li:not(:first-child) {
+	margin: 3px 0 0;
+}
+
+
+.cd_index {
+	margin: 0 0 30px;
+	overflow: hidden;
+}
+
+.cd_index ul {
+	float: left;
+}
+
+.cd_index ul:first-child {
+	margin-right: 80px;
+}
+
+
+.book_index {
+	overflow: hidden;
+}
+
+.book_index > div {
+	float: left;
+	width: 445px;
+}
+
+.book_index > div:first-child {
+	margin: 0 60px 0 0;
+}
+
+.book_index h4 {
+	display: table;
+	width: 100%;
+	font-weight: bold;
+}
+
+.book_index h4 > *:first-child {
+	display: table-cell;
+	width: 3em;
+	padding: 0 1em 0 0;
+	white-space: nowrap;
+}
+
+.book_index h4:not(:first-child) {
+	margin: 40px 0 0;
+}
+
+.book_index ol {
+	margin: 10px 0 0 30px;
+	font-size: 14px;
+}
+
+.book_index ol li:not(:first-child) {
+	margin: 3px 0 0;
+}
+
+.book_index p {
+	margin: 15px 0 0 !important;
+	font-size: 14px;
+}
+
+
+#btn_form {
+	list-style-type: none !important;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#btn_form li {
+	margin: 0 0 20px;
+}
+
+#btn_form li a {
+	padding: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#btn_form li .btn-primary {
+	padding: 15px;
+	color: #fff;
+	font-size: 20px;
+}
+
+
+
+.mb10 { margin-bottom: 10px !important; }
+.mt0 { margin-top: 0 !important; }

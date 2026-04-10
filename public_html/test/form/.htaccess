@@ -1,0 +1,8 @@
+<IfDefine !DEVELOPMENT>
+    php_flag magic_quotes_gpc Off
+</IfDefine>
+
+<FilesMatch "\.html$">
+  AddType application/x-httpd-php .html
+  SetHandler php74-cgi
+</FilesMatch>

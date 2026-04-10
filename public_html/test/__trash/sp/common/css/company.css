@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* ============================================================ */
+/* company.html */
+/* ============================================================ */
+
+#company #company_outline {
+	margin-top: -75px;
+	padding-top: 75px;
+}
+
+#company #tokuteisyotorihikihou {
+	margin-top: -75px;
+	padding-top: 75px;
+}
+
+#company #kojinjyouhou {
+	margin-top: -75px;
+	padding-top: 75px;
+}

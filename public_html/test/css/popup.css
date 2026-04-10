@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+/* ブラウザ固有のCSSをリセット
+-------------------------------------------------------------*/
+
+body,div,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,input,p,blockquote{
+	margin: 0;
+	padding: 0;
+}
+
+address,caption,cite,code,dfn,h1,h2,h3,h4,var{
+	font-style: normal;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6,small{
+	font-size: 100%;
+	font-weight: normal;
+}
+
+fieldset,img,abbr{ border: 0; }
+caption{ text-align: left; }
+q:before,q:after{ content: ''; }
+a{ text-decoration: none; }
+img{
+	border: none;
+	vertical-align: bottom;
+}
+
+input,
+textarea,
+select{
+	font-size: 1em;
+}
+
+/*WordPress対策*/
+span textarea,span input{ vertical-align: bottom!important; }
+
+
+/*Firefox対策*/
+html{
+	overflow: scroll;
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: scroll;
+}
+
+body,x:-moz-broken { margin-left:-1px; }
+
+/*--------------------------------------------------------
+レイアウトの初期設定
+-------------------------------------------------------*/
+
+html,body,#container{
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body,pre{
+	line-height: 1.5;
+}
+
+body {
+	font-size: 10px;
+	font-size: 1.0rem;
+}
+
+
+
+/* IE8対策 */
+body *{
+	font-style: normal!important;
+	font-family: "メイリオ", meiryo, Arial, Helvetica!important;
+	overflow: hidden;
+}
+
+.sp_view {
+	display: none;
+}
+
+#popup .box_pop_mail,
+#popup .box_pop_envelope,
+#popup .box_pop_color,
+#popup .box_pop_paper {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+
+
+#popup p {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+#popup .note {
+	padding: 0 0 0 1em;
+	text-indent: -1em;
+}
+
+#popup h1 {
+	margin: 0 0 15px;
+	padding: 0 0 0 10px;
+	border-left: 5px solid #3f7ac3;
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+
+/* table
+-------------------------------------------------------------*/
+#popup table {
+	width: 100%;
+	font-size: 14px;
+	font-size: 1.4rem;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#popup table th,
+#popup table td {
+	padding: 10px;
+	border: 1px solid #d1d0ca !important;
+	box-sizing: border-box;
+}
+
+#popup table thead th {
+	background: #3f7ac3;
+	color: #fff;
+}
+
+#popup table tbody th {
+	width: 20%;
+	background: #d4ebfc;
+}
+
+#popup table td {
+	width: 30%;
+	text-align: center;
+}
+
+#popup .tal {
+	text-align: left;
+}
+
+#popup table + p {
+	margin: 15px 0 0;
+}
+
+
+
+/* color.html
+-------------------------------------------------------------*/
+#popup .box_pop_color tbody th {
+	width: 10%;
+}
+
+#popup .box_pop_color tbody td {
+	width: 30%;
+	vertical-align: top;
+}
+
+#popup .box_pop_color tbody td p {
+	margin: 10px 0 0;
+	text-align: left;
+}
+
+
+
+/* paper.html
+-------------------------------------------------------------*/
+#popup .box_pop_paper table td {
+	width: 25%;
+}

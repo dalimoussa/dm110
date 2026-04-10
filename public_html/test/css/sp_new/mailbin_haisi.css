@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* mailbin_haisi */
+/* ============================================================ */
+
+#main div.btn_mail {
+	border: 1px solid #e7e3c3;
+	background: #edead9;
+	padding: 4px;
+	margin: 20px 0;
+}
+
+#main div.btn_mail div {
+	background: #fcfbf3;
+	padding: 12px 0 8px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#main div.btn_mail div p {
+	margin: 0 0 5px 0;
+}
+
+#main div.btn_mail div p span {
+	font-weight: bold;
+}
+
+#main div.btn_mail div a img {
+	width: 90%;
+}
+
+#main div.btn_mail div a:hover img {
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+
+
+/* メール便廃止について 150327追加 */
+.tbl_kuroneko {
+	margin: -10px 0 30px 0 !important;
+}
+
+.tbl_kuroneko th {
+	width: 30% !important;
+}
+
+.tbl_kuroneko th ,
+.tbl_kuroneko td {
+	padding: 8px 10px !important;
+	text-align: left !important;
+}
+
+.tbl_kuroneko td {
+	background: #fff !important;
+}
+
+
+
+/* クロネコDM便とメール便比較 150327追加 */
+.tbl_hikaku {
+	border: none !important;
+	margin: 20px 0 30px 0 !important;
+}
+
+.tbl_hikaku th ,
+.tbl_hikaku td {
+	padding: 8px 10px !important;
+	width: 33%;
+	border: 1px #999999 solid !important;
+}
+
+.tbl_hikaku .td_none {
+	border: none !important;
+}
+
+.tbl_hikaku .td_mail {
+	background: #fffbed !important;
+}
+
+.tbl_hikaku .td_neko {
+	background: #dbf3fa !important;
+}
+
+.emp05{
+	font-weight: bold;
+}
+
+h3#pagetop07 {
+	margin-top: 20px !important;
+}
+
+
+
+

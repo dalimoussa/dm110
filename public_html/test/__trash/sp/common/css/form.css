@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* ============================================================ */
+/* form.html */
+/* ============================================================ */
+
+#form .error_wrap {
+	color: #dd0000;
+	padding-top: 20px;
+	font-weight: bold;
+}
+
+#form .form_table th em {
+	color: #dd0000;
+}
+
+#form .form_table th span {
+	color: #797979;
+	font-size: 1.2rem;
+}
+
+#form .form_table td span.error {
+	color: #dd0000;
+	font-weight: bold;
+	font-size: 1.2rem;
+	display: block;
+}
+
+#form .form_table td input[type="text"] {
+	border: 1px solid #ccc;
+	padding: 3px 5px;
+	margin: 3px 2px;
+	display: inline-block;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+#form .form_table td select {
+	border: 1px solid #ccc;
+	padding: 3px 2px;
+	margin: 3px 2px;
+	display: inline-block;
+	background: #fff;
+}
+
+#form .form_table td textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 3px 5px;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+#form .form_table td .text_ss {
+	width: 50px;
+}
+
+#form .form_table td .text_s {
+	width: 100px;
+}
+
+#form .form_table td .text_m {
+	width: 200px;
+}
+
+#form .form_table td .text_l {
+	width: 100%;
+}
+
+#form .btn02 {
+	color: #fff;
+	font-size: 1.4rem;
+	display:inline-block;
+	text-align: center;
+	background: #dd0000;
+	background: -moz-linear-gradient(#dd0000 0%, #b70000 100%);
+	background: -webkit-linear-gradient(#dd0000 0%, #b70000 100%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#dd0000), to(#b70000));
+	padding: 15px;
+	border-radius: 4px;
+	position: relative;
+	width: 100%;
+	border: none;
+}
+
+#form .btn03 {
+	color: #fff;
+	font-size: 1.4rem;
+	display:inline-block;
+	text-align: center;
+	background: #0084e2;
+	background: -moz-linear-gradient(top, #0084e2 0%, #1e5799 100%);
+	background: -webkit-linear-gradient(top, #0084e2 0%,#1e5799 100%);
+	background: linear-gradient(to bottom, #0084e2 0%,#1e5799 100%);
+	padding: 15px;
+	border-radius: 4px;
+	position: relative;
+	width: 100%;
+	border: none;
+}
+
+#form .icon-chevron-right,
+#form .icon-chevron-down {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+}
+
+
+#form .displayNone {
+	display: none;
+}
+
+#form h4 {
+	cursor:pointer;
+}

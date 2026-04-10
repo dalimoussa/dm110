@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.table01 th,
+.table01 td {
+	padding: 5px;
+}
+
+#main img[src^="/images/2enryoukin/pic_"] {
+	width: 30%;
+}

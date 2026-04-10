@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>お申し込みありがとうございます</title>
+		<meta name="keywords" content="発送代行,DM(ダイレクトメール)発送,DM(ダイレクトメール)発送代行" />
+		<meta name="description" content="DM発送代行専門店。50通より、見積3時間、一部上場会社60社を含む取引実績6277社、「専任担当者」が付き、クロネコＤＭ便の「発送証明書」をお届けし「追跡調査」ができます。<!--#include virtual="/common/inc_new/num_enquete.inc" -->件のお客様アンケートより87％の価格満足、97％の対応満足を頂いています。" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<!--#include virtual="/common/inc_new/html_head.html" -->
+
+		<script src="/js/jquery.tile.min.js"></script>
+		<script>
+			$(window).load(function() {
+			  $(".top_interview ul li a").tile();
+			  //$(".top_message ul li a").tile();
+			  $(".top_dm_option ul li").tile();
+			  //$(".top_system ul li").tile(2);
+			});
+		</script>
+
+		<script>
+			$(function(){
+				var setPrt = $('.top_system ul'),
+				setChd = setPrt.find('li');
+
+				function argHeight(){
+					prtWidth = setPrt.outerWidth();
+					chdWidth = setChd.outerWidth();
+					setNum = Math.floor(prtWidth / chdWidth);
+					chdLength = setChd.length;
+
+					setChd.css({height:'auto'});
+
+					setPrt.each(function(){
+						h = 0;
+						setChd.each(function(i){
+							var self = $(this),
+							i = i+1,
+							hSet = self.outerHeight(),
+							pdTop = parseInt(self.css('padding-top')),
+							pdBtm = parseInt(self.css('padding-bottom')),
+							boxSizing = self.css('box-sizing');
+							self.addClass('heightReplace');
+
+							if(hSet > h){
+								h = hSet;
+							};
+
+							if(boxSizing === 'border-box'){
+								setPrt.find('.heightReplace').css({height:h});
+							} else {
+								setPrt.find('.heightReplace').css({height:(h-(pdTop + pdBtm))});
+							}
+
+							if(i%setNum == 0 || i == chdLength){
+								h = 0;
+								setChd.removeClass('heightReplace');
+							}
+						});
+					});
+				}
+				$(window).on('load resize',function(){
+					argHeight();
+				}).resize();
+			});
+		</script>
+
+
+
+	</head>
+	<body id="index">
+
+		<!--#include virtual="/common/inc_new/anlytics_top.html" -->
+
+		<div id="container">
+
+			<!--main-->
+			<div id="main">
+				<!--main-in-->
+				<div id="main-in">
+					<div id="dwn_content">
+					<h2 class="ttl01">お申し込みありがとうございます</h2>
+					<p class="mb30">この度は無料PDF資料をお申し込みいただきありがとうございます。<br>
+									フォームにて入力いただいたメールアドレスにダウンロードのリンクをご案内いたしました。<br>
+									万一、メールが届かない場合は下記にお問い合わせください。<br><br></p>
+									<p>
+									株式会社メディアボックス<br>
+									</p>
+									<dl class="dwn_thanks cf">
+									<dt>Eメール</dt>
+									<dd>info@dm110.jp（24時間受付）</dd>
+									<dt>電話</dt>
+									<dd>0561-37-2027</dd>
+									<dt>FAX</dt>
+									<dd>0561-37-1811</dd>
+									<dt>休日</dt>
+									<dd>土曜・日曜・祝祭日・その他</dd>
+									<dt>営業時間</dt>
+									<dd>AM9:00～PM6:00</dd>
+									</dl>
+					<a href="https://test.dm110.jp/" class="dwn_btn_kanryou"><div>トップページへ戻る</div></a>
+					</div>
+				</div>
+				<!--/main-in-->
+
+				<!--#include virtual="/common/inc_new/go_top.html" -->
+
+				<!--#include virtual="/common/inc_new/footer.html" -->
+			</div>
+			<!--/main-->
+			<!--▼ヘッダー-->
+			<!--#include virtual="/common/inc_new/header.html" -->
+			<!--▲ヘッダー-->
+
+			<div class="pc_view">
+				<!--▼グローバルメニュー-->
+				<!--#include virtual="/common/inc_new/gnavi.html" -->
+				<!--▲グローバルメニュー-->
+			</div>
+
+		</div>
+
+		<!--#include virtual="/common/inc_new/anlytics_bottom_thanks.html" -->
+
+	</body>
+</html>

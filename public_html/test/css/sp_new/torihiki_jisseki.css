@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* torihiki_jisseki */
+/* ============================================================ */
+
+/* 	テーブル */
+#gradient-style {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin: 0px;
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 1px;
+	width: 100%;
+}
+
+#gradient-style td {
+	color: #000;
+	border-bottom: 1px solid #ffb500;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	padding: 8px;
+	background: #ecfbff url(../../2011images/gradback3.gif) 0 bottom repeat-x;
+	width: 49%;
+}
+

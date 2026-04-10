@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+/* ブラウザ固有のCSSをリセット
+-------------------------------------------------------------*/
+
+body,div,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,input,p,blockquote{
+	margin: 0;
+	padding: 0;
+}
+
+address,caption,cite,code,dfn,h1,h2,h3,h4,var{
+	font-style: normal;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6,small{
+	font-size: 100%;
+	font-weight: normal;
+}
+
+fieldset,img,abbr{ border: 0; }
+caption{ text-align: left; }
+q:before,q:after{ content: ''; }
+a{ text-decoration: none; }
+img{
+	border: none;
+	vertical-align: bottom;
+}
+
+input,
+textarea,
+select{
+	font-size: 1em;
+}
+
+/*WordPress対策*/
+span textarea,span input{ vertical-align: bottom!important; }
+
+
+/*Firefox対策*/
+html{
+	overflow: scroll;
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: scroll;
+}
+
+body,x:-moz-broken { margin-left:-1px; }
+
+img {
+	vertical-align: bottom;
+}
+
+/*--------------------------------------------------------
+レイアウトの初期設定
+-------------------------------------------------------*/
+
+html,body,#container{
+	height: 100%;
+}
+
+body,pre{
+	font-size: 62.5%;
+	line-height: 1.5;
+}
+
+/* IE8対策 */
+body *{
+	font-style: normal!important;
+	font-family: "メイリオ", meiryo, Arial, Helvetica!important;
+}
+
+#container{
+	position: relative;
+}
+
+#global-menu li,
+#breadcrumbs li,
+#top-menu li,
+#sidebar .banner li,
+#sidebar .side-menu li,
+.ranking li,
+#footer-banner li,
+#footer-in li{
+	list-style: none;
+}
+
+
+
+
+/* アンケート結果
+----------------------------------------------------------- */
+div.con_ank {
+	margin: 0 0 45px 0;
+}
+
+#main div.con_ank p {
+	line-height: 1.6;
+}
+
+#test {
+	overflow: hidden;
+	zoom: 1;
+}
+
+
+
+/* アンカーリンクボタン */
+#main ul.btn_ank {
+	background: url(../images/Ancert/Graph/bg_ank.gif) 0 0 repeat;
+	padding: 25px 12px 17px 20px;
+	margin: 0 0 50px 0;
+	overflow: hidden;
+	zoom: 1;
+}
+
+#main ul.btn_ank li {
+	list-style-type: none;
+	float: left;
+	width: 147px;
+	margin: 0 8px 8px 0;
+	border: 1px solid #de5e09;
+	background: url(../images/Ancert/Graph/bg_btn_ank.gif) 0 bottom repeat-x #fb7f2d;
+	font-size: 90%;
+}
+
+#main ul.btn_ank li a {
+	width: 118px;
+	padding: 10px 9px 10px 20px;
+	color: #fff;
+	font-weight: bold;
+	display: block;
+	background: url(../images/Ancert/Graph/ico_arr.gif) 10px center no-repeat;
+}
+
+#main ul.btn_ank li a.high {
+	padding: 20px 9px 19px 20px;
+}
+
+#main ul.btn_ank li a:hover {
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+
+
+/* アンケート詳細 */
+.con_ank h3.midashi03 {
+	background: url(../images/tl_inn.gif) 0 center no-repeat;
+	margin: 3px 0 0 0;
+}
+
+div.con_ank h3:before {
+	position: relative;
+	display: block;
+	content: "";
+	margin: 0;
+	padding: 8px 0 0 0;
+	height: 4px;
+	background: url(../images/tl_top.gif) top left no-repeat;
+	font-size: 0;
+	line-height: 0;
+}
+
+div.con_ank h3:after {
+	position: relative;
+	display: block;
+	content: "";
+	margin: 0;
+	padding: 0 0 8px 0;
+	height: 3px;
+	background: url(../images/tl_btm.gif) 0 bottom no-repeat;
+	font-size: 0;
+	line-height: 0;
+}
+
+div.con_ank h3.midashi03 span {
+	margin: 0 0 0 15px;
+	padding: 1px 15px 0 10px;
+	font-size: 100%;
+	border-left: 5px solid #f22638;
+	color: #fff;
+	font-weight: bold;
+	display: block;
+}
+
+div.con_ank div.box_ank {
+	border: 1px solid #c1d0f6;
+	border-top: none;
+	background: #d4def9;
+	margin: -14px 0 0 0;
+	padding: 0 4px 4px 4px;
+}
+
+div.con_ank div.box_ank div.box_ank_inn {
+	background: #fff;
+	padding: 30px 25px;
+}
+
+div.con_ank div.box_ank div.box_ank_inn div.box_que {
+	background: url(../images/Ancert/Graph/bg_que.gif) 0 bottom no-repeat;
+	padding: 0 0 9px 0;
+	margin: 0 0 10px 0;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn div.box_que p {
+	background: #f9f3d2;
+	border: 2px solid #e8deaa;
+	border-bottom: none;
+	margin: 0;
+	padding: 8px 0 5px 0;
+	text-align: center;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn div.box_que p span {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn div.img_gra {
+	text-align: center;
+	margin: 0 auto 25px auto;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn table {
+	background: #e3e3e3;
+	font-size: 14px;
+	border-collapse: separate;
+	border-spacing: 1px;
+	line-height: 1.4;
+	color: #333;
+	width: 100%;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn table th ,
+#main div.con_ank div.box_ank div.box_ank_inn table td {	
+	padding: 5px;
+	text-align: center;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn table th {
+	background: #d4ebfc;
+	font-weight: bold;
+	border: 1px solid #FFF;
+	width: 16%;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn table td {
+	background: #FFF;
+}
+
+#main div.con_ank div.box_ank div.box_ank_inn table td.td_gra {
+	background: #f6f6f6;
+	border: 1px solid #FFF;
+}
+
+
+/* ページtop */
+#main div.con_ank p.lnk_page {
+	text-align: right;
+	margin: 10px 0 45px 0;
+	padding: 0;
+	font-size: 90%;
+}
+
+/* アンケート原本はコチラボタン */
+#main div.btn_ank {
+	border: 1px solid #e7e3c3;
+	background: #edead9;
+	padding: 4px;
+	margin: 0 0 40px 0;
+}
+
+#main div.btn_ank div {
+	background: #fcfbf3;
+	padding: 24px 0 17px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#main div.btn_ank div p {
+	margin: 0 0 5px 0;
+}
+
+#main div.btn_ank div a:hover img {
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}
+

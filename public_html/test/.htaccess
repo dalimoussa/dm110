@@ -1,0 +1,103 @@
+<IfDefine DEVELOPMENT>
+</IfDefine>
+
+<IfDefine !DEVELOPMENT>
+
+	Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+
+	AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/javascript text/javascript application/font-woff application/vnd.ms-fontobject
+
+
+	#�t�H���g��content-type�̒ǉ�
+	AddType application/vnd.ms-fontobject .eot
+	AddType application/x-font-ttf .ttf
+	AddType application/x-font-opentype .otf
+	AddType application/x-font-woff .woff
+	AddType image/svg+xml .svg
+
+	#���k�̐ݒ�
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+
+	#�t�H���g
+	AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+	ExpiresActive On
+	ExpiresByType text/css "access plus 15 days"
+	ExpiresByType image/gif "access plus 10 days"
+	ExpiresByType image/jpg "access plus 10 days"
+	ExpiresByType image/jpeg "access plus 10 days"
+	ExpiresByType image/png "access plus 10 days"
+	ExpiresByType application/x-javascript "access plus 10 days"
+	ExpiresByType text/x-javascript "access plus 1 month"
+	ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType application/x-javascript "access plus 1 month"
+	ExpiresByType text/js "access plus 1 month"
+	ExpiresByType text/javascript "access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+	# WebP�Ή��u���E�U����WebP�t�@�C���������WebP�t�@�C����Ԃ�
+	<IfModule mod_rewrite.c>
+		SetEnvIfNoCase User-Agent "(MSIE|Trident)" ua_browser=ie
+		RewriteEngine On
+		RewriteCond %{ENV:ua_browser} !ie
+		RewriteCond %{HTTP_ACCEPT} image/webp
+		RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+		RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp]
+	</IfModule>
+	<IfModule mod_headers.c>
+		Header append Vary Accept env=_image_request
+	</IfModule>
+	<IfModule mod_mime.c>
+		AddType image/webp .webp
+	</IfModule>
+
+
+	Options +FollowSymLinks
+
+	RewriteEngine on
+	RewriteBase /
+
+	RewriteRule ^koe.htm$ https://test.dm110.jp/koe/ [R=301,L]
+	RewriteRule ^koe_([0-9]).htm$ https://test.dm110.jp/koe/$1/ [R=301,L]
+
+	RewriteRule ^Ank_index.htm$ https://test.dm110.jp/enquete/ [R=301,L]
+	RewriteRule ^Ank_index2.htm$ https://test.dm110.jp/enquete/aggregate/ [R=301,L]
+	RewriteRule ^Ank_\d+.htm$ https://test.dm110.jp/enquete/ [R=301,L]
+
+	RewriteCond %{THE_REQUEST} ^.*/index.html
+	RewriteRule ^(.*)index.html$ https://test.dm110.jp/$1 [R=301,L]
+	RewriteRule ^kaisyaannai.html$ https://test.dm110.jp/kaisyaannai [R=301,L]
+
+	RewriteRule ^DMT/download/DM-Tracker__01.pdf /download/DM-Tracker__01.pdf [L]
+	RewriteRule ^DMT/download/DM-Tracker__02.pdf /download/DM-Tracker__02.pdf [L]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule  ^([0-9A-Za-z_\-]*)$  $1.php [L]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule  ^([0-9A-Za-z_\-]*)/$ $1.php [L]
+
+	ErrorDocument 404 https://test.dm110.jp/
+
+# kagoya edit by 2021/05/11
+	#RewriteCond %{HTTPS} off
+	#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+	#RewriteRule ^(.*)$ https://test.dm110.jp/$1 [R=301,L]
+
+	Options +Includes
+	AddOutputFilter INCLUDES .htm .html
+	AddHandler application/x-httpd-php .php .htm .html
+
+        AddType "text/plain; charset=UTF-8" .txt
+	AddDefaultCharset UTF-8
+
+</IfDefine>

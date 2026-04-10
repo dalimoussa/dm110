@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* tosyokan */
+/* ============================================================ */
+
+#main-contents1 table tr:nth-of-type(6) td ,
+#main-contents1 table tr:nth-of-type(7) td ,
+#main-contents1 table tr:nth-of-type(8) td ,
+#main-contents1 table tr:nth-of-type(18) td ,
+#main-contents1 table tr:nth-of-type(19) td {
+	background: #fff;
+}

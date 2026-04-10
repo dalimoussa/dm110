@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>条件を満たせば、信書部分も書ける添え状</title>
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<?php include("./common/inc_new/html_head.html"); ?>
+		<style type="text/css">
+		<!--
+		img{max-width:100%;height:auto}
+		-->
+		</style>
+	</head>
+	<body>
+
+		<?php include("./common/inc_new/anlytics_top.html"); ?>
+
+		<div id="container">
+
+			<!--main-->
+			<div id="main">
+				<!--main-in-->
+				<div id="main-in">
+
+		<?php $get_datas['name1'] = '条件を満たせば、信書部分も書ける添え状'; include("./common/inc_new/breadcrumb2.php"); ?>
+
+					<!--▽メインコンテンツ-->
+					<div id="main-contents1">
+
+						<h2 class="ttl01">条件を満たせば、信書部分も書ける添え状</h2>
+
+						<div class="contents1">
+
+							<p>運送業者、その代表者又はその代理人その他の従業者は、その運送方法により他人のために信書の送達をしてはならない。ただし、<strong>貨物に添付する無風の添え状又は送り状は、その限りでない。</strong>（郵便法第4条第3項）</p>
+							<p>「添え状」とは、送付される貨物の目録や性質、使用方法等を説明する文書及び当該貨物の送付と密接に関連した次に掲げる簡単な通信文で当該貨物に従として添えられるもののこと。</p>
+							<br />
+
+							<h3 class="ttl02">無封の添え状・送り状について</h3>
+							<h4 class="ttl03">1. 無封の添え状・送り状とは</h4>
+							<p>「無封」とは、封筒等に納めていない状態、封筒等に納めて納入口を閉じていない状態のことをいいます。<br />
+								また封筒等に納めて納入口を閉じている場合でも、<strong>封筒が透明であり容易に内容物を透視できる状態</strong>、封筒の納入口付近に「開閉自由」等の表示があり開閉できる状態のものも「無封」に含まれます。</p>
+							<br />
+
+							<h4 class="ttl03">2. 「添え状」とは</h4>
+							<p>送付される貨物の目録や性質、使用方法等を説明する文書及び当該貨物の送付と密接に関連した次に掲げる簡単な通信文で当該貨物に従として添えられるもののことです。</p>
+							<ol class="list-decimal mb30 ml50">
+								<li>貨物の送付に関して添えられるその処理に関する簡単な通信文</li>
+								<li>貨物の送付目的を示す簡単な通信文</li>
+								<li>貨物の授受又は代金に関する簡単な通信文</li>
+								<li>貨物の送付に関して添えられるあいさつのための簡単な通信文</li>
+								<li>その他貨物に従として添えられる簡単な通信文であって(1)～(4)に掲げる事項に類するもの</li>
+							</ol>
+
+							<p>「送り状」とは、貨物を送付したことを通知する案内書のことであり、具体的には、送付される貨物の種類、重量、容積、荷造りの種類、個数、記号、代価、受取人並びに差出人の住所及び氏名等当該貨物の送付に関する事項が必要に応じて記載されたもののことです。<br /></p>
+							<p>参照：<a href="https://www.post.japanpost.jp/service/soejyou.html" target="_blank" rel="noopener noreferrer"><cite>日本郵便株式会社「無封の添え状・送り状について」</cite></a></p>
+							<br />
+
+							<h4 class="ttl03">まとめると</h4>
+							<p>全面透明封筒の一番上の印刷物に、処理、送付目的、授受又は代金、簡単な挨拶、簡単な通信文を入れることができるとなります。</p>
+
+						<!--▼メインコンテンツ用 お問い合わせ-->
+						<?php include("./common/inc_new/main_inquiry.html"); ?>
+						<!--▲メインコンテンツ用 お問い合わせ-->
+							<br />
+
+
+							<h3 class="ttl02">具体例<span class="text15">（下記添え状としてゆうメールで発送できます）</span></h3>
+
+							<table class="table01" style="max-width:100%">
+								<tr>
+									<td style="width:50%;vertical-align:top"><h4 class="ttl03">貨物の処理に関する簡単な通信文</h4><img src="/images/soejyou/soejyou_sub01.png" width="370" height="460" alt="" decoding="async" loading="lazy" /></td>
+									<td style="width:50%;vertical-align:top"><h4 class="ttl03">貨物の送付目的を示す簡単な通信文</h4><img src="/images/soejyou/soejyou_sub02.png" width="370" height="460" alt="" decoding="async" loading="lazy" /></td>
+								</tr>
+								<tr>
+									<td style="width:50%;vertical-align:top"><h4 class="ttl03">授受または代金に関する簡単な通信文</h4><img src="/images/soejyou/soejyou_sub03.png" width="370" height="334" alt="" decoding="async" loading="lazy" /></td>
+									<td style="width:50%;vertical-align:top"><h4 class="ttl03">貨物の送付に関して添えられるあいさつのための簡単な通信文</h4><img src="/images/soejyou/soejyou_sub04.png" width="370" height="460" alt="" decoding="async" loading="lazy" /></td>
+								</tr>
+							</table>
+							<br />
+
+
+							<h3 class="ttl02">ゆうメールで発送できる添え状例</h3>
+							<p><img src="/images/soejyou/soejyou_sub05.png" width="1100" height="720" alt="【照会内容】住宅メーカーから以下の文書を送りたいが送付物１は添え状に該当するか。→送付物１（○○住宅オーナという特定の受取人にあてた信書）は、送付物２（信書に該当しないチラシ）に従として添えられる添え状と認められる。" decoding="async" loading="lazy" /><br />
+							https://www.soumu.go.jp/main_content/000447206.pdf（総務省）より抜粋</p>
+							<br />
+
+
+							<h3 class="ttl02">ゆうメールで発送できない添え状例</h3>
+							<p><img src="/images/soejyou/soejyou_sub06.png" width="1100" height="720" alt="【照会内容】自動車販売会社から以下の文書を送りたいが、送付物１は添え状に該当するか。→送付物１（○○様という特定の受取人にあてた信書）は、送付物２（信書に該当しない冊子）に従として添えられる添え状の範囲を超えている。" decoding="async" loading="lazy" /><br />
+							https://www.soumu.go.jp/main_content/000447206.pdf（総務省）より抜粋</p>
+							<br />
+
+
+							<h3 class="ttl02">当社ニュースレターの添え状例</h3>
+							<p>当社では毎月ニュースレターを利用者の皆さんに発送しています。<br />その中に入れた添え状が下記になります。</p>
+							<p class="al_center"><img src="/images/soejyou/soejyou_sub07.png" style="width:50%;border:#999 solid 2px" width="750" height="1080" alt="当社ニュースレターの添え状例" decoding="async" loading="lazy" /></p>
+							<br />
+
+
+							<h3 class="ttl02">添え状の判断</h3>
+							<p>実際に添え状に当たるのか、信書に当たるのかの判断は難しいところがあります。<br />
+								実際にとても複雑です。<br />
+								もし添え状と判断して、日本郵便へ発送依頼しても信書に該当すると判断されると発送が出来なくなります。</p>
+
+							<p><strong class="red">当社では注文いただいたお客様には、無料で判断させていただいています。<br />
+								印刷前に信書判断を依頼して下さい。</strong></p>
+							<br />
+
+
+							<h3 class="ttl02">まとめ</h3>
+							<p>クロネコDM便の廃止に伴い「ゆうメール」移行でお困りの方はお見積もりをしてください。<br />
+								・希望条件での一番コストを抑えたDM発送方法<br />
+								・日本郵政の割引制度を利用したい<br />
+								・郵便局で信書と認められ、困っている。</p>
+							<br />
+
+
+							<p><strong>なお当社では事前にお客様から印刷データを見せていただき対応を行っています。</strong><br />
+								<strong class="red">１. 信書チェック<br />
+								２. 信書にならないように改善提案・代案<br />
+								３. 場合により郵便局へ確認</strong></p>
+							<br />
+						</div>
+
+
+						<!--▼メインコンテンツ用 お問い合わせ-->
+						<?php include("./common/inc_new/main_inquiry.html"); ?>
+						<!--▲メインコンテンツ用 お問い合わせ-->
+
+					</div>
+					<!--△メインコンテンツ-->
+
+					<?php include("./common/inc_new/sidebar.html"); ?>
+				</div>
+				<!--/main-in-->
+
+				<?php include("./common/inc_new/go_top.html"); ?>
+
+				<?php include("./common/inc_new/footer.html"); ?>
+			</div>
+			<!--/main-->
+			<!--▼ヘッダー-->
+			<?php include("./common/inc_new/header.html"); ?>
+			<!--▲ヘッダー-->
+
+			<!--▼グローバルメニュー-->
+			<?php include("./common/inc_new/gnavi.html"); ?>
+			<!--▲グローバルメニュー-->
+		</div>
+
+
+
+		<?php include("./common/inc_new/anlytics_bottom.html"); ?>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /sinario
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([0-9A-Za-z_\-]*)/+$ ./$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([0-9A-Za-z_\-]*)$ $1.php [L]

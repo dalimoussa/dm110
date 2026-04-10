@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>DM発送のみコース（封入済みDMの発送代行）｜DM110番</title>
+		<meta name="keywords" content="ＤＭ発送代行,ＤＭ発送,ＤＭ代行" />
+		<meta name="description" content="封入封封緘済みの封筒やA4ハガキをお送りいただき発送のみを行うコースです。　宛名ラベルは御社でも当社での作成が可能です。" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<?php include("./common/inc_new/html_head.html"); ?>
+		<link rel="stylesheet" href="/css/sp_new/rakurakuryoukin.css" type="text/css" media="only screen and (min-width: 0px) and (max-width: 720px)">
+	</head>
+	<body>
+
+		<?php include("./common/inc_new/anlytics_top.html"); ?>
+
+		<div id="container">
+
+			<!--main-->
+			<div id="main">
+				<!--main-in-->
+				<div id="main-in">
+
+		<?php $get_datas['name1'] = '発送のみ料金表'; include("./common/inc_new/breadcrumb2.php"); ?>
+		
+					<!--▽メインコンテンツ-->
+					<div id="main-contents1">
+
+						<h1>封入済みDMをお預かりして「発送のみ」を行う代行コース</h1>
+						<h2 class="ttl01">発送のみコース（封筒に封入済み）</h2>
+						<div class="contents1">
+							<p>封入済み封筒に、宛名ラベルを作成・貼付け、発送します。<br />
+								最低通数は100通からになります。</p>
+							<br />
+
+							<h3 class="ttl02" id="ryo1" name="ryo1">発送 ＋ 宛名ラベル当社作成　料金表</h3>
+							<p>封入封綴じ済みの封筒に当社作成の宛名ラベルを貼り発送します。
+								御社にて宛名ラベル作成の場合には別途作業が増えるため割高になります。</p>
+
+							<table class="table01">
+								<thead>
+									<tr>
+										<th colspan="4"><img src="images/common/ryokinhyo_gazo.png" class="fl-r" width="280" height="58" alt="専任担当者付・進捗状況メール・信書チェック・発送証明" />
+											<span style="color:#0e54e1">2025/4/1～ 新料金</span><br />料金表（送料＋宛名ラベル当社作成）　</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="bg_yellow">通数</th>
+										<th class="bg_yellow">料金</th>
+										<th class="bg_yellow">納期</th>
+									</tr>
+									<tr>
+										<th class="bg_yellow">100通以上</th>
+										<td>151.0円以下(税抜)<br /><span class="small">166.1円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">200通以上</th>
+										<td>110.0円以下(税抜)<br /><span class="small">121.0円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">300通以上</th>
+										<td>108.0円以下(税抜)<br /><span class="small">118.8円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">500通以上</th>
+										<td>93.7円以下(税抜)<br /><span class="small">103.1円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">1000通以上</th>
+										<td>88.8円以下(税抜)<br /><span class="small">97.7円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">2000通以上</th>
+										<td>85.5円以下(税抜)<br /><span class="small">94.1円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">3000通以上</th>
+										<td>83.0円以下(税抜)<br /><span class="small">91.3円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">5000通以上</th>
+										<td>78.8円以下(税抜)<br /><span class="small">86.7円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">10000通以上</th>
+										<td>74.7円以下(税抜)<br /><span class="small">82.2円以下(税込)</span></td>
+										<td>4営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">20000通以上</th>
+										<td>73.9円以下(税抜)<br /><span class="small">81.3円以下(税込)</span></td>
+										<td>6営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">30000通以上</th>
+										<td>73.5円以下(税抜)<br /><span class="small">80.9円以下(税込)</span></td>
+										<td>7営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">50000通以上</th>
+										<td>72.0円以下(税抜)<br /><span class="small">79.2円以下(税込)</span></td>
+										<td>11営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">10万通以上</th>
+										<td>71.0円以下(税抜)<br /><span class="small">78.1円以下(税込)</span></td>
+										<td>14営業日</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="bg_gray">※100g以内料金<br>※101ｇ以上は別途お見積りいたします</td>
+									</tr>
+								</tbody>
+							</table>
+<?php /*
+							<table class="table01">
+								<tbody>
+									<tr>
+										<td><b>201g以上299g以下　＠2.2円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>300g以上499g以下　＠4.4円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>500g以上1000g以下　＠6.6円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>消費税　込み</b></td>
+									</tr>
+								</tbody>
+							</table>
+*/ ?>
+
+							<b>※宛名データ（完成形）を部材到着日の2前営業日前 18:00迄必須</b>
+							<br />
+							<div class="btn-form-hagaki">
+								<div><a href="/form/hassou_nomi/">発送のみ見積もりフォームはこちら ≫</a></div>
+							</div>
+							<p>※上記料金に含むもの<br /><strong><span class="red">　１　発送証明を送ります<br />　２　返品物のEXCELデータ化</span><br />　３　宛名データ削除証明（米国国家安全保障局（NSA）<br />　４　初回、ご依頼の発送物見本を送ります<br />　５　専任担当者制</strong></p>
+							<br />
+							<br />
+
+						</div>
+
+
+						<h2 class="ttl01">発送のみコース（A4ハガキ・A4圧着ハガキ）</h2>
+						<div class="contents1">
+							<p>印刷済みのA4ハガキ・A4圧着ハガキを当社にて宛先を印刷して発送します。</p>
+							<p><span class="red"><strong>印刷前に確認していただきたい事<br />
+							１　印刷前に無料信書チェックを当社に依頼ください。<br />
+							　（日本郵便持込時に信書と判断されると発送できなくなるため事前チェックをお勧めします）<br />
+							２　縦70mm×横100mm　以上の空白を作ってください。宛名印字スペースです。</strong></span></p>
+							<br />
+
+							<h3 class="ttl02">発送 ＋ 宛名印字　料金表</h3>
+							<p>宛名印字ができるスペースが開いたA4ハガキ・A4圧着ハガキの発送料金<br />
+								当社にて宛名印字を行い、ゆうメールで発送します。</p>
+
+							<table class="table01">
+								<thead>
+									<tr>
+										<th colspan="4"><img src="images/common/ryokinhyo_gazo.png" class="fl-r" width="280" height="58" alt="専任担当者付・進捗状況メール・信書チェック・発送証明" />
+											<span style="color:#0e54e1">2025/4/1～ 新料金</span><br />料金表（送料＋宛名印字）　</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="bg_yellow">通数</th>
+										<th class="bg_yellow">料金</th>
+										<th class="bg_yellow">納期</th>
+									</tr>
+									<tr>
+										<th class="bg_yellow">100通以上</th>
+										<td>159.0円以下(税抜)<br /><span class="small">174.9円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">200通以上</th>
+										<td>118.0円以下(税抜)<br /><span class="small">129.8円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">300通以上</th>
+										<td>116.0円以下(税抜)<br /><span class="small">127.6円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">500通以上</th>
+										<td>101.7円以下(税抜)<br /><span class="small">111.9円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">1000通以上</th>
+										<td>96.8円以下(税抜)<br /><span class="small">106.5円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">2000通以上</th>
+										<td>93.5円以下(税抜)<br /><span class="small">102.9円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">3000通以上</th>
+										<td>91.0円以下(税抜)<br /><span class="small">100.1円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">5000通以上</th>
+										<td>86.8円以下(税抜)<br /><span class="small">95.5円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">10000通以上</th>
+										<td>82.7円以下(税抜)<br /><span class="small">91.0円以下(税込)</span></td>
+										<td>4営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">20000通以上</th>
+										<td>81.9円以下(税抜)<br /><span class="small">90.1円以下(税込)</span></td>
+										<td>6営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">30000通以上</th>
+										<td>81.5円以下(税抜)<br /><span class="small">89.7円以下(税込)</span></td>
+										<td>7営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">50000通以上</th>
+										<td>80.0円以下(税抜)<br /><span class="small">88.0円以下(税込)</span></td>
+										<td>11営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">10万通以上</th>
+										<td>71.0円以下(税抜)<br /><span class="small">78.1円以下(税込)</span></td>
+										<td>14営業日</td>
+									</tr>
+									<tr>
+										<td colspan="3" class="bg_gray">※100g以内料金<br>※101ｇ以上は別途お見積りいたします</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="btn-form-hagaki">
+								<div><a href="/form/hassou_nomi/">発送のみ見積もりフォームはこちら ≫</a></div>
+							</div>
+							<br />
+
+
+
+<?php /*
+							<h3 class="ttl02" id="ryo2" name="ryo2">発送 ＋ お客様より支給宛名ラベル貼り　料金表</h3>
+							<p>お客様より印刷済みの宛名ラベルと封入済みの封筒を支給頂きメディアボックスにて発送する料金表です。<br />
+							宛名ラベルを支給頂く場合は別途クロネコDM便のバーコードシールを貼る必要があります。<br />
+							そのため、バーコードシール貼り料金が＠2.75円追加されます。</p>
+							<p>
+							<p><span class="red"><b>※注意<br />
+							印刷された宛名ラベルの郵便番号を数字とみなし小さいものから順番に並んでいる必要があります。<br />
+							 郵便番号昇順でなければ⇒郵便番号並べ替え作業＠3.3円以上が必要になります。</b></span></p>
+							<table class="table01">
+								<thead>
+									<tr>
+										<th colspan="5">料金表（送料＋宛名ラベルお客様より支給）　<img src="images/common/ryokinhyo_gazo.jpg" alt="料金表画像" /></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="bg_yellow">通数</th>
+										<th class="bg_yellow">料金</th>
+										<th class="bg_yellow">納期</th>
+									</tr>
+									<tr>
+										<th class="bg_yellow">50通以上</th>
+										<td>224.5円以下(税抜)<br /><span class="small">246.95円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">100通以上</th>
+										<td>145.5円以下(税抜)<br /><span class="small">160.05円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">200通以上</th>
+										<td>120.5円以下(税抜)<br /><span class="small">132.55円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">300通以上</th>
+										<td>105.5円以下(税抜)<br /><span class="small">116.05円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">500通以上</th>
+										<td>95.5円以下(税抜)<br /><span class="small">105.05円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">1000通以上</th>
+										<td>85.5円以下(税抜)<br /><span class="small">94.05円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">2000通以上</th>
+										<td>83.5円以下(税抜)<br /><span class="small">91.85円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">3000通以上</th>
+										<td>81.5円以下(税抜)<br /><span class="small">89.65円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">5000通以上</th>
+										<td>78円以下(税抜)<br /><span class="small">85.8円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">10000通以上</th>
+										<td>73.5円以下(税抜)<br /><span class="small">80.85円以下(税込)</span></td>
+										<td>5営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">20000通以上</th>
+										<td>72円以下(税抜)<br /><span class="small">79.2円以下(税込)</span></td>
+										<td>7営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">30000通以上</th>
+										<td>71.5円以下(税抜)<br /><span class="small">78.65円以下(税込)</span></td>
+										<td>8営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">50000通以上</th>
+										<td>70.5円以下(税抜)<br /><span class="small">77.55円以下(税込)</span></td>
+										<td>15営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">100000通以上</th>
+										<td>70円以下(税抜)<br /><span class="small">77円以下(税込)</span></td>
+										<td>17営業日</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table01">
+								<tbody>
+									<tr>
+										<td><b>201g以上299g以下　＠2.2円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>300g以上499g以下　＠4.4円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>500g以上1000g以下　＠6.6円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>消費税　込み</b></td>
+									</tr>
+								</table>
+							<div class="btn-form-hagaki">
+								<div><a href="/form/hassou_nomi">発送のみ見積もりフォームはこちら ≫</a></div>
+							</div>
+							<br />
+
+
+
+							<h3 class="ttl02" id="ryo3" name="ryo3">発送 ＋ 宛名ラベル貼り済み・封入済み封筒支給　料金表</h3>
+							<p>お客様より宛名ラベル貼り済みの発送物をお送りいただきメディアボックスにて発送する方法です。<br />
+							宛名ラベルを支給頂く場合は別途クロネコDM便のバーコードシールを貼る必要があります。<br />
+							そのため、バーコードシール貼り料金が＠2.75円追加されます。</p>
+
+							<p><span class="red"><b>※注意<br />
+							宛名ラベルの郵便番号を数字とみなし小さいものから順番に並べて梱包してお送りください。<br />
+							 郵便番号昇順でなければ⇒郵便番号並べ替え作業＠3.3円以上が必要になります。</b></span></p>
+
+							<p>
+							<table class="table01">
+								<thead>
+									<tr>
+										<th colspan="5">料金表（送料＋宛名ラベル貼り済み封筒支給） 　<img src="images/common/ryokinhyo_gazo.jpg" alt="料金表画像" /></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="bg_yellow">通数</th>
+										<th class="bg_yellow">料金</th>
+										<th class="bg_yellow">納期</th>
+									</tr>
+									<tr>
+										<th class="bg_yellow">50通以上</th>
+										<td>227円以下(税抜)<br /><span class="small">249.7円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">100通以上</th>
+										<td>148円以下(税抜)<br /><span class="small">162.8円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">200通以上</th>
+										<td>123円以下(税抜)<br /><span class="small">135.3円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">300通以上</th>
+										<td>108円以下(税抜)<br /><span class="small">118.8円以下(税込)</span></td>
+
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">500通以上</th>
+										<td>98円以下(税抜)<br /><span class="small">107.8円以下(税込)</span></td>
+										<td>2営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">1000通以上</th>
+										<td>88円以下(税抜)<br /><span class="small">96.8円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">2000通以上</th>
+										<td>86円以下(税抜)<br /><span class="small">94.6円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">3000通以上</th>
+										<td>84円以下(税抜)<br /><span class="small">92.4円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">5000通以上</th>
+										<td>80.5円以下(税抜)<br /><span class="small">88.55円以下(税込)</span></td>
+										<td>3営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">10000通以上</th>
+										<td>76円以下(税抜)<br /><span class="small">83.6円以下(税込)</span></td>
+										<td>5営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">20000通以上</th>
+										<td>74.5円以下(税抜)<br /><span class="small">81.95円以下(税込)</span></td>
+										<td>7営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">30000通以上</th>
+										<td>74円以下(税抜)<br /><span class="small">81.4円以下(税込)</span></td>
+										<td>8営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">50000通以上</th>
+										<td>73円以下(税抜)<br /><span class="small">80.3円以下(税込)</span></td>
+										<td>15営業日</td>
+									</tr>
+									<tr>
+										<th class="bg_yellow">100000通以上</th>
+										<td>72.5円以下(税抜)<br /><span class="small">79.75円以下(税込)</span></td>
+										<td>17営業日</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table01">
+								<tbody>
+									<tr>
+										<td><b>201g以上299g以下　＠2.2円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>300g以上499g以下　＠4.4円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>500g以上1000g以下　＠6.6円増し</b></td>
+									</tr>
+									<tr>
+										<td><b>消費税　込み</b></td>
+									</tr>
+								</table>
+							<p><strong>※基本料金は頂きません</strong><br />
+							※ヤマト運輸　<strong>クロネコDM便</strong>（旧メール便）で発送の場合<br />
+							</p>
+							<br />
+
+							<div class="btn-form-hagaki">
+								<div><a href="/form/hassou_nomi">発送のみ見積もりフォームはこちら ≫</a></div>
+							</div>
+							<br />
+*/ ?>
+
+
+
+							<h3 class="ttl02">詳細</h3>
+							<table class="table01">
+								<tbody>
+									<tr>
+										<th class="tal" colspan="2">ゆうメール便</th>
+									</tr>
+									<tr>
+										<th class="tal">配達担当</th>
+										<td class="tal">日本郵便</td>
+									</tr>
+									<tr>
+										<th class="tal">差出表の表記</th>
+										<td class="tal"><strong>必要</strong></td>
+									</tr>
+									<tr>
+										<th class="tal">差出表の提出期限</th>
+										<td class="tal"><strong>７営業日前(1万通以上）</strong></td>
+									</tr>
+									<tr>
+										<th class="tal">料金体系</th>
+										<td class="tal"><strong>重量別運賃</strong></td>
+									</tr>
+									<tr>
+										<th class="tal">最大サイズ</th>
+										<td class="tal">縦36cm以下×横25cm以下</td>
+									</tr>
+									<tr>
+										<th class="tal">最小サイズ</th>
+										<td class="tal">縦14cm以下×横９㎝以上</td>
+									</tr>
+									<tr>
+										<th class="tal">厚み上限</th>
+										<td class="tal">３cm</td>
+									</tr>
+									<tr>
+										<th class="tal">重量</th>
+										<td class="tal">３kg以内</td>
+									</tr>
+									<tr>
+										<th class="tal">日達日数</th>
+										<td class="tal">３～７日（土日祝祭日除く）</td>
+									</tr>
+									<tr>
+										<th class="tal">配達の遅延</th>
+										<td class="tal">有り（保証なし）</td>
+									</tr>
+									<tr>
+										<th class="tal">配達精度</th>
+										<td class="tal">◎</td>
+									</tr>
+									<tr>
+										<th class="tal">配達状況の追跡</th>
+										<td class="tal"><strong>無し</strong></td>
+									</tr>
+									<tr>
+										<th class="tal">転送サービス</th>
+										<td class="tal">◎</td>
+									</tr>
+									<tr>
+										<th class="tal">還付先指定</th>
+										<td class="tal">〇</td>
+									</tr>
+									<tr>
+										<th class="tal">信書の送付</th>
+										<td class="tal">×</td>
+									</tr>
+									<tr>
+										<th class="tal">信書チェック</th>
+										<td class="tal"><strong>非常に厳しい</strong></td>
+									</tr>
+									<tr>
+										<th class="tal">信書チェック日数</th>
+										<td class="tal"><strong>通常当日から3日ぐらい</strong></td>
+									</tr>
+								</tbody>
+							</table>
+							<br />
+
+
+							<p><b>注意</b><br />
+							※印刷前に信書チェックを依頼ください。（当社での印刷をお勧めします）<br />
+							（日本郵便持込時に信書と判断されると発送できなくなるため事前チェックをお勧めします）<br />
+							封入内容と封筒の信書チェックが必要なため封入見本が必要になります。<br />
+							※基本料金は頂きません。<br />
+							※日本郵便のゆうメール発送になります。<br />
+							※作業所が複数あるため、発送物は送り先確認後の発送をお願いします。<br />
+							※封入や封緘を完了したもの。<br />
+							※作業が完了していないものを入荷の場合は、封入作業した後の発送となります。その際は別途追加料金が発生致します。<br />
+							※弊社で発送の為の作業を完了後の発送となります。<br />
+							</p>
+							<br />
+
+							<div style="margin: 30px 0; padding: 20px; border: 2px solid #e0e0e0; text-align: center;">
+								<p style="font-size: 1.1em; margin-bottom: 10px;">印刷や封入作業も含めた、DM発送の丸ごと代行をご希望のお客様へ</p>
+								<p><strong><a href="https://test.dm110.jp/" style="color: #d9534f; text-decoration: underline; font-size: 1.2em;">「DM発送代行」の総合案内・トップページはこちら</a></strong></p>
+							</div>
+						</div>
+
+
+
+						<!--Facebook いいね！-->
+						<fb:like href="https://test.dm110.jp/hassou_nomi.html" send="true" layout="button_count" width="200" show_faces="false"></fb:like>
+						<!--/Facebook いいね！ここまで-->
+
+						<!--はてなブックマーク-->
+						<a href="http://b.hatena.ne.jp/entry/https://test.dm110.jp/hassou_nomi.html" class="hatena-bookmark-button" data-hatena-bookmark-title="DM(ダイレクトメール)発送代行 作業＋発送料で70円台より全国対応" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+						<!--/はてなブックマークここまで-->
+
+						<!--お気に入りに登録-->
+						<input type="button" value="お気に入りに追加" onclick="window.external.AddFavorite('https://test.dm110.jp/hassou_nomi.html','ＤＭ発送代行　発送のみコース')">
+						<!--/お気に入りに登録ここまで-->
+
+
+
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<!--▼メインコンテンツ用 お問い合わせ-->
+						<?php include("./common/inc_new/main_inquiry.html"); ?>
+						<!--▲メインコンテンツ用 お問い合わせ-->
+
+						<br />
+						<div class="contents1">
+							<p>▼DM発送代行をご検討中の方は、まず無料見積りをご依頼ください。<br />
+								24時間365日受付中。返信は３時間以内（当社営業日）にご連絡いたします。<br />
+								【営業時間/9:00～18:00　休日/土日祝祭日】<br />
+								電話でのお問合せ0561-37-2027　担当：加藤</p>
+
+							<p>カタログや本を封入し合計で200g以上になる場合には下記をクリックください。<br />
+								<a href="/catalogs.html">≫カタログ発送代行コースはこちら</a></p>
+							<p>開封率100%のA4ハガキ印刷発送については下記をクリックください。<br />
+								<a href="/Ryoukin_A4.htm">≫A4ハガキ印刷発送コースはこちら</a></p>
+							<br />
+						</div>
+
+
+					</div>
+					<!--△メインコンテンツ-->
+
+					<?php include("./common/inc_new/sidebar.html"); ?>
+				</div>
+				<!--/main-in-->
+
+				<?php include("./common/inc_new/go_top.html"); ?>
+
+				<?php include("./common/inc_new/footer.html"); ?>
+			</div>
+			<!--/main-->
+			<!--▼ヘッダー-->
+			<?php include("./common/inc_new/header.html"); ?>
+			<!--▲ヘッダー-->
+
+			<!--▼グローバルメニュー-->
+			<?php include("./common/inc_new/gnavi.html"); ?>
+			<!--▲グローバルメニュー-->
+		</div>
+
+
+
+		<?php include("./common/inc_new/anlytics_bottom.html"); ?>
+
+
+
+
+
+
+	</body>
+</html>

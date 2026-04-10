@@ -1,0 +1,5 @@
+
+php_flag magic_quotes_runtime Off
+php_flag mbstring.encoding_translation On
+php_value mbstring.script_encoding UTF-8
+php_value mbstring.internal_encoding UTF-8

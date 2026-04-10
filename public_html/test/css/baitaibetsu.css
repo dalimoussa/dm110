@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.table01 td {
+	vertical-align: top;
+}
+
+.table01 th:first-child {
+	width: 100px;
+}
+

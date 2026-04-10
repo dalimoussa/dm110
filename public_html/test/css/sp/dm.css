@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* dm */
+/* ============================================================ */
+
+#pagetop06 {
+	background:url(/images/common/otakara.jpg) 0 0 no-repeat;
+	background-size: 100%;
+	margin: 0px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	padding: 0px 0px 15px 0px;
+	font-size: 1.5rem;
+	float: left;
+	width: 100%;
+}
+
+#takara a {
+	background: url(/images/common/h4_green.jpg) 0 bottom no-repeat;
+    background-size: 100%;
+	display: block;
+	color: #000000;
+	margin: 0 0 10px 0;
+	padding: 0 0 1% 35px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#takara a:hover {
+	background: url(/images/common/h4_red.jpg) 0 bottom no-repeat;
+    background-size: 100%;
+	display: block;
+	color: #000000;
+}
+
+#takara:nth-child(21) {
+	margin: 0 0 20px 0;
+}
+
+.pagetop02 {
+	margin: 20px 0 10px 0 !important;
+}

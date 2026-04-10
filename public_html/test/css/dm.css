@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+.ttl01 {
+	padding-top: 10px;
+	line-height: 1.2;
+}
+.ttl01 span {
+	font-size: 12px;
+}
+h2#pagetop01,
+h3.pagetop02 {
+	float: none;
+}
+#caution {
+	color: #E45254;
+	font-size: 0.9em;
+}
+.q_best10 {
+	border: 7px solid #eee;
+	margin: 0 0 30px;
+	padding: 10px;
+}
+.q_best10 ol {
+	list-style: decimal inside;
+}
+.q_best10 ol li {
+	border-bottom: 1px dotted #ccc;
+	padding: 10px;
+}
+.q_best10 ol li a {
+	color: #0044cc !important;
+	text-decoration: none;
+	padding: 10px;
+}
+.q_best10 ol li a:hover {
+ 	background: ;
+}
+.ttl_cate_top {
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: 0 0 15px;
+	background: -moz-linear-gradient(top,  #435399 0%, #1f359b 100%);
+	background: -webkit-linear-gradient(top,  #435399 0%,#1f359b 100%);
+	background: linear-gradient(to bottom,  #435399 0%,#1f359b 100%);
+	box-shadow: 0px 4px 4px -3px rgba(0,0,0,0.3);
+	padding: 15px;
+	color: #fff;
+	border-radius: 3px;
+}
+.ttl_cate_top::before {
+	content: "";
+	border-top: 3px solid #fff;
+	display: inline-block;
+	width: 8px;
+	height: 3px;
+	margin: 0 10px 0 0;
+}
+#ttl_cate_block {
+	margin: 0 0 60px;
+	overflow: hidden;
+}
+.ttl_cate {
+	width: 50%;
+	list-style: none;
+	float: left;
+}
+.ttl_cate li a {
+	color: #484848 !important;
+	font-size: 1.15em;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px dotted #d0d0d0;
+	display: block;
+	background: url(../images/DM_otoku/ico_dm_otoku.png) 98% center no-repeat;
+	padding: 10px;
+}
+.ttl_cate li a:hover {
+	color: #0044cc !important;
+	background: url(../images/DM_otoku/ico_dm_otoku.png) 98% 60% no-repeat;
+}
+.ttl_cate span,
+.ttl_co span {
+	color: #fff;
+	background: -moz-linear-gradient(-45deg,  #277cc6 0%, #1f359b 100%);
+	background: -webkit-linear-gradient(-45deg,  #277cc6 0%,#1f359b 100%);
+	background: linear-gradient(135deg,  #277cc6 0%,#1f359b 100%);
+	margin: 0 10px 0 0;
+	padding: 0 8px;
+	border-radius: 2px;
+}
+.ttl_co {
+	border-bottom: 3px double #e8e8e8;
+	padding: 0 0 10px;
+}
+.ttl_co + ul {
+	list-style: url(../images/DM_otoku/ico_dm_otoku_list.png) inside;
+}
+.ttl_co + ul li {
+	padding: 10px;
+	border-bottom: 1px dotted #ccc;
+}
+.ttl_co + ul li a {
+	color: #0044cc !important;
+	text-decoration: none;
+}
+
+.btn_cate {
+	font-size: 0.8em;
+	margin: 20px 0 45px !important;
+}
+.btn_cate a {
+	color: #000;
+	text-decoration: none;
+}
+.btn_cate a::before {
+	content: "▲";
+	color: #2057d8;
+	margin: 0 5px 0 0;
+}
+.consultation {
+	border: 5px solid #d4e9ff;
+	background: #f6fdff;
+	padding: 15px !important;
+}

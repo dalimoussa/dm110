@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* dm */
+/* ============================================================ */
+
+#pagetop06 {
+	background:url(/images/common/otakara.jpg) 0 0 no-repeat;
+	background-size: 100%;
+	margin: 0px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	padding: 0px 0px 15px 0px;
+	font-size: 1.5rem;
+	float: left;
+	width: 100%;
+}
+
+#takara a {
+	background: url(/images/common/h4_green.jpg) 0 bottom no-repeat;
+    background-size: 100%;
+	display: block;
+	color: #000000;
+	margin: 0 0 10px 0;
+	padding: 0 0 1% 35px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#takara a:hover {
+	background: url(/images/common/h4_red.jpg) 0 bottom no-repeat;
+    background-size: 100%;
+	display: block;
+	color: #000000;
+}
+
+#takara:nth-child(21) {
+	margin: 0 0 20px 0;
+}
+
+.ttl06 {
+	margin: 20px 0 10px 0 !important;
+	line-height: 1.4;
+}
+
+
+/* DMの書き方・作り方・発送の仕方 */
+#caution {
+	color: #E45254;
+	font-size: 0.9em;
+	margin: 0 0 20px;
+}
+
+.q_best10 {
+	border: 5px solid #eee;
+	margin: 0 0 20px;
+	padding: 10px;
+}
+
+.q_best10 ol {
+	list-style: decimal inside;
+	padding: 10px;
+}
+
+.q_best10 ol li {
+	border-bottom: 1px dotted #ccc;
+	padding: 5px;
+}
+
+.q_best10 ol li a {
+	color: #0044cc !important;
+	text-decoration: none;
+}
+
+.ttl_cate_top {
+	margin: 0 0 15px !important;
+	background: linear-gradient(to bottom,  #435399 0%,#1f359b 100%) !important;
+	box-shadow: 0px 4px 4px -3px rgba(0,0,0,0.3);
+	padding: 10px 15px !important;
+	color: #fff;
+	border-radius: 3px;
+	border: none !important;
+}
+
+.ttl_cate {
+	list-style: none;
+}
+
+.ttl_cate li a {
+	color: #484848 !important;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px dotted #d0d0d0;
+	display: block;
+	background: url(../../images/DM_otoku/ico_dm_otoku.png) right center no-repeat;
+	padding: 8px 0;
+}
+
+.ttl_cate:last-of-type {
+	margin-bottom: 30px;
+}
+
+.ttl_cate span,
+.ttl_co span {
+	color: #fff;
+	background: linear-gradient(135deg,  #277cc6 0%,#1f359b 100%);
+	margin: 0 10px 0 0;
+	padding: 5px 8px;
+	border-radius: 2px;
+}
+
+.ttl_co {
+	font-size: 1.3em;
+	font-weight: bold;
+	border-bottom: 3px double #e8e8e8;
+	padding: 0 0 10px;
+}
+
+.ttl_co:first-of-type {
+	margin-top: 30px;
+}
+
+.ttl_co + ul {
+	list-style: url(../../images/DM_otoku/ico_dm_otoku_list.png) inside;
+}
+
+.ttl_co + ul li {
+	padding: 8px;
+	border-bottom: 1px dotted #ccc;
+}
+.ttl_co + ul li a {
+	color: #0044cc !important;
+	text-decoration: none;
+}
+
+.btn_cate {
+	font-size: 0.8em;
+	margin: 15px 0 30px !important;
+	text-align: right;
+}
+
+.btn_cate a {
+	color: #000;
+}
+
+.btn_cate a::before {
+	content: "▲";
+	color: #2057d8;
+	margin: 0 5px 0 0;
+}
+
+.consultation {
+	border: 3px solid #d4e9ff;
+	background: #f6fdff;
+	padding: 10px !important;
+}

@@ -1,0 +1,16 @@
+<IfDefine !DEVELOPMENT>
+    php_flag magic_quotes_gpc Off
+</IfDefine>
+
+<FilesMatch "\.html$">
+  AddType application/x-httpd-php .html
+  SetHandler php74-cgi
+</FilesMatch>
+
+### 20240127 [KAGOYA ADDED S:28051] ###
+SetEnvIf Referer "/form/contact/" limit-url
+<LIMIT POST>
+  Order Allow,Deny
+  Allow from all
+  Deny from env=limit-url
+</LIMIT>
