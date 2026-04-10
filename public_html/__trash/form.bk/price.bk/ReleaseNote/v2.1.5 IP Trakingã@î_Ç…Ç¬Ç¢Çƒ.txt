@@ -1,0 +1,18 @@
+IP Traking機能について
+
+※ IP Traking機能は標準ではOFFです ※
+
+IP Traking機能を利用するためには以下の方法で有効にしてください。
+
+01./iplogs/ フォルダをアップロードしフォルダのパーミッションを755（※又はCGIが実行できるパーミッション）
+02.iplogs.cgi のパーミッションを755（※又はCGIが実行できるパーミッション）
+03.iplogs.dat.cgi のパーミッションを777（※又はCGIが書き換えできるパーミッション）
+	04-1.【head内で設定する場合】サイト上のすべてのHTMLファイルのhead内に以下のタグを追加
+		<script type="text/javascript" src="～iplogsフォルダまでのパス～/iplogs.cgi"></script>
+	04-2.【body内で設定する場合】サイト上のすべてのHTMLファイルの<body>～</body>内に以下のタグを追加
+		<script type="text/javascript" src="～iplogsフォルダまでのパス～/iplogs.img.cgi"></script>
+	※上記、04-1又は04-2いづれかの方法ですべてのHTMLにトラッキングコードを埋め込んでください。
+
+05.iplogs.dat.cgiにログが記録されていることを確認する。
+06.config.cgi内の#$config{'iplogs'} の頭のシャープを削除する。
+07.完了

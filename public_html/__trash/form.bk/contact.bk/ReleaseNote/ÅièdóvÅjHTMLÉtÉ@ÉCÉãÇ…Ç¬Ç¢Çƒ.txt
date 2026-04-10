@@ -1,0 +1,17 @@
+HTMLは普通のHTMLです。
+ファイル名を変更していただいて構いません。
+
+example.html
+	tableタグでつくられたフォームのサンプルHTML
+
+example_dt.html
+	dtタグでつくられたフォームのサンプルHTML
+
+example_phase_input.html
+	段階的入力機能のサンプルHTML
+
+example_drop.html
+	ドロップ機能のサンプルHTML
+
+thanks.html
+	サンクスページのサンプルHTML

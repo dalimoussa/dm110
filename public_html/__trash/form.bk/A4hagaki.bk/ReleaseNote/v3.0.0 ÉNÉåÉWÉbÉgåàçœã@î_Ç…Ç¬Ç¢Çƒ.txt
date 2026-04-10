@@ -1,0 +1,38 @@
+クレジット決済、PayPal ExpressCheckout機能について
+
+※ PayPal ExpressCheckout機能については標準ではOFFです ※
+
+PayPalのExpressCheckout機能を使ってクレジット決済をする機能です。
+お金が絡む処理なのでスーパー自己責任でご利用ください。
+あまり詳しくない人は”絶対に”使わないでください！！マジで！！
+
+01.mailformproフォルダ内のpaypal_tokenフォルダのパーミッションを777
+02.config.cgi内の「Paypal Express Checkout Init」以下の行頭コメントアウトを外してください。
+03.PayPal Sandboxでテストを行ってください。テスト方法は以下のURL参照のこと。
+http://weblogs.trancedive.com/weblog_1301539848.html
+04.PayPalにログインし、マイアカウント→個人設定→APIアクセスでAPI認証情報を取得
+05.その他もろもろ設定してください。
+06.HTML側の設定についてはexample_paypal.htmlを参照の事。
+06.完了
+
+## 追記 3.0.1 ##
+やっぱり怖いので商品情報の擦り合わせ機能を付けました。
+商品情報の擦り合わせはHTMLからPOSTされた商品IDと価格情報をTSVで保存した
+「paypal_items.cgi」ファイルと照合する処理です。
+擦り合わせ機能は初期設定ではOFFです。
+同梱の「paypal_items.xls」ファイルを参考に
+1列目ID、2列目価格、3列目商品名(オプション)というデータを作ってください。
+「名前を付けて保存」から「テキストファイル(タブ区切りテキスト)」で
+「mailformpro/paypal_items.cgi」へ上書きしてください。
+さらに文字コードをUTF-8(BOM無し)に変更すれば完了です。
+あとはconfig.cgiで
+$_PAYPAL{'SECURE'} = 1;
+とすればOKです。
+##
+
+※※注意点※※
+基本的に価格の合算処理等、多くの部分でJavascriptを使っています。
+なので本当に決済後に必ず金額の裏はとってください。
+あとこの機能を利用する場合は免責事項を必ず明記し、
+悪意のある不正行為が発生した場合に対して防衛線を張ってください！
+超自己責任でご利用ください。

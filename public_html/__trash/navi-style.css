@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* CSS Document */
+ /* Button with CSS only */ 
+li
+ {
+	list-style: none;
+	float:left;
+	font-size: 2px;
+	color: #FFF;
+	text-indent: -9999;
+}
+.nv1
+{
+	background: url(images/gnavi-1.png);
+	height:59px;
+	width:125px;
+	display:block;
+}
+
+.nv1:hover
+{
+     background-position:0px 59px;
+}
+.nv2
+{
+	background: url(images/gnavi-2.png);
+	height:59px;
+	width:171px;
+	display:block;
+}
+.nv2:hover
+{
+     background-position:0px 59px;
+}
+.nv3
+{
+	background: url(images/gnavi-3.png);
+	height:59px;
+	width:152px;
+	display:block;
+}
+.nv3:hover
+{
+     background-position:0px 59px;
+}
+.nv4
+{
+	background: url(images/gnavi-4.png);
+	height:59px;
+	width:101px;
+	display:block;
+}
+.nv4:hover
+{
+     background-position:0px 59px;
+}
+.nv5
+{
+	background: url(images/gnavi-5.png);
+	height:59px;
+	width:113px;
+	display:block;
+}
+.nv5:hover
+{
+     background-position:0px 59px;
+}
+.nv6
+{
+	background: url(images/gnavi-6.png);
+	height:59px;
+	width:140px;
+	display:block;
+}
+.nv6:hover
+{
+     background-position:0px 59px;
+}
+
+
+
+.nv7
+{
+	background: url(images/00_29.gif);
+	height:21px;
+	width:196px;
+	display:block;
+}
+.nv7:hover
+{
+     background-position:0px 21px;
+}

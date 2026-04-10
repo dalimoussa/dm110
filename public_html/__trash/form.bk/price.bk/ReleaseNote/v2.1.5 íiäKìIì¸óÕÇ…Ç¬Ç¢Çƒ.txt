@@ -1,0 +1,23 @@
+段階的入力機能について
+
+詳細はexample_phase_input.htmlのソースをご覧ください。
+面倒なので細かい説明は省きます。
+あとはフィーリングで感じ取ってください。
+
+<div id="mfp_phase_1" class="mfp_phase_section">
+	<h4 id="mfp_phase_1_title" class="mfp_phase_title">タイトル1</h4>
+	<input type="button" value="次へ進む &gt;" onclick="mfp_phase_change(1,2);" />
+</div>
+
+<div id="mfp_phase_2" class="mfp_phase_section">
+	<h4 id="mfp_phase_2_title" class="mfp_phase_title">タイトル2</h4>
+	<input type="button" value="&lt; 前へ戻る" onclick="mfp_phase_change(2,1);" />
+	<input type="button" value="次へ進む &gt;" onclick="mfp_phase_change(2,3);" />
+</div>
+
+
+関数の解説
+	mfp_phase_change(x,y);
+		x番目からy番目に切り替えるってこと。
+		mfp_phase_change(1,2);
+		の場合だと1番目の入力カラムから2番目の入力カラムに変更ってことね。

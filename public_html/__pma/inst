@@ -1,0 +1,28 @@
+user=$1
+pass=$2
+dir=$3
+enc_flg=$4
+host=$5
+date=`date +"%Y%m%d%I%M%S"`
+
+mv -f $dir/config.inc.php $dir/config.inc.php.$date
+rm -f $dir/config.inc.php
+echo "<?php" >> $dir/config.inc.php
+echo "\$cfg['blowfish_secret'] =        'phpmyadmin_$user';" >> $dir/config.inc.php
+if [ $enc_flg -eq 1 ]; then
+    echo "\$cfg['DefaultLang'] =            'euc-jp';" >> $dir/config.inc.php
+    echo "\$cfg['DefaultCharset'] =     'euc-jp';" >> $dir/config.inc.php
+    echo "\$cfg['AllowAnywhereRecoding'] =      TRUE;" >> $dir/config.inc.php
+fi
+echo "\$i = 0;" >> $dir/config.inc.php
+echo "\$i++;" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['auth_type'] =  'cookie';" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['host'] =       '$host';" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['connect_type'] =   'tcp';" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['compress'] =   false;" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['extension'] =  'mysqli';" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['controluser'] =    '$user';" >> $dir/config.inc.php
+echo "\$cfg['Servers'][\$i]['controlpass'] =    '$pass';" >> $dir/config.inc.php
+echo "?>" >> $dir/config.inc.php
+rm $dir/inst
+

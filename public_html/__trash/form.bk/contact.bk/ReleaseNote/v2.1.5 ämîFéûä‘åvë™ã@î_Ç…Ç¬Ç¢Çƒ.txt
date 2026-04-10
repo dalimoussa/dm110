@@ -1,0 +1,10 @@
+確認時間計測機能について
+
+※ 確認時間計測機能は標準ではONです ※
+
+確認画面が表示された秒数を計測する機能です。
+
+Mailform Pro 2.1.4以前のバージョンから、バージョンアップをする場合は、
+以下のタグを<form>～</form>内に追加してください。
+
+<input type="hidden" name="confirm_time" id="confirm_time" value="0" />

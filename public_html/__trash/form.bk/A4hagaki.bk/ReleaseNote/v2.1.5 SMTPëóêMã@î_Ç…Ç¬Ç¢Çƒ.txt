@@ -1,0 +1,17 @@
+SMTP送信機能について
+
+※ SMTP送信機能は標準ではOFFです ※
+
+SMTP送信機能はsendmailやpostfixを使わずNet:SMTPを使って
+メールを送信するための機能です。sendmailが利用できない場合にご利用ください。
+SMTP送信機能を利用するためには以下の方法で有効にしてください。
+
+01.config.cgi内の「$config{'SMTPserver'}」の行頭コメントアウトを外してください。
+02.$config{'SMTPserver'}にSMTPサーバを設定してください。
+
+※ POP before SMTPを利用する場合 ※
+01.config.cgi内の「$config{'POPserver'}」の行頭コメントアウトを外してください。
+02.config.cgi内の「$config{'POPuser'}」の行頭コメントアウトを外してください。
+03.config.cgi内の「$config{'POPpasswd'}」の行頭コメントアウトを外してください。
+04.POPサーバの各設定を行って下さい。
+05.完了

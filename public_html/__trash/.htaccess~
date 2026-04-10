@@ -1,0 +1,67 @@
+<IfDefine DEVELOPMENT>
+</IfDefine>
+
+<IfDefine !DEVELOPMENT>
+
+	Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+
+	AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/javascript text/javascript application/font-woff application/vnd.ms-fontobject
+	
+
+	#フォントのcontent-typeの追加
+	AddType application/vnd.ms-fontobject .eot
+	AddType application/x-font-ttf .ttf
+	AddType application/x-font-opentype .otf
+	AddType application/x-font-woff .woff
+	AddType image/svg+xml .svg
+
+	#圧縮の設定
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+
+	#フォント
+	AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+	ExpiresActive On
+	ExpiresByType text/css "access plus 15 days"
+	ExpiresByType image/gif "access plus 10 days"
+	ExpiresByType image/jpg "access plus 10 days"
+	ExpiresByType image/jpeg "access plus 10 days"
+	ExpiresByType image/png "access plus 10 days"
+	ExpiresByType application/x-javascript "access plus 10 days"
+	ExpiresByType text/x-javascript "access plus 1 month"
+	ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType application/x-javascript "access plus 1 month"
+	ExpiresByType text/js "access plus 1 month"
+	ExpiresByType text/javascript "access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+
+	Options +FollowSymLinks
+
+	RewriteEngine on
+	RewriteBase /
+	RewriteRule ^koe$ http://www.dm110.jp/koe.htm [R=301,L]
+
+	RewriteRule ^koe/$ http://www.dm110.jp/koe.htm [R=301,L]
+
+	RewriteRule ^okyaku_koe_FAX150.htm$ http://www.dm110.jp/koe.htm [R=301,L]
+
+	RewriteCond %{THE_REQUEST} ^.*/index.html
+	RewriteRule ^(.*)index.html$ http://www.dm110.jp/$1 [R=301,L]
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine on
+		RewriteCond %{HTTPS} off
+		RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+	</IfModule>
+
+	AddHandler server-parsed html htm
+</IfDefine>
