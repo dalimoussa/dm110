@@ -1,0 +1,819 @@
+@charset "utf-8";
+/* ============================================================ */
+/* .contents */
+/* ============================================================ */
+.contents {
+	overflow: hidden;
+	margin: 0 0 70px;
+	
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		max-width: 1000px;
+		margin: 0 auto;
+	}	
+	
+}
+
+
+/* ============================================================ */
+/* 汎用スタイル */
+/* ============================================================ */
+
+/* --------------------------------------------------- */
+/* テキスト */
+/* --------------------------------------------------- */
+p {
+	margin-bottom: 15px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.indent {
+	display: table;
+	
+	& > *:first-child {
+		display: table-cell;
+		white-space: nowrap;
+	}
+}
+
+.txt-red {
+	color: $red;
+	font-weight: bold;
+}
+
+
+/* --------------------------------------------------- */
+/* 見出し */
+/* --------------------------------------------------- */
+.ttl01 {
+}
+
+.ttl02 {
+	text-align: center;
+	margin: 0 0 30px;
+	font-size: 3.6rem;
+	line-height: 1.4;
+	font-weight: bold;
+	
+	&__txt {
+		display: block;
+	}
+	
+	&__sub {
+		font-size: $xxl !important;
+		display: block;
+		line-height: 1.8;
+	}
+}
+
+.ttl03 {
+	margin: 0 auto 30px;
+	text-align: center;
+	display: table;
+	position: relative;
+	color: #002060;
+	font-weight: bold;
+	font-size: 3.0rem;
+	line-height: 1.4;
+	
+	&__txt {
+		font-size: $l;
+		color: $textColor;
+		font-weight: 400;
+		display: block;
+	}
+}
+
+.ttl04 {
+	margin: 0 0 20px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid $borderColor;
+	color: $baseColor;
+	font-size: $xxxl;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.4;
+	
+	&__txt {
+		font-size: $xl;
+	}
+}
+
+.ttl05 {
+	margin: 0 0 20px;
+	padding: 0 0 3px 15px;
+	border-left: 3px solid $baseColor;
+	font-size: $l;
+	font-weight: bold;
+	line-height: 1.4;
+	text-align: left;
+}
+
+.ttl06 {
+	margin: 0 0 15px;
+	color: $baseColor;
+	font-size: $m;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.ttl07 {
+	margin: 0 auto 20px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid $borderColor;
+	text-align: left;
+	color: $baseColor;
+	font-weight: bold;
+	font-size: 3.0rem;
+	line-height: 1.4;
+}
+
+
+/* --------------------------------------------------- */
+/* カラム制御 */
+/* --------------------------------------------------- */
+
+/* 複数カラム
+/* --------------------------------------------------- */
+.column {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column > * {
+	margin-bottom: 15px;
+
+	* {
+		max-width: 100%;
+	}
+
+	img {
+		outline: 1px solid transparent;
+		
+		&:not([class*="wd-a"]) {
+			width: 100%;
+		}
+	}
+}
+
+.column1 {
+	&> * {
+		width: 100%;
+	}
+}
+
+.column2 {
+	 margin-left: -5px;
+	 margin-right: -5px;
+
+	 &> * {
+		 margin-left: 5px;
+		 margin-right: 5px;
+		 width: calc((100% - 21px) / 2 );
+	 }
+ }
+
+.column3 {
+	margin-left: -10px;
+	margin-right: -10px;
+
+	&> * {
+		margin-left: 10px;
+		margin-right: 10px;
+		width: calc((100% - 61px) / 3);
+	}
+}
+
+.column4 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 23%;
+	}
+}
+
+.column5 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 18%;
+	}
+}
+
+.column6 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 14.6%;
+	}
+}
+
+
+/* 幅指定カラム
+------------------------------------------------------------ */
+.flex-column {
+	display: flex;
+	justify-content: space-between;
+
+	&> * {
+		flex: 0 0 auto;
+
+		* {
+			max-width: 100%;
+		}
+
+	}
+}
+
+
+/* 画像回り込みカラム
+------------------------------------------------------------ */
+.float {
+
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	&--left {
+		.float__item {
+			float: left;
+			margin: 0 20px 20px 0;
+			max-width: 50%;
+
+			* {
+				width: 100%;
+			}
+		}
+	}
+
+	&--right {
+		.float__item {
+			float: right;
+			margin: 0 0 20px 20px;
+			max-width: 50%;
+
+			* {
+				width: 100%;
+			}
+
+		}
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* リスト */
+/* --------------------------------------------------- */
+.list {
+	list-style-type: none;
+
+	& > * {
+		position: relative;
+		padding-left: 15px;
+		margin-bottom: 5px;
+
+		&::before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			display: block;
+			position: absolute;
+			top: 0.7em;
+			left: 0;
+		}
+	}
+
+	&--circle {
+		& > * {
+			&::before {
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+			}
+		}
+	}
+	
+	&--black {
+		& > * {
+			&::before {
+				background: $textColor;
+			}
+		}
+	}
+
+	&--blue {
+		& > * {
+			&::before {
+				background: $baseColor;
+			}
+		}
+	}
+
+	&--decimal {
+		list-style: decimal outside;
+		margin: 0 0 15px 20px;
+		& > * {
+			padding-left: 0;
+		}
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* box */
+/* --------------------------------------------------- */
+.box {
+	padding: 18px 25px;
+	box-sizing: border-box;
+
+	&--white {
+		background: $white;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+		padding: 0 0 50px;
+	}
+	
+	&--blue {
+		background: #daebfd;
+		
+		.ttl04 {
+			border-bottom: none;
+			padding: 0;
+			font-size: $xxl;
+		}
+	}
+	
+	&--yellow {
+		background: #fbfce4;
+		border: 1px solid #e3e5b8;
+	}
+
+	&--gray {
+		background: #f6f6f6;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+	}
+
+	&--border-gray {
+		border: 1px solid $borderColor;
+	}
+	
+	&--bg-white {
+		background: $white;
+	}
+	
+	&--red {
+		background: #fff0f1;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* iframe */
+/* --------------------------------------------------- */
+.iframe {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+
+	& > iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* table */
+/* --------------------------------------------------- */
+.table {
+	width: 100%;
+	
+	th,
+	td {
+		padding: 10px 15px;
+		background: $white;
+		border: 1px solid $borderColor;
+		font-size: $m;
+		text-align: left;
+		vertical-align: middle;
+		line-height: 1.6;
+	}
+	.bg-blue {
+		background: $baseColor;
+		color: $white;
+	}
+	.bg-gray {
+		background: #f3f3f3;
+	}
+	.error {
+		background: #fde9e9;
+		color: #dd0000;
+	}	
+}
+
+.table--center {
+	th,
+	td {
+		text-align: center;
+	}
+}
+
+.table--thin {
+	th,
+	td {
+		padding: 5px 10px;
+		line-height: 1.4;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* btn */
+/* --------------------------------------------------- */
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 150px;
+	height: 80px;
+	margin: 0 5px;
+	padding: 0 30px;
+	color: $white;
+	font-size: 2.6rem;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1.4;
+	cursor: pointer;
+	transition: 0.3s all;
+	@include radius(3);
+	font-weight: 500;
+	
+	&__txt {
+		display: block;
+		
+		&__inner {
+			display: block;
+			font-size: $m;
+			font-weight: 300;
+		}
+	}
+
+	.icon-fix-left,
+	.icon-fix-right {
+		@include centering-elements(false, true);
+	}
+	.icon-fix-left { left: 10px; }
+	.icon-fix-right { right: 10px; }
+	
+	&:hover {
+		opacity: 0.7;
+		text-decoration: none;
+	}
+	
+	&--blue {
+		background: linear-gradient(#1a6fc7, #0153a7);
+	}
+	&--red {
+		background: linear-gradient(#cf1919, #af0a0a);
+	}
+	&--orange {
+		background: linear-gradient(#ff8d1e, #fd6500);
+	}
+	&--black {
+		background: $textColor;
+	}
+	&--lg {
+		min-width: 450px;
+		height: 130px;
+	}
+	&--sm {
+		min-width: inherit;
+		height: 40px;
+	}
+}
+
+button,
+input[type="button"].btn,
+input[type="submit"].btn {
+	appearance: none;
+}
+
+
+/* --------------------------------------------------- */
+/* pager */
+/* --------------------------------------------------- */
+.pager {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px 0 0;
+	
+	li {
+		margin: 0 3px 5px;
+
+		& > * {
+			display: block;
+			padding: 10px 15px;
+			background: #f3f3f3;
+			border: 1px solid #d5d5d5;
+			color: $textColor;
+			text-decoration: none;
+			@include radius(3);
+			
+			&.current,
+			&:hover {
+				background: $baseColor;
+				border: 1px solid $baseColor;
+				color: $white;
+				opacity: 1;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	&__prev {
+		position: absolute;
+		left: 0;
+	}
+	&__next {
+		position: absolute;
+		right: 0;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* accordion */
+/* --------------------------------------------------- */
+.accordion {
+	position: relative;
+	padding: 10px 30px 10px 10px;
+	background: #f3f3f3;
+	border: 1px solid #d5d5d5;
+	cursor: pointer;
+	line-height: 1.6;
+	@include radius(3);
+	
+	&__icon {
+		right: 10px;
+		color: $baseColor;
+		@include centering-elements(false, true);
+	}
+	&.active {
+		.accordion__icon::before {
+			display: block;
+			transform: rotate(180deg);
+		}
+	}
+}
+.accordion-hide {
+	display: none;
+	padding: 15px 0 0;
+}
+
+
+/* --------------------------------------------------- */
+/* form */
+/* --------------------------------------------------- */
+.label-must {
+	right: 10px;
+	padding: 2px 10px;
+	background: $baseColor;
+	color: $white;
+	font-size: $xxs;
+	@include centering-elements(false, true);
+}
+
+.error-block {
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	appearance: none;
+	height: 40px;
+	padding: 0 10px;
+	border: 1px solid #d2d2d2;
+	color: $textColor;
+	font-size: $m;
+	@include radius(0);
+}
+
+textarea {
+	appearance: none;
+	padding: 5px 10px;
+	width: 100%;
+	height: 200px;
+	border: 1px solid #d2d2d2;
+	color: $textColor;
+	@include radius(0);
+}
+
+select {
+	height: 40px;
+	padding: 0 0 0 10px;
+	background: $white;
+	border: 1px solid #d2d2d2;
+}
+
+
+/* radio
+----------------------------------------------------------- */
+.radio {
+	cursor: pointer;
+	
+	input[type="radio"] {
+		display: none;
+	}
+	input[type="radio"] + span {
+		position: relative;
+		display: block;
+		padding: 0 0 0 25px;
+		color: $textColor;
+		
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			content: '';
+			transform: translateY(-50%);
+		}
+		&::before {
+			left: 0;
+			background: #fff;
+			border: 2px solid darken($borderColor, 5%);
+			@include circle(14);
+		}
+		&::after {
+			left: 5px;
+			background: $baseColor;
+			@include circle(8);
+			opacity: 0;
+		}
+	}
+
+	input[type="radio"]:checked + span {
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+
+/* checkbox
+----------------------------------------------------------- */
+.checkbox {
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	input[type="checkbox"] + span {
+		position: relative;
+		padding: 0 0 0 22px;
+		color: $textColor;
+		cursor: pointer;
+		
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&::before {
+			left: 0;
+			content: '';
+			width: 12px;
+			height: 12px;
+			background: #fff;
+			border: 2px solid darken($borderColor, 5%);
+		}
+		&::after {
+			left: 1px;
+			content: "\f00c";
+			color: $baseColor;
+			font-family: 'icomoon';
+			font-size: $m;
+			opacity: 0;
+		}
+	}
+	input[type="checkbox"]:checked + span {
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+
+/* .contact-block__inner
+----------------------------------------------------------- */
+.contact-block__inner {
+	margin: 0 40px 0;
+	padding: 30px 40px;
+	background: $white;
+	@include radius(3);
+	
+	&__ttl {
+		margin: 0 0 25px;
+		text-align: center;
+		@include radius(3);
+		font-size: $xxxl;
+		font-weight: 400;
+		line-height: 1.4;
+		
+		&__big {
+			font-size: 3.3rem;
+			font-weight: 700;
+		}
+		
+		&__blue {
+			color: #1a68ba;
+		}
+	}
+	
+	&__form {
+		margin-left: -10px;
+    margin-right: -10px;
+		
+		&__btn {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: calc((100% - 41px)/ 2);
+			
+			.btn {
+				width: 100%;
+				height: 110px;
+				padding: 0;
+				margin-left: 0;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+				
+				&__txt {
+					width: 100%;
+					font-size: 3.0rem;
+					
+					&__inner {
+						font-size: $xxl;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+		
+		&__tel {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: calc((100% - 41px)/ 2);
+			
+			&__ttl {
+				background: #cf1817;
+				color: $white;
+				text-align: center;
+				font-size: $l;
+			}
+			
+			&__txt {
+				text-align: center;
+				
+				&__phone {
+					font-size: 4.2rem;
+					font-weight: 700;
+					line-height: 1.0;
+				}
+				
+				.tel > * {
+					color: $textColor;
+					text-decoration: none;
+				}
+			}
+			
+			.icon-phone {
+				color: #cf1817;
+				font-size: 3.6rem;
+			}
+		}
+
+	}
+	
+}
+
+

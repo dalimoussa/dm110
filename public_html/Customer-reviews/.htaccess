@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME}\.php !-f
+RewriteRule  ^([0-9]*)/([0-9]*)/$  index.php?s=$1&p=$2 [L]
+RewriteRule  ^([0-9]*)/$  index.php?p=$1 [L]
+

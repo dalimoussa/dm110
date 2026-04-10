@@ -1,0 +1,990 @@
+@charset "utf-8";
+/* ============================================================ */
+/* .contents */
+/* ============================================================ */
+.contents {
+	margin: 15px 0 35px;
+	overflow: hidden;
+	
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		margin: 0 15px;
+	}
+}
+
+
+/* ============================================================ */
+/* 汎用スタイル */
+/* ============================================================ */
+
+/* --------------------------------------------------- */
+/* テキスト */
+/* --------------------------------------------------- */
+p {
+	margin-bottom: 20px;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.indent {
+	display: table;
+	
+	& > *:first-child {
+		display: table-cell;
+		white-space: nowrap;
+	}
+}
+
+.txt-red {
+	color: $red;
+	font-weight: bold;
+}
+
+
+/* --------------------------------------------------- */
+/* 見出し */
+/* --------------------------------------------------- */
+.ttl01 {
+}
+
+.ttl02 {
+	text-align: center;
+	margin: 0 0 20px;
+	font-size: $xxl;
+	line-height: 1.4;
+	font-weight: bold;
+	
+	&__txt {
+		display: block;
+	}
+	
+	&__sub {
+		font-size: $s !important;
+		display: block;
+		line-height: 1.8;
+	}
+}
+
+.ttl03 {
+	margin: 0 auto 20px;
+	text-align: center;
+	display: table;
+	position: relative;
+	color: #002060;
+	font-weight: bold;
+	font-size: $xl;
+	line-height: 1.4;
+
+	&__txt {
+		font-size: $m;
+		color: $textColor;
+		font-weight: 400;
+		display: block;
+	}
+}
+
+.ttl04 {
+	margin: 0 0 15px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid $borderColor;
+	color: $baseColor;
+	font-size: $l;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.4;
+	
+	&__txt {
+		font-size: $s;
+	}
+}
+
+.ttl05 {
+	margin: 0 0 15px;
+	padding: 0 0 2px 10px;
+	border-left: 3px solid $baseColor;
+	font-size: $m;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.ttl06 {
+	margin: 0 0 15px;
+	color: $baseColor;
+	font-size: $s;
+	font-weight: bold;
+	line-height: 1.4;
+}
+
+.ttl07 {
+	margin: 0 auto 20px;
+	padding: 0 0 10px;
+	border-bottom: 1px solid $borderColor;
+	text-align: left;
+	color: $baseColor;
+	font-weight: bold;
+	font-size: $xl;
+	line-height: 1.4;
+}
+
+
+/* --------------------------------------------------- */
+/* カラム制御 */
+/* --------------------------------------------------- */
+
+/* 複数カラム
+/* --------------------------------------------------- */
+.column {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.column > * {
+	margin-bottom: 15px;
+
+	* {
+		max-width: 100%;
+	}
+
+	img {
+		outline: 1px solid transparent;
+		
+		&:not([class*="wd-a"]) {
+			width: 100%;
+		}
+	}
+}
+
+.column1 {
+	&> * {
+		width: 100%;
+	}
+}
+
+.column2 {
+	margin-left: -1.5%;
+	margin-right: -1.5%;
+
+	&> * {
+		margin-left: 1.5%;
+		margin-right: 1.5%;
+		width: 47%;
+	}
+}
+
+.column3,
+.column6 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 31%;
+	}
+}
+
+.column4 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 23%;
+	}
+}
+
+.column5 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 18%;
+	}
+}
+
+.sp-column1 {
+	margin-left: 0;
+	margin-right: 0;
+
+	&> * {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+}
+
+.sp-column2 {
+	margin-left: -1.5%;
+	margin-right: -1.5%;
+
+	&> * {
+		margin-left: 1.5%;
+		margin-right: 1.5%;
+		width: 47%;
+	}
+}
+
+.sp-column3 {
+	margin-left: -1%;
+	margin-right: -1%;
+
+	&> * {
+		margin-left: 1%;
+		margin-right: 1%;
+		width: 31%;
+	}
+}
+
+
+
+/* 幅指定カラム
+------------------------------------------------------------ */
+.flex-column {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&> * {
+		flex: 0 0 auto;
+		width: 100%;
+		
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		* {
+			max-width: 100%;
+		}
+
+	}
+}
+
+
+/* 画像回り込みカラム
+------------------------------------------------------------ */
+.float {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	&--left {
+		.float__item {
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+			margin: 0 0 10px;
+
+			* {
+				max-width: 100%;
+			}
+		}
+	}
+
+
+	&--right {
+		.float__item {
+			max-width: 100%;
+			width: 100%;
+			text-align: center;
+			margin: 0 0 10px;
+
+			* {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+
+.sp-float.float {
+
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+
+	&--left {
+		.float__item {
+			float: left;
+			margin: 0 20px 20px 0;
+			text-align: center;
+			max-width: 50%;
+
+			* {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&--right {
+		.float__item {
+			float: right;
+			margin: 0 0 20px 20px;
+			text-align: center;
+			max-width: 50%;
+
+			* {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* リスト */
+/* --------------------------------------------------- */
+.list {
+	list-style-type: none;
+
+	& > * {
+		position: relative;
+		padding-left: 20px;
+		margin-bottom: 5px;
+
+		&::before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			display: block;
+			position: absolute;
+			top: 0.7em;
+			left: 5px;
+		}
+	}
+
+	&--circle {
+		& > * {
+			&::before {
+				width: 6px;
+				height: 6px;
+				border-radius: 100%;
+			}
+		}
+	}
+
+	&--black {
+		& > * {
+			&::before {
+				background: $textColor;
+			}
+		}
+	}
+
+	&--blue {
+		& > * {
+			&::before {
+				background: $baseColor;
+			}
+		}
+	}
+
+	&--decimal {
+		list-style: decimal outside;
+		margin: 0 0 15px 20px;
+		
+		& > * {
+			padding-left: 0;
+		}
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* box */
+/* --------------------------------------------------- */
+.box {
+	padding: 13px 10px;
+	background: #fff;
+
+	&--white {
+		background: $white;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+		padding: 0 0 25px;
+	}
+	
+	&--blue {
+		background: #daebfd;
+		
+		.ttl04 {
+			border-bottom: none;
+			padding: 0;
+		}
+	}
+
+	&--yellow {
+		background: #fbfce4;
+		border: 1px solid #e3e5b8;
+	}
+	
+	&--gray {
+		background: #f6f6f6;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+	}
+
+	&--border-gray {
+		border: 1px solid $borderColor;
+	}
+	
+	&--red {
+		background: #fff0f1;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* iframe */
+/* --------------------------------------------------- */
+.iframe {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+
+	& > iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* table */
+/* --------------------------------------------------- */
+.table {
+	width: 100%;
+	border: 1px solid $borderColor;
+	table-layout: fixed;
+	font-size: $s;
+	line-height: 1.6;
+	word-break: break-all;
+	word-wrap: break-word;
+
+	th,
+	td {
+		padding: 10px;
+		background: #fff;
+		border: 1px solid #d5d5d5;
+		text-align: left;
+		vertical-align: middle;
+	}
+	.bg-blue {
+		background: $baseColor;
+		color: $white;
+	}
+	.bg-gray {
+		background: #f3f3f3;
+	}
+	.error {
+		background: #fde9e9;
+		color: #dd0000;
+	}	
+	
+	
+	&--sp-column1 {
+		display: block;
+		
+		thead,
+		tbody {
+			display: block;
+		}
+		tr {
+			display: block;
+			&:first-child th {
+				border-top: none;
+			}
+		}
+		th,
+		td {
+			display: block;
+			padding: 15px;
+			border-left: none;
+			border-right: none;
+			border-bottom: none;
+		}
+	}
+	
+	&--wide {
+		border: none;
+		display: block;
+
+		th,
+		td {
+			display: block;
+			padding: 5px 8px;
+			border-bottom-width: 0;
+			border-right-width: 0;
+			text-align: center;
+		}
+		th{  
+			width: auto;
+			text-align: left;
+		}
+		thead {
+			display: block;
+			float: left;
+			overflow-x: scroll;
+		}
+		tbody {
+			display: block;
+			width: auto;
+			overflow-x: auto;
+			white-space: nowrap;
+
+			tr { 
+				display: inline-block; 
+				margin: 0 -3px;
+
+				&:last-child {
+					th,
+					td {
+						border-right-width: 1px;
+					}
+				}
+			}
+		}
+		thead th:last-child,
+		tbody td:last-child {
+			border-bottom-width: 1px;
+		}
+	}
+	
+	&--list {
+		border: none;
+
+		tr {
+			display:block;
+			margin: 0 0 20px;
+		}
+		th {
+			display: block;
+		}
+		td {
+			display: list-item;
+			margin: 0 0 0 20px;
+			padding: 5px 0 0;
+			border: none;
+			background: none;
+		}
+	}
+	
+}
+
+
+/* --------------------------------------------------- */
+/* btn */
+/* --------------------------------------------------- */
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 150px;
+	height: 60px;
+	margin: 5px 0;
+	padding: 0 15px;
+	color: $white;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1.4;
+	@include radius(3);
+	font-size: 1.7rem;
+	font-weight: 500;
+	
+	@media screen and (min-width: 440px) and (max-width: 768px) {
+		height: 80px;
+	}
+	
+	&__txt {
+		display: block;
+		
+		&__inner {
+			display: block;
+			font-size: $s;
+			font-weight: 300;
+		}
+	}
+	
+	.icon-fix-left,
+	.icon-fix-right {
+		@include centering-elements(false, true);
+	}
+	.icon-fix-left { left: 10px; }
+	.icon-fix-right { right: 10px; }
+	
+	&--blue {
+		background: linear-gradient(#1a6fc7, #0153a7);
+	}
+	&--red {
+		background: linear-gradient(#cf1919, #af0a0a);
+	}
+	&--orange {
+		background: linear-gradient(#ff8d1e, #fd6500);
+	}
+	&--black {
+		background: $textColor;
+	}
+	&--lg {
+		width: 100%;
+		height: 70px;
+
+		@media screen and (min-width: 440px) and (max-width: 768px) {
+			height: 100px;
+		}
+	}
+	&--sm {
+		display: inline-flex;
+		min-width: 0;
+		min-height: 35px;
+		padding: 0 20px;
+		font-size: $xxs;
+	}
+}
+
+button,
+input[type="button"].btn,
+input[type="submit"].btn {
+	appearance: none;
+}
+
+
+/* --------------------------------------------------- */
+/* pager */
+/* --------------------------------------------------- */
+.pager {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 30px 0 0;
+	
+	li {
+		margin: 0 3px 10px;
+
+		& > * {
+			display: block;
+			padding: 5px 12px;
+			background: #f3f3f3;
+			border: 1px solid #d5d5d5;
+			color: $textColor;
+			text-decoration: none;
+			@include radius(3);
+			
+			&.current {
+				background: $baseColor;
+				border: 1px solid $baseColor;
+				color: #fff;
+				opacity: 1;
+			}
+		}
+	}
+	
+	&__prev {
+		position: absolute;
+		left: 0;
+	}
+	&__next {
+		position: absolute;
+		right: 0;
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* accordion */
+/* --------------------------------------------------- */
+.accordion,
+.sp-accordion {
+	position: relative;
+	padding: 10px 30px 10px 10px;
+	background: #f3f3f3;
+	border: 1px solid #d5d5d5;
+	cursor: pointer;
+	line-height: 1.6;
+	@include radius(3);
+	
+	&__icon {
+		right: 10px;
+		color: $baseColor;
+		font-size: $xxs;
+		@include centering-elements(false, true);
+	}
+	&.active {
+		.accordion__icon::before {
+			display: block;
+			transform: rotate(180deg);
+		}
+	}
+}
+.accordion-hide {
+	display: none;
+	padding: 15px 0 0;
+}
+
+
+/* --------------------------------------------------- */
+/* form */
+/* --------------------------------------------------- */
+.label-must {
+	right: 0;
+	padding: 2px 10px;
+	background: $baseColor;
+	color: $white;
+	font-size: $xxs;
+	@include centering-elements(false, true);
+}
+
+.error-block {
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+	color: $textColor;
+	font-size: 16px;
+}
+
+input[type="text"] {
+	appearance: none;
+	height: 40px;
+	padding: 0 10px;
+	border: 1px solid #d2d2d2;
+	@include radius(0);
+}
+
+textarea {
+	appearance: none;
+	padding: 5px 10px;
+	width: 100%;
+	height: 200px;
+	border: 1px solid #d2d2d2;
+	@include radius(0);
+}
+
+select {
+	height: 40px;
+	padding: 0 0 0 10px;
+	background: $white;
+	border: 1px solid #d2d2d2;
+}
+
+
+/* radio
+----------------------------------------------------------- */
+.radio {
+	cursor: pointer;
+	
+	input[type="radio"] {
+		display: none;
+	}
+	input[type="radio"] + span {
+		position: relative;
+		display: block;
+		padding: 0 0 0 25px;
+		color: $textColor;
+		
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			content: '';
+			transform: translateY(-50%);
+		}
+		&::before {
+			left: 0;
+			background: #fff;
+			border: 2px solid darken($borderColor, 5%);
+			@include circle(14);
+		}
+		&::after {
+			left: 5px;
+			background: $baseColor;
+			@include circle(8);
+			opacity: 0;
+		}
+	}
+
+	input[type="radio"]:checked + span {
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+
+/* checkbox
+----------------------------------------------------------- */
+.checkbox {
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	input[type="checkbox"] + span {
+		position: relative;
+		padding: 0 0 0 22px;
+		color: $textColor;
+		cursor: pointer;
+		
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&::before {
+			left: 0;
+			content: '';
+			width: 12px;
+			height: 12px;
+			background: #fff;
+			border: 2px solid darken($borderColor, 5%);
+		}
+		&::after {
+			left: 1px;
+			content: "\f00c";
+			color: $baseColor;
+			font-family: 'icomoon';
+			font-size: $m;
+			opacity: 0;
+		}
+	}
+	input[type="checkbox"]:checked + span {
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+/* --------------------------------------------------- */
+/* label */
+/* --------------------------------------------------- */
+.label {
+	width: 45px;
+	padding: 2px 0;
+	background: $baseColor;
+	color: #fff;
+	font-size: $xxxs;
+	text-align: center;
+}
+
+
+/* --------------------------------------------------- */
+/* contact-block__inner */
+/* --------------------------------------------------- */
+.contact-block__inner {
+	margin: 0 15px 0;
+	padding: 15px;
+	background: $white;
+	@include radius(3);
+	
+	&__ttl {
+		margin: 0 0 10px;
+		text-align: center;
+		@include radius(3);
+		font-size: $m;
+		font-weight: 500;
+		line-height: 1.4;
+		
+		&__big {
+			font-size: $l;
+			font-weight: 700;
+		}
+		
+		&__blue {
+			color: $baseColor;
+		}
+	}
+	
+	&__form {
+		
+		&__btn {
+			
+			.btn {
+				width: 100%;
+				height: 90px;
+				padding: 0;
+				margin-left: 0;
+				box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+				
+				@media screen and (min-width: 440px) and (max-width: 768px) {
+					height: 130px;
+					
+					br {
+						display: none;
+					}
+				}
+				
+				&__txt {
+					width: 100%;
+					font-size: $xl;
+					
+					&__inner {
+						font-size: $s;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+		
+		&__tel {
+			
+			&__ttl {
+				background: #cf1817;
+				color: $white;
+				text-align: center;
+				margin: 0 0 5px;
+				padding: 5px;
+				line-height: 1.4;
+			}
+			
+			&__txt {
+				text-align: center;
+				
+				&__phone {
+					font-size: 3.0rem;
+					font-weight: 700;
+					line-height: 1.0;
+				}
+				
+				.tel > * {
+					color: $textColor;
+				}
+			}
+			
+			.icon-phone {
+				color: #cf1817;
+				font-size: 2.8rem;
+			}
+		}
+
+	}
+	
+	
+}
+
+
+
+
+
+

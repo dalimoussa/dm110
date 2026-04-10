@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+#estimate #openProfiler {
+	display: none;
+}
+
+#estimate > img {
+	display: none;
+}
+
+#estimate #main h1 {
+	padding: 10px 0;
+	border: 1px solid #12389b;
+	box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .2), inset -1px -1px 0 rgba(255, 255, 255, .2);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #062d91), color-stop(0.50, #153da5), color-stop(0.49, #264ebc));
+	background: -webkit-linear-gradient(top, #264ebc 49%, #153da5 50%, #062d91 100%);
+	background: -moz-linear-gradient(top, #264ebc 49%, #153da5 50%, #062d91 100%);
+	background: -o-linear-gradient(top, #264ebc 49%, #153da5 50%, #062d91 100%);
+	background: linear-gradient(to bottom, #264ebc 49%, #153da5 50%, #062d91 100%);
+	color: #fff;
+	font-size: 1.6rem;
+	text-align: center;
+}
+
+
+/* #main-image1
+-------------------------------------------------------------*/
+#estimate #main-image1 {
+	margin: -15px 0 10px;
+}
+
+
+/* #main-contents3
+-------------------------------------------------------------*/
+#estimate #main-contents3 {
+	margin: 15px 0 0;
+}
+
+
+/* h3
+-------------------------------------------------------------*/
+#estimate .midashi01 {
+	background: #317cc8;
+	padding: 10px;
+	margin: 0 0 20px 0;
+}
+
+#estimate .midashi01 span  {
+	font-weight: bold;
+	color: #fff;
+	font-size: 120%;
+}
+
+
+
+/* .con_tel
+-------------------------------------------------------------*/
+#estimate .con_tel {
+	background: #e1f0fb;
+	border: 2px solid #bddff8;
+	margin: 20px 0;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#estimate .con_tel p {
+	margin: 0;
+}
+
+#estimate p span {
+	font-weight: bold;
+}
+
+#estimate .con_tel .txt_tel,
+#estimate .con_tel .txt_tel a {
+	font-size: 2.0rem;
+	color: #be352b;
+}
+
+
+
+/* .con_pro
+-------------------------------------------------------------*/
+#estimate .con_pro {
+	margin: 0 0 15px 0;
+}
+
+
+/* .con_form
+-------------------------------------------------------------*/
+#estimate .con_form h2 {
+	margin: 0 0 20px 0;
+}
+
+#estimate .con_form table {
+	width: 100%;
+}
+
+#estimate .con_form table th,
+#estimate .con_form table td {
+	display: block;
+	width: 100%;
+	border-top: none;
+	box-sizing: border-box;
+	padding: 10px 5px 10px 10px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+
+#estimate .con_form table tr:first-child th:first-child {
+	border-top: 1px solid #ddd;
+}
+
+
+#estimate .con_form table th {
+	padding: 5px 10px;
+	background: #d4ebfc;
+}
+
+#estimate .con_form table th span {
+	color: #be352b;
+}
+
+#estimate .con_form table th span.note {
+	display: block;
+	margin: 5px 0 0;
+	color: #333;
+	font-size: 80%;
+	font-weight: normal;
+}
+
+
+#estimate .con_form table td span.error {
+	display: block;
+	margin: 5px 0 0;
+	padding: 2px 0 2px 30px;
+	background: url(/estimate/images/ico_alert.png) 8px center no-repeat #ffebeb;
+	color: #be352b;
+	line-height: 2;
+}
+
+#estimate .con_form table td span.error:empty {
+	display: none;
+}
+
+#estimate .con_form table td p {
+	font-size: 80%;
+	margin: 5px 0 0 0;
+}
+
+#estimate .con_form table td .icon_window {
+	padding: 0 15px 0 0;
+	background: url(/images/icon/icon_window.gif) right center no-repeat;
+}
+
+#estimate .con_form table .td_gray {
+	background: #f6f6f6;
+}
+
+#estimate .con_form table .td_right {
+	text-align: right;
+}
+
+#estimate .con_form table td .txt_small {
+	font-size: 80%;
+}
+
+#estimate .con_form table td ul {
+	overflow: hidden;
+}
+
+#estimate .con_form table td ul li {
+	float: left;
+	margin: 0 15px 0 0;
+	padding: 0 0 0 1.8em;
+	text-indent: -1.8em;
+}
+
+#estimate .con_form table td ul.list_env li {
+	float: none;
+	margin: 0 0 5px;
+	line-height: 1.6;
+}
+
+#estimate .con_form table td ul.break-even li.odd {
+	clear: left;
+}
+
+#estimate .con_form table td #pref_sel {
+	margin: 0 0 5px 0;
+}
+
+
+/* #tbl_com */
+#estimate .con_form #tbl_com th,
+#estimate .con_form #tbl_com td {
+	display: table-cell;
+	width: auto;
+}
+
+#estimate .con_form #tbl_com th {
+	text-align: center;
+}
+
+#estimate .con_form #tbl_com .th_narrow ,
+#estimate .con_form #tbl_com .td_narrow {
+	white-space: nowrap;
+}
+
+/* #tbl_total */
+#estimate .con_form #tbl_total th,
+#estimate .con_form #tbl_total td {
+	display: table-cell;
+	width: auto;
+	border: 1px solid #ddd;
+}
+
+#estimate .con_form #tbl_total td {
+	text-align: right;
+}
+
+#estimate .con_form p.note {
+	padding: 0 0 0 1em;
+	text-indent: -1em;
+}
+
+
+
+/* form */
+#estimate input[name="name"],
+#estimate input[name="kana"],
+#estimate input[name="company"],
+#estimate input[name="section"],
+#estimate input[name="email"],
+#estimate input[name="tel"],
+#estimate input[name="address"] {
+	width: 95%;
+}
+
+
+
+/* .box_pri_info
+-------------------------------------------------------------*/
+#estimate .box_pri_info {
+	margin: 0 0 50px 0;
+}
+
+#estimate .box_pri_info table {
+	margin: 0 0 20px 0;
+}
+
+
+
+
+
+/* .box_print
+-------------------------------------------------------------*/
+#estimate .con_form .box_print {
+	margin: 0 0 40px 0;
+}
+
+#estimate .con_form .box_print div {
+	margin: 0 0 20px 0;
+}
+
+#estimate .con_form .box_print div table {
+	margin: 0;
+}
+
+
+
+/* #add-print, .del-print
+-------------------------------------------------------------*/
+#estimate #add-print {
+	position: relative;
+	z-index: 5;
+	padding: 15px 30px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#5197d5), to(#1d5db3));
+	background: -webkit-linear-gradient(top, #5197d5, #1d5db3);
+	background: -moz-linear-gradient(top, #5197d5, #1d5db3);
+	background: -o-linear-gradient(top, #5197d5, #1d5db3);
+	background: -ms-linear-gradient(top, #5197d5, #1d5db3);
+	background: linear-gradient(top, #5197d5, #1d5db3);
+	background-color: #5197d5;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5197d5', endColorstr='#1d5db3', GradientType=0);
+	border: 1px solid #1d5db3;
+	border-radius: 4px;
+	box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .15), inset -1px -1px 0 rgba(255, 255, 255, .15);
+	color: #fff;
+	font-size: 110%;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, .2);
+	cursor: pointer;
+}
+
+#estimate #add-print:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+}
+
+
+#estimate .del-print {
+	margin: 0 0 10px;
+	padding: 10px 15px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#ddd));
+	background: -webkit-linear-gradient(top, #fcfcfc, #ddd);
+	background: -moz-linear-gradient(top, #fcfcfc, #ddd);
+	background: -o-linear-gradient(top, #fcfcfc, #ddd);
+	background: -ms-linear-gradient(top, #fcfcfc, #ddd);
+	background: linear-gradient(top, #fcfcfc, #ddd);
+	background-color: #fcfcfc;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#dddddd', GradientType=0);
+	border: 1px solid #d2d2d2;
+	border-radius: 4px;
+	box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .5), inset -1px -1px 0 rgba(255, 255, 255, .5);
+	text-shadow: 0px 1px 0 #fff;
+	cursor: pointer;
+}
+
+#estimate .del-print[disabled] {
+	display: none;
+}
+
+
+
+/* .btn_form　.btn_view
+-------------------------------------------------------------*/
+#estimate .btn_form ,
+#estimate .btn_view {
+	margin: 20px auto 10px;
+	text-align: center;
+}
+
+#estimate .btn_form li ,
+#estimate .btn_view li {
+	margin: 0 0 5px;
+}
+
+#estimate .btn_form li input ,
+#estimate .btn_view li input {
+	width: 100%;
+}
+
+#estimate .btn_form li.btn_back input,
+#estimate .btn_form li.btn_previous input {
+	margin: 10px 0 0;
+	vertical-align: top;
+}
+
+
+
+

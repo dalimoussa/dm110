@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+
+/* -- 以下、カレンダー表示領域の設定 - 既存サイトに組み込む場合はここだけを修正すればOK -------------------------------------------------------------------------------- */
+
+div#business-calendar {
+	width: 260px;  /* カレンダーの横幅はここで調整 */
+	margin: 0 auto;  /* 既存のページに組み込む場合は、この中央寄せの設定は不要 */
+	position: relative;  /* 前月・次月をクリックした際のローディング画像の位置調整のために必要 */
+	line-height: 1.5;  /* 各セルの縦幅はここで調整 */
+	font-size: 110%;
+}
+
+
+
+
+/* -- 以下、カレンダーの枠などの設定 -------------------------------------------------------------------------------- */
+
+div#business-calendar table,
+div#business-calendar table tr th,
+div#business-calendar table tr td {
+	border-collapse: collapse;
+	border: 1px solid #cccccc;
+	text-align: center;
+}
+
+div#business-calendar table tr th,
+div#business-calendar table tr td {
+	padding: 7px 0;
+}
+
+
+div#business-calendar table {
+	width: 100%;
+	margin-top: 40px;
+	background: #ffffff;
+}
+
+
+div#business-calendar table:first-child {
+	margin-top: 0px;
+}
+
+div#business-calendar table th {
+	font-weight: bold;
+}
+
+div#business-calendar table tr {
+}
+
+div#business-calendar table tr#year-month th,
+div#business-calendar table tr#year-month td {
+	padding: 10px 0;
+}
+
+div#business-calendar table tr#year-month th {
+	position: relative;
+}
+
+div#business-calendar table tr#year-month th ul {
+	width: 100%;
+	list-style-type: none;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	bottom: 11px;
+}
+
+div#business-calendar table tr#year-month ul li#prev {
+	float: left;
+	margin-left: 5px;
+}
+
+div#business-calendar table tr#year-month ul li#next {
+	float: right;
+	margin-right: 5px;
+}
+
+div#business-calendar table tr#year-month ul li a {
+	font-weight: normal;
+	font-size: 85%;
+	color: #3377ff;
+	text-decoration: none;
+	position: relative;
+}
+
+div#business-calendar table tr#year-month ul li#prev a {
+	padding: 0 0 0 15px;
+}
+
+div#business-calendar table tr#year-month ul li#next a {
+	padding: 0 15px 0 0;
+}
+
+div#business-calendar table tr#year-month ul li#prev a:before {
+	content: "";
+	border-style: solid;
+	border-width: 6px 6px 6px 0;
+	border-color: transparent #3377ff transparent transparent;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	transform: translateY( -50% );
+}
+
+div#business-calendar table tr#year-month ul li#next a:after {
+	content: "";
+	border-style: solid;
+	border-width: 6px 0 6px 6px;
+	border-color: transparent transparent transparent #3377ff;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translateY( -50% );
+}
+
+div#business-calendar table tr#year-month ul li a:hover {
+	cursor: pointer;
+	color: #106dff;
+	text-decoration: underline;
+}
+
+
+div#business-calendar table tr td {
+}
+
+div#business-calendar table th.saturday,
+div#business-calendar table td.saturday {
+	color: #3535ff;
+}
+
+div#business-calendar table th.sunday,
+div#business-calendar table td.sunday {
+	color: #ff3535;
+}
+
+
+
+
+/* -- 以下、定休日のセルの色の設定 -------------------------------------------------------------------------------- */
+
+div#business-calendar table td.holiday {
+	background: rgba( 255, 0, 0, 0.1 );
+}
+
+
+
+
+/* -- 以下、「定休日」の文字などの設定 -------------------------------------------------------------------------------- */
+
+div#business-calendar p.holiday-string {
+	margin: 15px 0 0;
+}
+
+div#business-calendar p.holiday-string:before {
+	content: "■ ";
+}
+
+div#business-calendar p.holiday-string:before {
+	color: rgba( 255, 0, 0, 0.25 );
+}
+
+
+
+
+/* -- 以下、ローディング画像 -------------------------------------------------------------------------------- */
+
+span.loading {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border-top: 5px solid rgba( 0, 0, 0, 0.15 );
+	border-right: 5px solid rgba( 0, 0, 0, 0.15 );
+	border-bottom: 5px solid rgba( 0, 0, 0, 0.15 );
+	border-left: 5px solid #ffffff;
+	-webkit-transform: translateZ( 0 );
+	-ms-transform: translateZ( 0 );
+	transform: translateZ( 0 );
+	-webkit-animation: load-circle 1.0s linear infinite;
+	animation: load-circle 1.0s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -30px;
+}
+
+@-webkit-keyframes load-circle {
+	0% {
+		-webkit-transform: rotate( 0deg );
+		transform: rotate( 0deg );
+	}
+	100% {
+		-webkit-transform: rotate( 360deg );
+		transform: rotate( 360deg );
+	}
+}
+
+@keyframes load-circle {
+	0% {
+		-webkit-transform: rotate( 0deg );
+		transform: rotate( 0deg );
+	}
+	100% {
+		-webkit-transform: rotate( 360deg );
+		transform: rotate( 360deg );
+	}
+}
+
+
+
+
+
+
+
+
+/* --responsive----------------------------------------------------------------------------------------------------------------------- */
+
+/* 1000pixel start */
+@media screen and ( max-width: 1000px ) {
+
+
+div#business-calendar {
+	width: 95%;  /* カレンダーの横幅はここで調整 */
+	margin: 0 auto;  /* 既存のページに組み込む場合は、この中央寄せの設定は不要 */
+}
+
+
+}
+/* 1000pixel end */
+
+
+
+

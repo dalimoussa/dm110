@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+$baseColor: #0153a7;
+$textColor: #333;
+$linkColor: #00aae6;
+$borderColor: #e4e4e4;
+$borderColor2: #d4d4d4;
+
+$white: #fff;
+$red: #ff0000;
+$black: #303030;
+$yellow: #fff100;
+$gray: #f6f6f6;
+$light-blue: #dceaf9;
+$cream: #fcfbf2;
+
+@mixin clearfix {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin radius($size) {
+	border-radius: ($size + px);
+}
+
+@mixin circle($size){
+	width: $size + px;
+	height: $size + px;
+	border-radius: 50%;
+}
+
+@mixin transition {
+	transition: 0.3s all;
+}
+
+@mixin opacity($opacity: 0.7) {
+	opacity: $opacity;
+}
+
+@mixin centering-elements($horizontal: true, $vertical: true) {
+	position: absolute;
+	@if $horizontal and $vertical {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if $horizontal {
+		left: 50%;
+		transform: translate(-50%, 0);
+	} @else if $vertical {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+
+
+
+/* font-size
+-------------------------------------------------- */
+$xxxs: 1.0rem;
+$xxs: 1.2rem;
+$xs: 1.3rem;
+$s: 1.4rem;
+$m: 1.6rem;
+$l: 1.8rem;
+$xl: 2.0rem;
+$xxl: 2.2rem;
+$xxxl: 2.4rem;
+

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/*初期化用*/
+@import "common.css";
+
+/*デザイン用*/
+@import "main_new.css";
+@import "clearfix.css";
+
+/* トップページ用 */
+@import "index.css";
+
+/*拡張用*/
+@import "advanced.css";
+
+@import "form.css";
+
+@import "general.css";

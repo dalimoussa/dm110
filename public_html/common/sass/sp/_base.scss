@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* ============================================================ */
+/* 基本設定 */
+/* ============================================================ */
+html {
+    font-size: calc(100vw / 37.5);
+}
+
+body {
+	background: $white;
+}
+
+.wrap {
+	color: $textColor;
+	font-size: $s;
+	line-height: 1.8;
+	font-family: "メイリオ", "Meiryo", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "新ゴR",  Verdana, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+.pc-view {
+	display: none !important;
+}
+
+a {
+	color: $linkColor;
+	text-decoration: underline;
+}
+
+
+
+/* --------------------------------------------------- */
+/* topic-path */
+/* --------------------------------------------------- */
+.topic-path {
+	margin: 0 0 25px;
+	padding: 10px 0;
+	border-bottom: 1px solid $borderColor;
+	font-size: $xxxs;
+	line-height: 1.4;
+	
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 15px;
+	}
+	&__item {
+		
+		&:not(:last-child) {
+			&::after {
+				margin: 0 10px;
+				content: "\f105";
+				font-family: 'icomoon';
+			}
+		}
+	}
+}
+
+
+/* --------------------------------------------------- */
+/* pagetop */
+/* --------------------------------------------------- */
+.pagetop {
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	z-index: 1;
+	
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		background: rgba($baseColor, 0.9);
+		color: $white;
+		font-size: $xxxl;
+		text-decoration: none;
+		
+		&--top {
+			margin: 0 0 5px;
+		}
+	}
+}

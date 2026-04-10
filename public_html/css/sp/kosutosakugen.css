@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* kosutosakugen */
+/* ============================================================ */
+
+/* ボックスエリア1.2 */
+#main-contents1 div.box1{
+	margin: 0;
+	margin-bottom: 10px;
+	border: 1px solid #aaa;
+	font-size: 0.9em;
+	width: 99.2% !important;
+}
+
+#main-contents1 div.box2{
+	margin: 0;
+	margin-bottom: 10px;
+	border: 1px solid #aaa;
+	font-size: 0.9em;
+	width: 99.2% !important;
+}
+
+#main-contents1 .box1 .title{
+    background: url(/images/common/before.gif) left top no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 0;
+    padding-top: 19.31%;
+}
+
+#main-contents1 .box2 .title{
+    background: url(/images/common/after_3.gif) left top no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 0;
+    padding-top: 19.31%;
+}
+
+#main-contents1 .box1 .title p{
+	margin: 0 10px;
+	padding: 5px 0;
+	font-weight: bold;
+	color: #fff;
+}
+
+#main-contents1 .box1 ul,
+#main-contents1 .box1 ol{
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 5px;
+	width:100%;
+}
+
+#main-contents1 .box2 ul,
+#main-contents1 .box2 ol{
+	list-style-type: none;
+	list-style-position: outside;
+	margin: 5px;
+}
+
+#main-contents1 .box1 li{
+	margin: 0 0 2px 0;
+	padding: 8px 8% 7px 8%;
+	font-size: 1.2rem;
+	background: url(/images/common/ico_list.gif) 5px 10px no-repeat #fffbed;
+	border: 1px solid #c8c8c8;
+	width: 80.5%;
+}
+
+#main-contents1 .box2 li{
+	margin: 0 0 2px 0;
+	padding: 8px 7px 7px 8%;
+	font-size: 1.2rem;
+	background: url(/images/common/ico_list.gif) 5px 10px no-repeat #fffbed;
+	border: 1px solid #c8c8c8;
+	width: 89%;
+}

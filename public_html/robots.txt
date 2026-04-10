@@ -1,0 +1,5 @@
+User-Agent: *
+Allow:/
+Sitemap:https://www.dm110.jp/sitemap.xml
+Disallow: /download/
+

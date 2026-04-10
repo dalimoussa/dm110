@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* ============================================================ */
+/* recruit.html */
+/* ============================================================ */
+.recruit {
+	.wrap {
+		font-size: $l;
+	}
+	
+	.table {
+		th,
+		td {
+			font-size: $l;
+		}
+	}
+
+
+	/* .recruit-visual
+	/* --------------------------------------------------- */
+	.recruit-visual {
+		position: relative;
+		height: 500px;
+		margin: 0 0 50px;
+		
+		.visual-slider {
+			
+			.object-fit-img {
+				height: 500px;
+				object-fit: cover;
+				object-position: center top;
+				font-family: 'object-fit: cover; object-position: center top;'
+			}
+
+			&__inner {
+				text-align: center;
+				width: 100%;
+				height: 500px;
+				position: relative;
+				
+				&__txt {
+					max-width: 730px;
+					margin: 138px auto 0;
+					padding: 25px 15px;
+					background: rgba(0,0,0,0.45);
+					color: $white;
+					position: relative;
+					z-index: 2;
+					
+					&__ttl {
+						font-size: 2.1rem;
+						font-weight: 300;
+						margin: 0 0 5px;
+					}
+					
+					&__block {
+						font-size: $xxl;
+						font-weight: 500;
+						
+						&__yellow {
+							color: #f31d31;
+							font-size: 3.8rem;
+							line-height: 1.4;
+							font-weight: 600;
+							padding: 0 5px;
+							text-shadow: $white 2px 0px,  $white -2px 0px,
+							$white 0px -2px, $white 0px 2px,
+							$white 2px 2px , $white -2px 2px,
+							$white 2px -2px, $white -2px -2px,
+							$white 1px 2px,  $white -1px 2px,
+							$white 1px -2px, $white -1px -2px,
+							$white 2px 1px,  $white -2px 1px,
+							$white 2px -1px, $white -2px -1px;
+						}
+					}
+				}
+				
+				&__img {
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: 1;
+					
+					.column {
+						flex-wrap: nowrap !important;
+						
+						div {
+							width: calc(100% / 3);
+						}
+					}
+				}
+			}
+			
+			.slick-dots {
+				text-align: center;
+				margin: -40px 0 0;
+				position: relative;
+				z-index: 3;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				&>* {
+					width: 13px;
+					height: 13px;
+					@include radius(13);
+					margin-right: 10px;
+					background: $white;
+					cursor: pointer;
+					@include transition;
+					font-size: 0;
+					line-height: 0;
+				}
+				
+				.slick-active {
+					background: $baseColor;
+				}
+			}
+		}
+	}
+	
+	/* .recruit-contact
+	/* --------------------------------------------------- */
+	.recruit-contact {
+		background: url(/common/img/common/bg_pattern03.png) 0 0 repeat;
+		padding: 40px;
+		
+		&__inner {
+			padding: 30px 40px;
+			background: $white;
+			@include radius(3);
+			
+			.column2 {
+				margin-left: -20px;
+				margin-right: -20px;
+
+				&> * {
+				 margin-left: 20px;
+				 margin-right: 20px;
+				 width: calc((100% - 81px) / 2 );
+				}
+				
+				.btn {
+					width: 100%;
+					margin: 0 0 10px;
+					padding: 0 10px;
+				}
+			}
+			
+			&__txt {
+				text-align: center;
+				padding: 15px;
+				background: #f1f1f1;
+				
+				&__phone {
+					font-size: 4.2rem;
+					font-weight: 700;
+					line-height: 1.0;
+				}
+				
+				.tel > * {
+					color: $textColor;
+					text-decoration: none;
+				}
+			}
+			
+			.icon-phone {
+				color: #cf1817;
+				font-size: 3.6rem;
+			}
+		}
+	}
+	
+}

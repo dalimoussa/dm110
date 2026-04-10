@@ -1,0 +1,4 @@
+<IfDefine !DEVELOPMENT>
+    php_flag magic_quotes_gpc Off
+</IfDefine>
+AddHandler application/x-httpd-php .php .html

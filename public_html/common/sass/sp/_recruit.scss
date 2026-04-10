@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* ============================================================ */
+/* recruit.html */
+/* ============================================================ */
+.recruit {
+	.wrap {
+		font-size: $m;
+	}
+	
+	.table {
+		th,
+		td {
+			font-size: $m;
+		}
+	}
+	
+	
+	/* .recruit-visual
+	/* --------------------------------------------------- */
+	.recruit-visual {
+		margin: 0 0 20px;
+		
+		.visual-slider {
+
+			&__img {
+				object-fit: cover;
+				width: 100%;
+			}
+			
+			&__inner {
+				text-align: center;
+				display: flex;
+				flex-wrap: wrap;
+			
+				&__txt {
+					padding: 15px;
+					background: rgba(0,0,0,0.7);
+					color: $white;
+					order: 2;
+					
+					&__ttl {
+						font-size: $m;
+						margin: 0 0 10px;
+						font-weight: 300;
+						line-height: 1.4;
+					}
+					
+					&__block {
+						font-size: $l;
+						font-weight: 500;
+						
+						&__yellow {
+							color: #f31d31;
+							font-size: $xxl;
+							line-height: 1.4;
+							font-weight: 600;
+							padding: 0 5px;
+							text-shadow: $white 2px 0px,  $white -2px 0px,
+							$white 0px -2px, $white 0px 2px,
+							$white 2px 2px , $white -2px 2px,
+							$white 2px -2px, $white -2px -2px,
+							$white 1px 2px,  $white -1px 2px,
+							$white 1px -2px, $white -1px -2px,
+							$white 2px 1px,  $white -2px 1px,
+							$white 2px -1px, $white -2px -1px;
+						}
+					}
+				}
+				
+				&__img {
+					width: 100%;
+					order: 1;
+				}
+			}
+			
+			.slick-dots {
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 10px 0 0;
+
+				&>* {
+					width: 13px;
+					height: 13px;
+					@include radius(13);
+					margin-right: 10px;
+					background: $borderColor;
+					cursor: pointer;
+					@include transition;
+					font-size: 0;
+					line-height: 0;
+				}
+
+				.slick-active {
+					background: $baseColor;
+				}
+			}
+		}
+	}	
+	
+	/* .recruit-contact
+	/* --------------------------------------------------- */
+	.recruit-contact {
+		background: url(/common/img/common/bg_pattern03.png) 0 0 repeat;
+		padding: 20px;
+		
+		&__inner {
+			padding: 15px;
+			background: $white;
+			@include radius(3);
+			
+			.column2 {
+				.btn {
+					width: 100%;
+					margin: 0 0 10px;
+					padding: 0 10px;
+				}
+			}
+			
+			&__ttl {
+				background: #cf1817;
+				color: $white;
+				text-align: center;
+				margin: 0 0 5px;
+				padding: 5px;
+				line-height: 1.4;
+			}
+			
+			&__txt {
+				text-align: center;
+				padding: 13px 10px;
+				background: #f1f1f1;
+				
+				&__phone {
+					font-size: 3.0rem;
+					font-weight: 700;
+					line-height: 1.0;
+				}
+				
+				.tel > * {
+					color: $textColor;
+					text-decoration: none;
+				}
+			}
+			
+			.icon-phone {
+				color: #cf1817;
+				font-size: 2.8rem;
+			}
+		}
+	}
+	
+}

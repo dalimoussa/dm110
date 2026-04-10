@@ -1,0 +1,19 @@
+<IfDefine DEVELOPMENT>
+</IfDefine>
+
+<IfDefine !DEVELOPMENT>
+	Options +FollowSymLinks
+
+	RewriteEngine on
+	RewriteBase /prompt/
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule  ^([0-9A-Za-z_\-]*)$  $1.php [L]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule  ^([0-9A-Za-z_\-]*)/$ $1.php [L]
+
+	ErrorDocument 404 https://www.dm110.jp/
+
+</IfDefine>

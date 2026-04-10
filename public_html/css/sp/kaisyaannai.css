@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* kaisyaannai */
+/* ============================================================ */
+#main-contents1 table:nth-child(1) td,
+#main-contents1 table:nth-of-type(2) td {
+	border: none;
+}
+
+#main-contents1 table:nth-child(1) td:nth-child(1) {
+	width: 30%;
+}
+
+#main-contents1 table:nth-of-type(2) td[width="150"] {
+	vertical-align: top;
+}
+
+#main-contents1 table:nth-of-type(3) td[width="150"] {
+	text-align: center;
+	width: 100%;
+	border: none;
+}
+
+#main-contents1 table:nth-of-type(3) td[width="150"] img {
+	width: 70%;
+}
+
+#main-contents1 table:nth-of-type(4) td[width=""]{
+	border: none;
+}
+
+#main-contents1 table:nth-of-type(4) td[width=""] img {
+	width: 30%;
+}

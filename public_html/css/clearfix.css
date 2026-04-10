@@ -1,0 +1,78 @@
+/*------------------------------------------------------------
+floatの回り込みを解除
+-------------------------------------------------------------*/
+
+#top-menu ul:after,
+#global-menu ul:after,
+#breadcrumbs ol:after,
+#main-in:after,
+#sidebar .search-box:after,
+#sidebar .ranking:after,
+#footer-in:after,
+#footer-banner:after,
+.access:after,
+#footer-navi:after,
+.clearfix:after{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+	clear: both;
+}
+
+#top-menu ul,
+#global-menu ul,
+#breadcrumbs ol,
+#main-in,
+#sidebar .search-box,
+#sidebar .ranking,
+#footer-in,
+#footer-banner,
+.access,
+#footer-navi,
+.clearfix{
+	display: inline-block;
+}
+
+/* MacIE begin \*/
+*+html #global-menu ul,
+*+html #breadcrumbs ol,
+*+html #sidebar .search-box,
+*+html #sidebar .ranking,
+*+html #footer-in,
+*+html .access,
+*+html #footer-navi,
+*+html .clearfix{
+	height: 1%;
+}
+
+* html #top-menu ul,
+* html #global-menu ul,
+* html #breadcrumbs ol,
+* html #main-in,
+* html #sidebar .search-box,
+* html #sidebar .ranking,
+* html #footer-in,
+* html #footer-banner,
+* html .access,
+* html #footer-navi,
+* html .clearfix{
+	height: 1%;
+}
+
+#top-menu ul,
+#global-menu ul,
+#breadcrumbs ol,
+#main-in,
+#sidebar .search-box,
+#sidebar .ranking,
+#footer-in,
+#footer-banner,
+.access,
+#footer-navi,
+.clearfix{
+	display: block;
+}
+/* Mac IE end */

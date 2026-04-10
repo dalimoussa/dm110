@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* omosabetu */
+/* ============================================================ */
+
+#main-contents1 table {
+	width: 100%;
+	table-layout:fixed;
+	word-break:break-all;
+	word-wrap:break-word;
+	white-space: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#main-contents1 table td {
+	width: 10%;
+}
+
+#main-contents1 table table td ,
+#main-contents1 table table th {
+	border: none !important;
+}
+
+#main-contents1 table td[bgcolor="#dcdcdc"] {
+	background: #dcdcdc;
+}
+
+#main-contents1 table td[bgcolor="#ffffcc"] {
+	background: #ffffcc;
+}
+
+#main-contents1 table td[colspan="2"] {
+	width: 20%;
+}
+
+
+
+/*body table:nth-child(2) td[width*="137"] {
+	width: 30%;
+}
+
+body table:nth-child(2) td[width*="90"] {
+	width: 10%;
+}
+
+body table:nth-child(2) td[width*="140"] ,
+body table:nth-child(2) table[width*="32"] {
+	width: 20%;
+}*/
+

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* kaisya_enkaku */
+/* ============================================================ */
+
+#main-contents1 table {
+	width: 100% !important;
+}
+
+#main-contents1 table tr[bgcolor="#FCFEED"] {
+	background: #FCFEED;
+}
+
+#main-contents1 table td[bgcolor="#D4EDFF"] {
+	background: #D4EDFF;
+}
+
+#main-contents1 table td[bgcolor="#F3F8FB"] {
+	background: #F3F8FB;
+}
+
+#main-contents1 table td:nth-child(1) {
+	width: 25% !important;
+}
+
+#main-contents1 table td:nth-child(2) {
+	width: 20% !important;
+}
+
+#main-contents1 table td:nth-child(3) {
+	width: 55% !important;
+}
+
+

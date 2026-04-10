@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* ryoukin */
+/* ============================================================ */
+
+/* 	テーブル */
+body table td[bgcolor="#979797"] {
+	background: #979797;
+}
+
+body table tr[bgcolor="#f3ebe3"] {
+	background: #f3ebe3;
+}
+
+body table:nth-of-type(4) {
+	border: 1px solid #ddd;
+}
+
+body table:nth-of-type(4) th ,
+body table:nth-of-type(4) td {
+	border: none;
+}
+
+
+

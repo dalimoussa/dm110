@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>DM集客　無料ダウンロード</title>
+		<meta name="keywords" content="DM,集客,ダウンロード,無料,発送代行,ノウハウ" />
+		<meta name="description" content="DMに関するテスト結果や反応率データ、DMツールやDMのコツなどの内容を無料ダウンロードいただけるページです。" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<?php include("./common/inc_new/html_head.html"); ?>
+
+		<script src="/js/jquery.tile.min.js"></script>
+		<script>
+			$(window).load(function() {
+			  $(".top_interview ul li a").tile();
+			  //$(".top_message ul li a").tile();
+			  $(".top_dm_option ul li").tile();
+			  //$(".top_system ul li").tile(2);
+			});
+		</script>
+
+		<script>
+			$(function(){
+				var setPrt = $('.top_system ul'),
+				setChd = setPrt.find('li');
+
+				function argHeight(){
+					prtWidth = setPrt.outerWidth();
+					chdWidth = setChd.outerWidth();
+					setNum = Math.floor(prtWidth / chdWidth);
+					chdLength = setChd.length;
+
+					setChd.css({height:'auto'});
+
+					setPrt.each(function(){
+						h = 0;
+						setChd.each(function(i){
+							var self = $(this),
+							i = i+1,
+							hSet = self.outerHeight(),
+							pdTop = parseInt(self.css('padding-top')),
+							pdBtm = parseInt(self.css('padding-bottom')),
+							boxSizing = self.css('box-sizing');
+							self.addClass('heightReplace');
+
+							if(hSet > h){
+								h = hSet;
+							};
+
+							if(boxSizing === 'border-box'){
+								setPrt.find('.heightReplace').css({height:h});
+							} else {
+								setPrt.find('.heightReplace').css({height:(h-(pdTop + pdBtm))});
+							}
+
+							if(i%setNum == 0 || i == chdLength){
+								h = 0;
+								setChd.removeClass('heightReplace');
+							}
+						});
+					});
+				}
+				$(window).on('load resize',function(){
+					argHeight();
+				}).resize();
+			});
+		</script>
+
+
+	</head>
+	<body id="index">
+
+		<?php include("./common/inc_new/anlytics_top.html"); ?>
+
+		<div id="container">
+
+			<!--main-->
+			<div id="main">
+				<!--main-in-->
+				<div id="main-in">
+
+		<?php $get_datas['name1'] = 'DM集客　無料ダウンロード'; include("./common/inc_new/breadcrumb2.php"); ?>
+
+					<!--▽メインコンテンツ-->
+					<div id="topmain-contents1">
+
+						<div id="dwn">
+						<div class="top_message">
+							<h2 class="ttl01">DM集客　無料ダウンロード</h2>
+							<p class="mb30">DMに関するテスト結果や反応率データ、DMツールやDMのコツなどの内容を無料でダウンロードいただけます。</p>
+
+							<ul class="top_box_list">
+								<li data-mh="dwn-sample">
+									<div>
+										<a href="/form/DL_dm_kaifuurituUP10/"><img src="images/dwn/li_pic01.jpg" alt="DM開封率を上げる実例10選" /></a>
+										<a href="/form/DL_dm_kaifuurituUP10/"><p class="dwn_ttl02">DM開封率を上げる実例10選</p></a>
+										<p class="dwn_text">実際に使い、成果が出た実例をご紹介します。すぐに使えるものを厳選しているので、今すぐお役に立ちます。</p>
+									</div>
+								</li>
+								<li data-mh="dwn-sample">
+									<div>
+										<a href="/form/DL_dm_hannouritu_data/"><img src="images/dwn/li_pic02.jpg" alt="DM反応率 実データ" /></a>
+										<a href="/form/DL_dm_hannouritu_data/"><p class="dwn_ttl02">DM反応率 実データ</p></a>
+										<p class="dwn_text">当社のテストデータを開示。実際のDM反応率と反応率の良いDMの特徴、最近の傾向をご紹介します。</p>
+									</div>
+								</li>
+								<li data-mh="dwn-sample">
+									<div>
+										<a href="/form/DL_dm_kaisyaerabi/"><img src="images/dwn/li_pic03.jpg" alt="お客さんから聞いたマル秘DM発送代行会社の選び方" /></a>
+										<a href="/form/DL_dm_kaisyaerabi/"><p class="dwn_ttl02">お客さんから聞いたマル秘DM発送代行会社の選び方</p></a>
+										<p class="dwn_text">10年以上通信販売を行っている会社様から、DM発送代行会社選びの成功と失敗を学びます。</p>
+									</div>
+								</li>
+								<li data-mh="dwn-sample">
+									<div>
+										<a href="/form/DL_netkoukokuhi_taisaku/"><img src="images/dwn/li_pic04.jpg" alt="ネット広告費の高騰を解決する方法" /></a>
+										<a href="/form/DL_netkoukokuhi_taisaku/"><p class="dwn_ttl02">ネット広告費の高騰を解決する方法</p></a>
+										<p class="dwn_text">ネット広告高騰でも問題なく広告が打てる会社のビジネスモデルをご紹介します。また、今後ネット広告高騰がチャンスになる方法も伝授します。</p>
+									</div>
+								</li>
+								<li data-mh="dwn-sample">
+									<div>
+										<a href="/form/DL_dm_test_hassousuu/"><img src="images/dwn/li_pic05.jpg" alt="プロが使うテストDMの発送数を決める公式" /></a>
+										<a href="/form/DL_dm_test_hassousuu/"><p class="dwn_ttl02">プロが使うテストDMの発送数を決める公式</p></a>
+										<p class="dwn_text">DM成功の基本はDMテストです。しかし、一番のネックは発送件数。今までほとんどの専門家も根拠なしに発送件数を決めていました。この問題の理論的な解決方法をご紹介します。</p>
+									</div>
+								</li>
+								<li data-mh="dwn-sample">
+									<div>
+										<a href="/form/DL_dm_muryou/"><img src="images/dwn/li_pic06.jpg" alt="無料でDMを送る方法" /></a>
+										<a href="/form/DL_dm_muryou/"><p class="dwn_ttl02">無料でDMを送る方法</p></a>
+										<p class="dwn_text">多くの方がDMはお金がかかると考えています。しかし、どなたでも無料でDMを送る方法があります。この方法で売上アップやリピート、離脱防止に役立てましょう。</p>
+									</div>
+								</li>
+							</ul>
+							<!-- .dwn -->
+
+						</div>
+						</div>
+
+
+						<!--▼メインコンテンツ用 お問い合わせ-->
+						<?php include("./common/inc_new/main_inquiry.html"); ?>
+						<!--▲メインコンテンツ用 お問い合わせ-->
+					</div>
+					<!--△メインコンテンツ-->
+
+					<?php include("./common/inc_new/sidebar.html"); ?>
+				</div>
+				<!--/main-in-->
+
+				<?php include("./common/inc_new/go_top.html"); ?>
+
+				<?php include("./common/inc_new/footer.html"); ?>
+			</div>
+			<!--/main-->
+			<!--▼ヘッダー-->
+			<?php include("./common/inc_new/header.html"); ?>
+			<!--▲ヘッダー-->
+
+			<div class="pc_view">
+				<!--▼グローバルメニュー-->
+				<?php include("./common/inc_new/gnavi.html"); ?>
+				<!--▲グローバルメニュー-->
+			</div>
+
+		</div>
+
+		<?php include("./common/inc_new/anlytics_bottom.html"); ?>
+
+	</body>
+</html>

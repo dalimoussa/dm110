@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+@import url("/css/sp/reset.css");
+@import url("/css/sp/common.css");
+
+.pc_view {
+	display: none;
+}
+
+#popup > div {
+	width: 100%;
+	padding: 15px 5%;
+	box-sizing: border-box;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+.note {
+	padding: 0 0 0 1em;
+	text-indent: -1em;
+}
+
+h1 {
+	margin: 0 0 15px;
+	padding: 0 0 0 10px;
+	border-left: 5px solid #3f7ac3;
+	font-size: 1.6rem;
+}
+
+
+/* table
+-------------------------------------------------------------*/
+table {
+	position: relative;
+	width: 100%;
+	font-size: 1.1rem;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table th,
+table td {
+	padding: 5px;
+	border: 1px solid #d1d0ca !important;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+table thead th {
+	background: #3f7ac3;
+	color: #fff;
+}
+
+table tbody th {
+	background: #d4ebfc;
+	text-align: left;
+}
+
+.tal {
+	text-align: left;
+}
+
+table + p {
+	margin: 15px 0 0;
+}
+
+
+
+
+/* mail.html
+-------------------------------------------------------------*/
+.box_pop_mail table tbody th {
+	width: 30%;
+}
+
+.box_pop_mail table tbody td {
+	width: 35%;
+}
+
+
+
+/* envelope.html
+-------------------------------------------------------------*/
+.box_pop_envelope table tbody th {
+	width: 20%;
+}
+
+.box_pop_envelope table tbody td {
+	width: 30%;
+}
+
+.box_pop_envelope table tbody td img {
+	width: 100%;
+}
+
+
+
+/* color.html
+-------------------------------------------------------------*/
+#popup .box_pop_color th {
+	display: none;
+}
+
+#popup .box_pop_color td {
+	display: block;
+	margin: 0 0 -1px;
+	padding: 0;
+	overflow: hidden;
+}
+
+#popup .box_pop_color td h2 {
+	margin: 0 0 15px;
+	padding: 5px;
+	background: #3f7ac3;
+	color: #fff;
+	font-size: 1.4rem;
+}
+
+#popup .box_pop_color td img {
+	float: left;
+	width: 25%;
+	margin: 0 5% 15px;
+}
+
+#popup .box_pop_color td p {
+	margin: 0 5% 0 0;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+
+
+/* paper.html
+-------------------------------------------------------------*/
+.box_pop_paper table tbody th {
+	width: 13%;
+}
+
+.box_pop_paper table tbody td {
+	width: 29%;
+}
+
+
+
+

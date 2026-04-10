@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* message */
+/* ============================================================ */
+
+#main-contents1 table {
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+#main-contents1 table td {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+#main-contents1 table td h2 {
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+}
+
+#main-contents1 table td p ,
+#main-contents1 table td h1 {
+	margin: 0;
+	padding: 0;
+}
+
+/*#main-contents1 table td img {
+	width: 100% !important;
+}*/
+
+body table td img[src*="images/11-04dm-mages/spacer.gif"] {
+	width: 10px !important;
+	height: 10px !important;
+}
+
+
+body table td img[alt="①"] ,
+body table td img[alt="②"] ,
+body table td img[alt="③"] {
+	display: none;
+}
+
+body table td[width*="179"] {
+	vertical-align: top;
+	width: 30%!important;
+}
+
+body table td[width*="179"] img {
+	width: 100% !important;
+}
+
+body table td img[alt="答え"] {
+	margin: 30px 0 0 0;
+}
+
+body table td[width*="396"] {
+	width: 70%!important;
+}
+
+/*body table td[rowspan="3"] {
+	vertical-align: top;
+	width: 20% !important;
+	background: #864748;
+	padding: 0;
+	margin: 0;
+}
+
+body table td[rowspan="3"] img {
+	width: 70% !important;
+}*/
+
+body table td[bgcolor="#EBEBEB"] {
+	background: #EBEBEB;
+	width: 100% !important;
+}
+
+body table td[bgcolor="#EBEBEB"] br {
+	display: none;
+}
+
+body table:nth-child(3) tr {
+	margin: 0 0 5px 0;
+	display: block;
+}
+
+body table:nth-child(3) tr td:nth-child(1) ,
+body table:nth-child(3) tr td:nth-child(2) ,
+body table:nth-child(3) tr td:nth-child(3) {
+	width: 25%;
+}
+
+body table:nth-child(3) tr td:nth-child(1) {
+	background: url(/images/11-04dm-mages/message/ind01_sp.gif) 0 0 no-repeat;
+}
+
+body table:nth-child(3) tr:nth-child(2) td:nth-child(1) {
+	background: url(/images/11-04dm-mages/message/ind02_sp.gif) 0 0 no-repeat;
+}
+
+body table:nth-child(3) tr:nth-child(3) td:nth-child(1) {
+	background: url(/images/11-04dm-mages/message/ind03_sp.gif) 0 0 no-repeat;
+}
+
+
+body table td img[src="images/11-04dm-mages/message/allow.gif"] {
+	width: 20% !important;
+}
+
+body table td[align="bottom"] {
+	vertical-align: top;
+}
+
+
+
+
+

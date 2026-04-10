@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* kojinjyouhou */
+/* ============================================================ */
+#main-contents1 table:nth-last-of-type(2) td {
+	text-align: center;
+	width: 100%;
+	border: none;
+}
+
+#main-contents1 table:nth-last-of-type(2) td img {
+	width: 70%;
+	border: none;
+}
+

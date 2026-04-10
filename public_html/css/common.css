@@ -1,0 +1,87 @@
+/*------------------------------------------------------------
+ブラウザ固有のCSSをリセット
+-------------------------------------------------------------*/
+
+body,div,ul,ol,li,
+h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,input,p,blockquote{
+	margin: 0;
+	padding: 0;
+}
+
+address,caption,cite,code,dfn,h1,h2,h3,h4,var{
+	font-style: normal;
+	font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6,small{
+	font-size: 100%;
+	font-weight: normal;
+}
+
+fieldset,img,abbr{ border: 0; }
+caption{ text-align: left; }
+q:before,q:after{ content: ''; }
+a{ text-decoration: none; }
+img{
+	border: none;
+	vertical-align: bottom;
+}
+
+input,
+textarea,
+select{
+	font-size: 1em;
+}
+
+/*WordPress対策*/
+span textarea,span input{ vertical-align: bottom!important; }
+
+
+/*Firefox対策*/
+html{
+	overflow: scroll;
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: scroll;
+}
+
+body,x:-moz-broken { margin-left:-1px; }
+
+
+/*--------------------------------------------------------
+レイアウトの初期設定
+-------------------------------------------------------*/
+
+html,body,#container{
+	height: 100%;
+}
+
+body,pre{
+	font-size: 62.5%;
+	line-height: 1.5;
+}
+
+/* IE8対策 */
+body *{
+	font-style: normal!important;
+	font-family: "メイリオ", meiryo, Arial, Helvetica!important;
+}
+
+#container{
+	position: relative;
+}
+
+#global-menu li,
+#breadcrumbs li,
+#top-menu li,
+#sidebar .banner li,
+#sidebar .side-menu li,
+.ranking li,
+#footer-banner li,
+#footer-in li{
+	list-style: none;
+}
+
+.sp_view {
+	display: none !important;
+}

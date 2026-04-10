@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* ============================================================ */
+/* shakai_kouken */
+/* ============================================================ */
+
+#main-contents1 table td[bgcolor="#d1d1d1"] {
+	background: #d1d1d1;
+}
+
+#main-contents1 table tr:nth-child(1) td:nth-child(1) {
+	border: none;
+}
+
+#main-contents1 table tr:nth-child(2) td:nth-child(1) ,
+#main-contents1 table tr:nth-child(3) td:nth-child(1) ,
+#main-contents1 table tr:nth-child(4) td:nth-child(1) {
+	border: none;
+}
+
+#main-contents1 table tr:nth-child(5) td:nth-child(1) ,
+#main-contents1 table tr:nth-child(6) td:nth-child(1) ,
+#main-contents1 table tr:nth-child(7) td:nth-child(1) {
+	border: none;
+}
+
+#main-contents1 table td[width="168"] {
+	border: 1px solid #ddd !important;
+}
+

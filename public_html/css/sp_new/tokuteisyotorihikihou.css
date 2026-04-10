@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.table01 th,
+.table01 td {
+	display: block;
+	border-top: none;
+	text-align: left;
+}
+
+.table01 tr:first-child th {
+	border-top: 1px solid #ddd;
+}

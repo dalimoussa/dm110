@@ -1,0 +1,132 @@
+<IfDefine DEVELOPMENT>
+</IfDefine>
+
+<IfDefine !DEVELOPMENT>
+
+	Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+
+	AddOutputFilterByType DEFLATE text/html text/css application/x-javascript application/javascript text/javascript application/font-woff application/vnd.ms-fontobject
+
+
+	
+	AddType application/vnd.ms-fontobject .eot
+	AddType application/x-font-ttf .ttf
+	AddType application/x-font-opentype .otf
+	AddType application/x-font-woff .woff
+	AddType image/svg+xml .svg
+
+	
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/xml
+	AddOutputFilterByType DEFLATE application/xhtml+xml
+	AddOutputFilterByType DEFLATE application/rss+xml
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE application/x-javascript
+
+	
+	AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+	ExpiresActive On
+	ExpiresByType text/css "access plus 15 days"
+	ExpiresByType image/gif "access plus 10 days"
+	ExpiresByType image/jpg "access plus 10 days"
+	ExpiresByType image/jpeg "access plus 10 days"
+	ExpiresByType image/png "access plus 10 days"
+	ExpiresByType application/x-javascript "access plus 10 days"
+	ExpiresByType text/x-javascript "access plus 1 month"
+	ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType application/x-javascript "access plus 1 month"
+	ExpiresByType text/js "access plus 1 month"
+	ExpiresByType text/javascript "access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+	
+	<IfModule mod_rewrite.c>
+		SetEnvIfNoCase User-Agent "(MSIE|Trident)" ua_browser=ie
+		RewriteEngine On
+		RewriteCond %{ENV:ua_browser} !ie
+		RewriteCond %{HTTP_ACCEPT} image/webp
+		RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+		RewriteRule (.+)\.(jpe?g|png)$ $1.webp [T=image/webp]
+	</IfModule>
+	<IfModule mod_headers.c>
+		Header append Vary Accept env=_image_request
+	</IfModule>
+	<IfModule mod_mime.c>
+		AddType image/webp .webp
+	</IfModule>
+
+
+	Options +FollowSymLinks
+
+	RewriteEngine on
+	RewriteBase /
+
+	# Production-only redirects (apply only on www.dm110.jp)
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteRule ^koe\.htm$ https://www.dm110.jp/koe/ [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteRule ^koe_([0-9])\.htm$ https://www.dm110.jp/koe/$1/ [R=301,L]
+
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteRule ^Ank_index\.htm$ https://www.dm110.jp/enquete/ [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteRule ^Ank_index2\.htm$ https://www.dm110.jp/enquete/aggregate/ [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteRule ^Ank_\d+\.htm$ https://www.dm110.jp/enquete/ [R=301,L]
+
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteCond %{THE_REQUEST} ^.*/index\.html
+	RewriteRule ^(.*)index\.html$ https://www.dm110.jp/$1 [R=301,L]
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	RewriteRule ^kaisyaannai\.html$ https://www.dm110.jp/kaisyaannai [R=301,L]
+
+	# Subdomain-safe equivalents (apply on subdomains; keep current host)
+	RewriteCond %{HTTP_HOST} !^www\.dm110\.jp$ [NC]
+	RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.dm110\.jp$ [NC]
+	RewriteRule ^koe\.htm$ https://%{HTTP_HOST}/koe/ [R=301,L]
+	RewriteCond %{HTTP_HOST} !^www\.dm110\.jp$ [NC]
+	RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.dm110\.jp$ [NC]
+	RewriteRule ^koe_([0-9])\.htm$ https://%{HTTP_HOST}/koe/$1/ [R=301,L]
+
+	RewriteCond %{HTTP_HOST} !^www\.dm110\.jp$ [NC]
+	RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.dm110\.jp$ [NC]
+	RewriteRule ^Ank_index\.htm$ https://%{HTTP_HOST}/enquete/ [R=301,L]
+	RewriteCond %{HTTP_HOST} !^www\.dm110\.jp$ [NC]
+	RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.dm110\.jp$ [NC]
+	RewriteRule ^Ank_index2\.htm$ https://%{HTTP_HOST}/enquete/aggregate/ [R=301,L]
+	RewriteCond %{HTTP_HOST} !^www\.dm110\.jp$ [NC]
+	RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.dm110\.jp$ [NC]
+	RewriteRule ^Ank_\d+\.htm$ https://%{HTTP_HOST}/enquete/ [R=301,L]
+
+	RewriteCond %{HTTP_HOST} !^www\.dm110\.jp$ [NC]
+	RewriteCond %{HTTP_HOST} ^([a-z0-9-]+)\.dm110\.jp$ [NC]
+	RewriteCond %{THE_REQUEST} ^.*/index\.html
+	RewriteRule ^(.*)index\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+	RewriteRule ^DMT/download/DM-Tracker__01.pdf /download/DM-Tracker__01.pdf [L]
+	RewriteRule ^DMT/download/DM-Tracker__02.pdf /download/DM-Tracker__02.pdf [L]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule  ^([0-9A-Za-z_\-]*)$  $1.php [L]
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule  ^([0-9A-Za-z_\-]*)/$ $1.php [L]
+
+	# Keep 404 on production only
+	RewriteCond %{HTTP_HOST} ^www\.dm110\.jp$ [NC]
+	ErrorDocument 404 https://www.dm110.jp/
+
+# kagoya edit by 2021/05/11
+	#RewriteCond %{HTTPS} off
+	#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+	#RewriteRule ^(.*)$ https://www.dm110.jp/$1 [R=301,L]
+
+	Options +Includes
+	AddOutputFilter INCLUDES .htm .html
+	AddHandler application/x-httpd-php .php .htm .html
+</IfDefine>
