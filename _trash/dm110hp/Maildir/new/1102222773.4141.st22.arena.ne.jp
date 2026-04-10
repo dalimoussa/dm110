@@ -1,0 +1,28 @@
+Return-Path: <akira@mb.ccnw.ne.jp>
+Delivered-To: dom10085-dm110hp@dm110.jp
+Received: (qmail 4137 invoked by SAV 20041204.004); 5 Dec 2004 13:59:33 +0900
+Received: from unknown (HELO exsmtp1.cmedia.ne.jp) (218.216.192.14)
+  by st22.arena.ne.jp (210.136.151.85) with SMTP; 5 Dec 2004 13:59:33 +0900
+Received: from scan1.cmedia.ne.jp (scan1.ccnw.ne.jp [218.216.192.36])
+	by exsmtp1.cmedia.ne.jp (8.12.11/8.12.11) with ESMTP id iB54xX5O025881
+	for <dm110hp@dm110.jp>; Sun, 5 Dec 2004 13:59:33 +0900 (JST)
+Received: from cmcsmtp2.ccnw.ne.jp (cmcsmtp2.ccnw.ne.jp [218.216.192.47])
+	by scan1.cmedia.ne.jp (Postfix) with ESMTP id D31E927EBA
+	for <dm110hp@dm110.jp>; Sun,  5 Dec 2004 13:59:32 +0900 (JST)
+Received: from [127.0.0.1] (nissin36157.ccnw.ne.jp [219.124.196.157])
+	by cmcsmtp2.ccnw.ne.jp (8.11.6p2/3.7W) with ESMTP id iB54xWW07759
+	for <dm110hp@dm110.jp>; Sun, 5 Dec 2004 13:59:32 +0900 (JST)
+Date: Sun, 05 Dec 2004 13:59:30 +0900
+From: dm110HP <dm110hp@dm110.jp>
+To: dm110hp@dm110.jp
+Subject: test
+Message-Id: <20041205135241.80DB.DM110HP@dm110.jp>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Becky! ver. 2.11.02 [ja]
+
+
+test
+
+

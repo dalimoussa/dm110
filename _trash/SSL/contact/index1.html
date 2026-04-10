@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>お問い合わせ　DM(ダイレクトメール)発送代行センター</title>
+<meta name="Keywords" content="お問い合わせ,発送代行,DM(ダイレクトメール)発送,DM(ダイレクトメール)発送代行" />
+<meta name="Description" content="DM発送代行センターのお問い合わせページです。" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" href="../css/import.css" type="text/css" />
+<link rel="help" href="../sitemap" title="サイトマップ" />
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script type="text/javascript" src="../js/rollover.js" charset="utf-8"></script>
+<!--[メールフォームプロ・参照ファイルここから]-->
+<link rel="stylesheet" href="commons/mailform.css" type="text/css" />
+<script type="text/javascript" src="commons/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="commons/mfp.lang.js" charset="UTF-8"></script>
+<script type="text/javascript" src="commons/mfp.extensions.js" charset="UTF-8"></script>
+<script type="text/javascript" src="commons/mailform.js" charset="UTF-8"></script>
+<script type="text/javascript" src="postcodes/get.cgi?js" charset="UTF-8"></script>
+<!--[メールフォームプロ・参照ファイルここまで]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="js/DD_belatedPNG.js"></script>
+<script type="text/javascript" src="js/png.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div id="container">
+
+
+
+<!--▼パン屑ナビ-->
+<div id="breadcrumbs">
+<ol>
+<li class="first">><a href="../index.html">DM発送代行センター TOP</a></li>
+<li>お問い合わせ</li>
+</ol>
+</div>
+<!--▲パン屑ナビ-->
+
+
+
+<!--main-->
+<div id="main">
+<!--main-in-->
+<div id="main-in">
+
+
+<!--メインイメージ-->
+<div id="main-image">
+<a href="../rakurakuryoukin.html" title="料金表はこちら"><img alt="DM発送代行 ダイレクトメールならお任せください。お見積もりはこちら。" src="../images/top-image1.jpg" onmouseover="this.src='../images/top-image1_on.jpg'" onmouseout="this.src='../images/top-image1.jpg'" class="m20-b" /></a>
+
+</div>
+<!--/メインイメージ-->
+
+<!--▽メインコンテンツ-->
+<div id="main-contents3">
+
+
+<!--conts-->
+<h2><img src="../images/common/h2_mail_contact.jpg" /></h2>
+
+
+<!--[ここからメールフォームプロ・本体]-->
+					<form id="mailform" method="post" action="mailformpro/send.cgi" onsubmit="return falsesubmit(this)" accept-charset="UTF-8">
+						<script type="text/javascript" src="mailformpro/include.cgi" charset="UTF-8"></script>
+						<noscript>
+							<p><input type="hidden" name="javascript_flag" value="0" /></p>
+						</noscript>
+						<div id="mailfrom_hidden_object">
+							<input type="submit" value="submit" />
+							<input type="hidden" name="must_id" value="(必須)" />
+							<input type="hidden" name="input_time" value="0" />
+							<input type="hidden" name="confirm_time" id="confirm_time" value="0" />
+							<input type="hidden" name="sitein_referrer" value="" />
+							<input type="hidden" name="mailform_confirm_mode" value="1" />
+						</div>
+						<table border="0" cellspacing="0" cellpadding="0" class="mailform" summary="mailform main">
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />御社名<span>company name</span></th>
+								<td><input type="text" name="company name(必須)" size="40" class="mfp" />　　例）　株式会社メディアボックス<div id="errormsg_company_name" class="mfp_err"></div></td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />御担当者様名<span>charge person name</span></th>
+								<td><input type="text" name="charge person name(必須)" size="40" class="mfp" />　　例）　山田　太郎<div id="errormsg_charge_person_name" class="mfp_err"></div></td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />会社で使用の電子メール<span>mail address</span></th>
+								<td><input type="text" name="email(必須)" size="40" class="mfp" />　　例）　info@postjp.com<div id="errormsg_email" class="mfp_err"></div></td>
+							</tr>
+							<tr class="mfptr">
+								<th>郵便番号<span>postcode</span></th>
+								<td>
+									<input type="hidden" name="ご住所[unjoin]〒+郵便番号+\n+都道府県(必須)+市区町村(必須)+丁目番地(必須)" value="" />
+									<input type="text" name="郵便番号" size="14" onblur="mfpc(this.form.id,this.name,'都道府県(必須)','市区町村(必須)','丁目番地(必須)');" class="mfp" />
+									<a href="http://www.post.japanpost.jp/zipcode/" target="_blank">郵便番号を調べる</a> 半角英数字のみ　例） 123-4567</td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />会社の住所<span>company　address</span></th>
+								<td>
+									<ol>
+										<li>
+											<span>会社の住所　都道府県</span>
+											<select name="都道府県(必須)" class="mfp">
+												<option value="" selected="selected">【選択して下さい】</option>
+												<optgroup label="北海道・東北地方">
+													<option value="北海道">北海道</option>
+													<option value="青森県">青森県</option>
+													<option value="岩手県">岩手県</option>
+													<option value="秋田県">秋田県</option>
+													<option value="宮城県">宮城県</option>
+													<option value="山形県">山形県</option>
+													<option value="福島県">福島県</option>
+												</optgroup>
+												<optgroup label="関東地方">
+													<option value="栃木県">栃木県</option>
+													<option value="群馬県">群馬県</option>
+													<option value="茨城県">茨城県</option>
+													<option value="埼玉県">埼玉県</option>
+													<option value="東京都">東京都</option>
+													<option value="千葉県">千葉県</option>
+													<option value="神奈川県">神奈川県</option>
+												</optgroup>
+												<optgroup label="中部地方">
+													<option value="山梨県">山梨県</option>
+													<option value="長野県">長野県</option>
+													<option value="新潟県">新潟県</option>
+													<option value="富山県">富山県</option>
+													<option value="石川県">石川県</option>
+													<option value="福井県">福井県</option>
+													<option value="静岡県">静岡県</option>
+													<option value="岐阜県">岐阜県</option>
+													<option value="愛知県">愛知県</option>
+												</optgroup>
+												<optgroup label="近畿地方">
+													<option value="三重県">三重県</option>
+													<option value="滋賀県">滋賀県</option>
+													<option value="京都府">京都府</option>
+													<option value="大阪府">大阪府</option>
+													<option value="兵庫県">兵庫県</option>
+													<option value="奈良県">奈良県</option>
+													<option value="和歌山県">和歌山県</option>
+												</optgroup>
+												<optgroup label="四国地方">
+													<option value="徳島県">徳島県</option>
+													<option value="香川県">香川県</option>
+													<option value="愛媛県">愛媛県</option>
+													<option value="高知県">高知県</option>
+												</optgroup>
+												<optgroup label="中国地方">
+													<option value="鳥取県">鳥取県</option>
+													<option value="島根県">島根県</option>
+													<option value="岡山県">岡山県</option>
+													<option value="広島県">広島県</option>
+													<option value="山口県">山口県</option>
+												</optgroup>
+												<optgroup label="九州・沖縄地方">
+													<option value="福岡県">福岡県</option>
+													<option value="佐賀県">佐賀県</option>
+													<option value="長崎県">長崎県</option>
+													<option value="大分県">大分県</option>
+													<option value="熊本県">熊本県</option>
+													<option value="宮崎県">宮崎県</option>
+													<option value="鹿児島県">鹿児島県</option>
+													<option value="沖縄県">沖縄県</option>
+												</optgroup>
+											</select>
+											<div id="errormsg_都道府県" class="mfp_err"></div>
+										</li>
+										<li><span>市区町村</span> <input type="text" name="市区町村(必須)" size="50" class="mfp" /><div id="errormsg_市区町村" class="mfp_err"></div></li>
+										<li><span>丁目番地</span> <input type="text" name="丁目番地(必須)" size="50" class="mfp" /><div id="errormsg_丁目番地" class="mfp_err"></div></li>
+									</ol>
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th>会社の電話番号<span>telephone number</span></th>
+								<td><input type="text" name="電話番号" size="40" class="mfp" /></td>
+							</tr>
+							<tr class="mfptr">
+								<th>会社のFAX番号<span>fax number</span></th>
+								<td><input type="text" name="電話番号" size="40" class="mfp" /></td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />封入物入りの１封筒の重さ<span>weight</span></th>
+								<td>
+									<ul>
+										<li><label for="100g" id="100g" class="mfp"><input type="radio" name="重さ(必須)" id="100g" value="100g" class="mfp" /> 100g</label></li>
+										<li><label for="200g" id="200g" class="mfp"><input type="radio" name="重さ(必須)" id="200g" value="200g" class="mfp" /> 200g</label></li>
+										<li><label for="500g" id="500g" class="mfp"><input type="radio" name="重さ(必須)" id="500g" value="500g" class="mfp" /> 500g</label></li>
+										<li><label for="1000g" id="1000g" class="mfp"><input type="radio" name="重さ(必須)" id="1000g" value="1000g" class="mfp" /> 1000g</label></li>
+										<li><label for="others" id="others" class="mfp"><input type="radio" name="重さ(必須)" id="others" value="others" class="mfp" /> その他・不明</label></li>
+									</ul>
+									<div id="errormsg_重さ" class="mfp_err"></div>
+									<!--radioを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+									<input type="hidden" name="重さ(必須)" />
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />今回発送予定の数<span> number of shipping timetables</span></th>
+								<td>約　<input type="text" name="timetables(必須)" size="40" class="mfp" />　通<div id="errormsg_company_name" class="mfp_err"></div></td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />1つの封筒に入れる予定部数<span> number of copies</span></th>
+								<td>
+									<ul>
+										<li><label for="1" id="1" class="mfp"><input type="radio" name="予定部数(必須)" id="1" value="1" class="mfp" /> 1部</label></li>
+										<li><label for="2" id="2" class="mfp"><input type="radio" name="予定部数(必須)" id="2" value="2" class="mfp" /> 2部</label></li>
+										<li><label for="3" id="3" class="mfp"><input type="radio" name="予定部数(必須)" id="3" value="3" class="mfp" /> 3部</label></li>
+										<li><label for="4" id="4" class="mfp"><input type="radio" name="予定部数(必須)" id="4" value="4" class="mfp" /> 4部</label></li>
+										<li><label for="5" id="5" class="mfp"><input type="radio" name="予定部数(必須)" id="5" value="5" class="mfp" /> 5部</label></li>
+										<li><label for="6" id="6" class="mfp"><input type="radio" name="予定部数(必須)" id="6" value="6" class="mfp" /> 6部</label></li>
+										<li><label for="7" id="7" class="mfp"><input type="radio" name="予定部数(必須)" id="7" value="7" class="mfp" /> 7部</label></li>
+										<li><label for="8" id="8" class="mfp"><input type="radio" name="予定部数(必須)" id="8" value="8" class="mfp" /> 8部</label></li>
+										<li><label for="9" id="9" class="mfp"><input type="radio" name="予定部数(必須)" id="9" value="9" class="mfp" /> 9部</label></li>
+										<li><label for="10" id="10" class="mfp"><input type="radio" name="予定部数(必須)" id="10" value="10" class="mfp" /> 10部</label></li>
+									</ul><br /><br />（冊子・ホッチキスでとめてあるものは１部とします）
+									<div id="errormsg_予定部数" class="mfp_err"></div>
+									<!--radioを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+									<input type="hidden" name="予定部数(必須)" />
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />封筒の種類<span> the kind of envelope</span></th>
+								<td>
+									<ul>
+										<li><label for="a4" id="a4" class="mfp"><input type="radio" name="封筒の種類(必須)" id="a4" value="a4" class="mfp" /> 当社A4透明＠4円使用 </label></li>
+										<li><label for="nk2" id="nk2" class="mfp"><input type="radio" name="封筒の種類(必須)" id="nk2" value="nk2" class="mfp" /> のり付き角2紙封筒支給（※1）</label></li>
+										<li><label for="k2" id="k2" class="mfp"><input type="radio" name="封筒の種類(必須)" id="k2" value="k2" class="mfp" /> のりなし角2紙封筒支給（※1） </label></li>
+										<li><label for="nn3" id="nn3" class="mfp"><input type="radio" name="封筒の種類(必須)" id="nn3" value="nn3" class="mfp" /> のり付き長3紙封筒支給（※2）</label></li>
+										<li><label for="n3" id="n3" class="mfp"><input type="radio" name="封筒の種類(必須)" id="n3" value="n3" class="mfp" /> のり無し長3紙封筒支給（※2）</label></li>
+										<li><label for="others" id="others" class="mfp"><input type="radio" name="封筒の種類(必須)" id="others" value="others" class="mfp" /> その他</label></li>
+									</ul><br /><br /><br /><br />（※1）角2封筒：A4が折らずに入る封筒<br />（※2）長3封筒：A4を3つ折にして入れる封筒
+									<div id="errormsg_封筒の種類" class="mfp_err"></div>
+									<!--radioを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+									<input type="hidden" name="封筒の種類(必須)" />
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th>当社で印刷する場合(黒１色印刷)<span>all in printing black</span></th>
+								<td>
+									<ul>
+										<li>サイズ　<select id="size" name="サイズ" class="mfp">
+												<option value="0">サイズ</option>
+												<option value="1">A4</option>
+												<option value="2">A3</option>
+												</select>
+										<li>紙の色　<select id="color" name="紙の色" class="mfp">
+												<option value="0">紙の色</option>
+												<option value="1">白色</option>
+												<option value="2">クリーム色</option>
+												<option value="3">ピンク色</option>
+												<option value="4">若草色</option>
+												</select>
+										<li>片面・両面　<select id="method" name="印刷方法" class="mfp">
+												<option value="0">印刷方法</option>
+												<option value="1">片面</option>
+												<option value="2">両面</option>
+												</select>
+										<li>印刷枚数　<input type="text" name="枚数" id="sheets" size="10" class="mfp" /> 枚</li>
+										
+									</ul>
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th>当社で印刷する場合(カラー印刷)<span>all in printing coler</span></th>
+								<td>
+									<ul>
+										<li>サイズ　<select id="size" name="サイズ" class="mfp">
+												<option value="0">サイズ</option>
+												<option value="1">A4</option>
+												<option value="2">A3</option>
+												</select>
+										<li>片面・両面　<select id="method" name="印刷方法" class="mfp">
+												<option value="0">印刷方法</option>
+												<option value="1">片面</option>
+												<option value="2">両面</option>
+												</select>
+										<li>印刷枚数　<input type="text" name="枚数" id="sheets" size="10" class="mfp" /> 枚</li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />現在の発送方法<span> the delivery method </span></th>
+								<td>
+									<ul>
+										<li><label for="post" id="post" class="mfp"><input type="radio" name="発送方法(必須)" id="post" value="post" class="mfp" /> 郵便 </label></li>
+										<li><label for="mail" id="mail" class="mfp"><input type="radio" name="発送方法(必須)" id="mail" value="mail" class="mfp" /> メール便</label></li>
+										<li><label for="first" id="first" class="mfp"><input type="radio" name="発送方法(必須)" id="first" value="first" class="mfp" /> はじめて送る </label></li>
+										<li><label for="others" id="others" class="mfp"><input type="radio" name="発送方法(必須)" id="others" value="others" class="mfp" /> その他</label></li>
+									</ul>
+									<div id="errormsg_発送方法" class="mfp_err"></div>
+									<!--radioを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+									<input type="hidden" name="発送方法(必須)" />
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />当HPをどこで知りまたしたか？<span> number of copies</span></th>
+								<td>
+									<ul>
+										<li><label for="yahoo" id="yahoo" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="yahoo" value="yahoo" class="mfp" /> Yahoo</label></li>
+										<li><label for="google" id="google" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="google" value="google" class="mfp" /> Google</label></li>
+										<li><label for="msn" id="msn" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="msn" value="msn" class="mfp" /> MSN</label></li>
+										<li><label for="goo" id="goo" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="goo" value="goo" class="mfp" /> goo</label></li>
+										<li><label for="others" id="others" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="others" value="others" class="mfp" /> その他検索エンジン</label></li>
+										<li><label for="tb" id="tb" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="tb" value="tb" class="mfp" /> 帝国データバンク</label></li>
+										<li><label for="bp" id="bp" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="bp" value="bp" class="mfp" /> 日経BP</label></li>
+										<li><label for="bc" id="bc" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="bc" value="bc" class="mfp" /> ビジネスチャンス</label></li>
+										<li><label for="os" id="os" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="os" value="os" class="mfp" /> その他紹介</label></li>
+										<li><label for="rp" id="rp" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="rp" value="rp" class="mfp" /> 既存取引</label></li>
+										<li><label for="fb" id="fb" class="mfp"><input type="radio" name="どこで知りまたしたか(必須)" id="fb" value="fb" class="mfp" /> facebook</label></li>
+									</ul>
+									<div id="errormsg_どこで知りまたしたか" class="mfp_err"></div>
+									<!--radioを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+									<input type="hidden" name="どこで知りまたしたか(必須)" />
+								</td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />検索キーワード・紹介者名<br />紹介ホームページ名<span>introducing agency</span></th>
+								<td><input type="text" name="company name(必須)" size="40" class="mfp" />　　例）　ダイレクトメール<div id="errormsg_company_name" class="mfp_err"></div></td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />印刷内容・現状・お困りごと・<br />条件などをお書き下さい<span>inquiry body</span></th>
+								<td><textarea name="ご用件(必須)" rows="10" cols="60" class="mfp"></textarea><div id="errormsg_ご用件" class="mfp_err"></div></td>
+							</tr>
+							<tr class="mfptr">
+								<th><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />送信確認<span>sending confirm</span></th>
+								<td><label for="send_confirm" id="send_confirm_label" class="mfp"><input type="checkbox" id="send_confirm" name="送信確認(必須)" value="送信チェック済み" class="mfp" /> 上記送信内容を確認したらチェックを入れてください</label><div id="errormsg_送信確認" class="mfp_err"></div></td>
+							</tr>
+						</table>
+						<div id="mfp_buttons">
+							<ul>
+								<li><input type="button" value="" id="button_mfp_reset" onclick="mfp_reset(this.form)" onkeypress="mfp_reset(this.form)" onmouseover="mfp_bt(this,1)" onmouseout="mfp_bt(this,0)" /></li>
+								<li><input type="button" value="" id="button_mfp_goconfirm" onclick="sendMail(this.form)" onkeypress="sendMail(this.form)" onmouseover="mfp_bt(this,1)" onmouseout="mfp_bt(this,0)" /></li>
+							</ul>
+						</div>
+					</form>
+					<!--[ここまでメールフォームプロ・本体]-->
+
+
+
+<!--/cont-->
+
+
+</div>
+<!--△メインコンテンツ-->
+
+
+</div>
+<!--/main-in-->
+
+
+<!--▼ページの先頭へ戻る-->
+<div id="page-top">
+<p><a href="#container"><img class="over png_bg" src="../images/common/btn-pagetop_off.gif" width="164" height="31" alt="このページの先頭へ" /></a></p>
+</div>
+<!--▲ページの先頭へ戻る-->
+
+
+<!--▼フッター-->
+<div id="footer" class="png_bg">
+<div id="footer-in">
+
+<!--フッターメニュー-->
+<div id="area02">
+<h3>サイトメニュー</h3>
+<div class="footer-menu">
+
+<ul>
+ <li class="b m10-b m10-t">システムのご案内</li>
+ <li><a href="../rakurakutowa.html" target="_self">らくらく便(発送代行)とは</a></li>
+ <li><a href="../2eninsatutowa.html" target="_self">2円印刷とは</a></li>
+ <li><a href="../calorinsatutowa.htm" target="_self">わけありカラー印刷とは</a></li>
+ <li class="b m10-b m10-t">お見積り（プランニング）</li>
+ <li><a href="price/index.html">見積り(プランニング)の請求</a></li>
+ <li class="b m10-b m10-t">基本料金表</li>
+ <li><a href="../price/index.html">らくらく便(発送代行)料金表</a></li>
+ <li><a href="../calorinsaturyoukin.htm">わけありカラー印刷料金表</a></li>
+ <li><a href="../Film_Fuutou.htm">フィルム封筒料金表</a></li>
+ <li><a href="../Ryoukin_A4.htm">A4ハガキ印刷＋発送代行料金</a></li>
+ <li class="b m10-b m10-t">お客様の声</li>
+ <li><a href="../okyaku_koe_FAX150.htm" target="_self">212件　お客さまの声</a></li> 
+ <li class="b m10-b m10-t">お客さまからの質問</li>
+ <li><a href="../merit.html">発送代行のメリット・デメリット</a></li> 
+ <li><a href="../miss.html" target="_self">DM発送で失敗しないために</a></li> 
+ <li><a href="../DM_otokuzyoho.html" target="_self">コンサルタントも参考にしているお宝ノウハウ</a></li> 
+</ul>
+
+
+ 
+ <ul>
+ <li class="b m10-b m10-t">特徴</li> 
+ <li><a href="../Tasya_Chigai.html">他社との違い</a></li>
+ <li><a href="../Anshin_wake.html">安心してお使い頂くために</a></li>
+ <li class="b m10-b m10-t">削減の具体例</li> 
+ <li><a href="../kosutosakugen.html" target="_self">DMコスト削減事例</a></li>
+ <li><a href="../omosabetu.html" target="_self">DM配達件数別料金比較</a></li>
+ <li class="b m10-b m10-t">売り上げアップに直結</li> 
+ <li><a href="../Nlrei.html" target="_self">これをやって多くの会社が儲かっている<br />簡単ニュースレター発行法</a></li>
+ <li><a href="../Dmrei.html" target="_self">お客様の協力によりできた<br />DMの反応率を上げる実験データ</a></li>
+ <li><a href="../2000tuurei.html" target="_self">広告郵便割引の適用されない<br />2000通未満の郵送物を格安郵送するには</a></li>
+ <li class="b m10-b m10-t">評価・グラフ</li> 
+ <li><a href="../okyaku_koe_FAX.htm">FAXからのお客様の声</a></li>
+ <li><a href="../okyaku_koe_Mail.htm">メールからのお客様の声</a></li>
+ <li><a href="../Ank_index.htm">お客様の評価</a></li> 
+</ul>
+
+<ul>
+ <li class="b m10-b m10-t">お得な情報</li> 
+ <li><a href="../dmnootosiana.html" target="_self">DMの落とし穴</a></li>
+ <li><a href="../Muryo_Soudan.html" target="_self">DM無料相談 受付中</a></li>
+ <li class="b m10-b m10-t">運営会社の概要</li> 
+ <li><a href="../kaisyaannai.html">会社案内</a></li>
+ <li><a href="../message.html">代表者からのメッセージ</a></li>
+ <li><a href="../kaisya_enkaku.htm">会社沿革</a></li>
+ <li><a href="../torihiki_jisseki.htm">取引実績</a></li>
+ <li><a href="../Shakai_kouken.htm">社会貢献</a></li>
+ <li><a href="../kojinjyouhou.html">個人情報保護</a></li>
+ <li><a href="../Q&amp;A.html">Q&amp;A</a></li>
+ <li><a href="../SiteMap.htm">サイトマップ</a></li>
+ <li><a href="contact/index.html">お問合せ</a></li> 
+</ul>
+
+
+
+</div>
+</div>
+<!--/フッターメニュー-->
+
+</div>
+</div>
+
+
+<!--コピーライト-->
+<p class="copyright"><small>Copyright (c)<a href="../index.html">　DM発送代行センター　</a> All Rights Reserved.</small></p>
+<!--/コピーライト--></div>
+<!--/main--><!--▼トップメニュー-->
+<div id="top">
+<div id="top-in">
+
+<ul id="top-menu">
+
+<li class="sitemap"><a href="../SiteMap.htm">サイトマップ</a></li>
+</ul>
+
+</div>
+</div>
+<!--▲トップメニュー-->
+<!--▼ヘッダー-->
+<div id="header">
+<div id="header-in">
+
+<div id="header-logo">
+<p id="logo-text"><a href="../index.html"><img src="../images/common/logo.gif"alt="DM発送代行センター" /></a></p>
+</div>
+<div id="header-text">
+<a href="contact/index.html"><img src="../images/common/contact01.jpg"alt="DM発送代行センターへのお問い合わせ" /></a>
+</div>
+
+<div id="header-text1">
+<p>DM(ダイレクトメール)発送のコスト削減と発送作業の大幅な軽減「DM発送代行センター」</p>
+</div>
+
+</div>
+</div>
+<!--▲ヘッダー-->
+
+<!--▼グローバルメニュー-->
+ <div id="globalnavi">
+ <ul>
+ <li id="navi1"><a href="../index.html" title="DM発送代行センター　TOP">DM発送代行センター　TOP</a></li>
+ <li id="navi2"><a href="price/index.html" title="お見積もり">お見積もり</a></li>
+ <li id="navi3"><a href="../rakurakutowa.html" title="初めての方へ">初めての方へ</a></li>
+ <li id="navi4"><a href="../okyaku_koe_FAX150.htm" title="お客様の声212件">お客様の声212件</a></li>
+ <li id="navi5"><a href="../Naze_yasui.htm" title="安い訳">安い訳</a></li>
+ <li id="navi6"><a href="../rakurakuryoukin.html" title="料金表">料金表</a></li>
+ <li id="navi7"><a href="../torihiki_jisseki.htm" title="取引実績">取引実績</a></li>
+ </ul>
+ </div>
+<!--▲グローバルメニュー-->
+</div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<title>メールフォームプロCGI サンプルHTML DTタグ版</title>
+		<meta name="revisit_after" content="7 days" />
+		<meta name="robots" content="ALL" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<link rel="index" href="index.html" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="commons/_include_wide.css" type="text/css" />
+		<meta name="Description" content="メールフォームプロCGI サンプルHTML DTタグ版" />
+		<!--[メールフォームプロ・参照ファイルここから]-->
+		<link rel="stylesheet" href="commons/mailform.css" type="text/css" />
+		<script type="text/javascript" src="commons/jquery.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="commons/mfp.lang.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="commons/mfp.extensions.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="commons/mailform.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="postcodes/get.cgi?js" charset="UTF-8"></script>
+		<!--[メールフォームプロ・参照ファイルここまで]-->
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1 id="title">メールフォームプロCGI <script type="text/javascript" src="commons/mfp.version.js"></script></h1>
+				<span>MAILFORM PRO CGI VERSION <script type="text/javascript" src="commons/mfp.version.js"></script></span>
+				<div>お電話でのお問い合せは ***-***-**** (月曜日～金曜日／午前10時～午後5時)までお問い合わせください。</div>
+			</div>
+			<div id="container">
+				<div id="contents">
+					<p>メールでお問い合わせの際は、以下のフォームよりお問い合わせ下さい。<a href="example_drop.html">ドロップ機能サンプルへ</a></p>
+					<!--入力平均時間表示する場合、コメント解除<div id="input_time_disp" class="mfp_disp"></div>-->
+					<!--送信有効期限表示する場合、コメント解除<div id="expires_time_disp" class="mfp_disp"></div>-->
+					<!--送信数制限表示する場合、コメント解除<div id="limit_disp" class="mfp_disp"></div>-->
+					<!--音声ガイダンス出力する場合、コメント解除<div id="mfp_se" class="mfp_disp"></div>-->
+					<!--[ここからメールフォームプロ・本体]-->
+					<form id="mailform" method="post" action="mailformpro/send.cgi" onsubmit="return falsesubmit(this)" accept-charset="UTF-8">
+						<script type="text/javascript" src="mailformpro/include.cgi" charset="UTF-8"></script>
+						<noscript>
+							<p><input type="hidden" name="javascript_flag" value="0" /></p>
+						</noscript>
+						<div id="mailfrom_hidden_object">
+							<input type="submit" value="submit" />
+							<input type="hidden" name="must_id" value="(必須)" />
+							<input type="hidden" name="input_time" value="0" />
+							<input type="hidden" name="sitein_referrer" value="" />
+							<input type="hidden" name="confirm_time" id="confirm_time" value="0" />
+							<input type="hidden" name="mailform_confirm_mode" value="1" />
+						</div>
+						<dl class="mailform">
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />ご予約日<span>reserved date</span></dt>
+							<dd class="mfptr"><script type="text/javascript" src="commons/choice_date.js"></script><div id="errormsg_ご予約日" class="mfp_err"></div></dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />メールアドレス<span>mail address</span></dt>
+							<dd class="mfptr"><input type="text" name="email(必須)" size="40" class="mfp" /><div id="errormsg_email" class="mfp_err"></div></dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />確認のためもう一度<span>confirm mail address</span></dt>
+							<dd class="mfptr"><input type="text" name="confirm_email(必須)" size="40" class="mfp" /><div id="errormsg_confirm_email" class="mfp_err"></div></dd>
+							<dt>会社名<span>company</span></dt>
+							<dd class="mfptr"><input type="text" name="会社名" size="30" class="mfp" /></dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />お名前<span>your name</span></dt>
+							<dd class="mfptr">
+								<input type="text" name="姓(必須)" size="15" class="mfp" onkeyup="inputTyping(this.form.id,'セイ',event.keyCode,this)" /> 
+								<input type="text" name="名(必須)" size="15" class="mfp" onkeyup="inputTyping(this.form.id,'メイ',event.keyCode,this)" />
+								<div id="errormsg_姓" class="mfp_err"></div>
+								<div id="errormsg_名" class="mfp_err"></div>
+							</dd>
+							<dt>フリガナ<span>assumed name</span></dt>
+							<dd class="mfptr"><input type="text" name="セイ" size="15" class="mfp" /> <input type="text" name="メイ" size="15" class="mfp" /></dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />性別<span>sex</span></dt>
+							<dd class="mfptr">
+								<ul>
+									<li><label for="male" id="male_label" class="mfp"><input type="radio" name="性別(必須)" id="male" value="男" class="mfp" /> 男性</label></li>
+									<li><label for="female" id="female_label" class="mfp"><input type="radio" name="性別(必須)" id="female" value="女" class="mfp" /> 女性</label></li>
+								</ul>
+								<div id="errormsg_性別" class="mfp_err"></div>
+								<!--radioを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+								<input type="hidden" name="性別(必須)" />
+							</dd>
+							<dt>電話番号<span>telephone number</span></dt>
+							<dd class="mfptr"><input type="text" name="電話番号" size="16" class="mfp" /></dd>
+							<dt>注文商品<span>order item</span></dt>
+							<dd class="mfptr">
+								<ol>
+									<li>山わさび 980円<input type="text" name="山わさび個数" id="price_yama_980" size="4" class="mfp" /> 個</li>
+									<li>白い恋人 1500円<input type="text" name="白い恋人個数" id="price_koibito_1500" size="4" class="mfp" /> 個</li>
+									<li>黒い愛人 9800円<input type="text" name="黒い愛人個数" id="price_kuroi_9080" size="4" class="mfp" /> 個</li>
+									<li>
+										ワダノリユキの愛憎
+										<select id="price_wada_98000" name="ワダノリユキの愛憎" class="mfp">
+											<option value=""></option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</li>
+								</ol>
+							</dd>
+							<dt>配送方法<span>telephone number</span></dt>
+							<dd class="mfptr">
+								<ul>
+									<li><label for="price_kuroneko_2000" id="price_kuroneko_2000_label" class="mfp"><input type="radio" name="運送会社" value="クロネコヤマト 2000円" id="price_kuroneko_2000" class="mfp" checked /> クロネコヤマト 2000円</label></li>
+									<li><label for="price_sagawa_1500" id="price_sagawa_1500_label" class="mfp"><input type="radio" name="運送会社" value="佐川急便 1500円" id="price_sagawa_1500" class="mfp" /> 佐川急便 1500円</label></li>
+								</ul>
+							</dd>
+							<dt>お支払い合計金額<span>total price</span></dt>
+							<dd class="mfptr">
+								<input type="hidden" name="price" readonly />
+								<div id="mfp_price">0円</div>
+							</dd>
+							<dt>郵便番号<span>postcode</span></dt>
+							<dd class="mfptr">
+								<input type="hidden" name="ご住所[unjoin]〒+郵便番号+\n+都道府県(必須)+市区町村(必須)+丁目番地(必須)" value="" />
+								<input type="text" name="郵便番号" size="8" onblur="mfpc(this.form.id,this.name,'都道府県(必須)','市区町村(必須)','丁目番地(必須)');" class="mfp" />
+								<a href="http://www.post.japanpost.jp/zipcode/" target="_blank">郵便番号を調べる</a></dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />ご住所<span>address</span></dt>
+							<dd class="mfptr">
+								<ol>
+									<li>
+										<span>都道府県</span>
+										<select name="都道府県(必須)" class="mfp">
+											<option value="" selected="selected">【選択して下さい】</option>
+											<optgroup label="北海道・東北地方">
+												<option value="北海道">北海道</option>
+												<option value="青森県">青森県</option>
+												<option value="岩手県">岩手県</option>
+												<option value="秋田県">秋田県</option>
+												<option value="宮城県">宮城県</option>
+												<option value="山形県">山形県</option>
+												<option value="福島県">福島県</option>
+											</optgroup>
+											<optgroup label="関東地方">
+												<option value="栃木県">栃木県</option>
+												<option value="群馬県">群馬県</option>
+												<option value="茨城県">茨城県</option>
+												<option value="埼玉県">埼玉県</option>
+												<option value="東京都">東京都</option>
+												<option value="千葉県">千葉県</option>
+												<option value="神奈川県">神奈川県</option>
+											</optgroup>
+											<optgroup label="中部地方">
+												<option value="山梨県">山梨県</option>
+												<option value="長野県">長野県</option>
+												<option value="新潟県">新潟県</option>
+												<option value="富山県">富山県</option>
+												<option value="石川県">石川県</option>
+												<option value="福井県">福井県</option>
+												<option value="静岡県">静岡県</option>
+												<option value="岐阜県">岐阜県</option>
+												<option value="愛知県">愛知県</option>
+											</optgroup>
+											<optgroup label="近畿地方">
+												<option value="三重県">三重県</option>
+												<option value="滋賀県">滋賀県</option>
+												<option value="京都府">京都府</option>
+												<option value="大阪府">大阪府</option>
+												<option value="兵庫県">兵庫県</option>
+												<option value="奈良県">奈良県</option>
+												<option value="和歌山県">和歌山県</option>
+											</optgroup>
+											<optgroup label="四国地方">
+												<option value="徳島県">徳島県</option>
+												<option value="香川県">香川県</option>
+												<option value="愛媛県">愛媛県</option>
+												<option value="高知県">高知県</option>
+											</optgroup>
+											<optgroup label="中国地方">
+												<option value="鳥取県">鳥取県</option>
+												<option value="島根県">島根県</option>
+												<option value="岡山県">岡山県</option>
+												<option value="広島県">広島県</option>
+												<option value="山口県">山口県</option>
+											</optgroup>
+											<optgroup label="九州・沖縄地方">
+												<option value="福岡県">福岡県</option>
+												<option value="佐賀県">佐賀県</option>
+												<option value="長崎県">長崎県</option>
+												<option value="大分県">大分県</option>
+												<option value="熊本県">熊本県</option>
+												<option value="宮崎県">宮崎県</option>
+												<option value="鹿児島県">鹿児島県</option>
+												<option value="沖縄県">沖縄県</option>
+											</optgroup>
+										</select>
+										<div id="errormsg_都道府県" class="mfp_err"></div>
+									</li>
+									<li><span>市区町村</span> <input type="text" name="市区町村(必須)" size="50" class="mfp" /><div id="errormsg_市区町村" class="mfp_err"></div></li>
+									<li><span>丁目番地</span> <input type="text" name="丁目番地(必須)" size="50" class="mfp" /><div id="errormsg_丁目番地" class="mfp_err"></div></li>
+								</ol>
+							</dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />資料請求<span>document request</span></dt>
+							<dd class="mfptr">
+								<ol>
+									<li><label for="doc01" id="doc01_label" class="mfp"><input type="checkbox" name="資料請求(必須)3" id="doc01" value="メールフォーム" class="mfp" /> メールフォーム</label></li>
+									<li><label for="doc02" id="doc02_label" class="mfp"><input type="checkbox" name="資料請求(必須)3" id="doc02" value="サイト内検索" class="mfp" /> サイト内検索</label></li>
+									<li><label for="doc03" id="doc03_label" class="mfp"><input type="checkbox" name="資料請求(必須)3" id="doc03" value="ステキカレンダー" class="mfp" /> ステキカレンダー</label></li>
+									<li><label for="doc04" id="doc04_label" class="mfp"><input type="checkbox" name="資料請求(必須)3" id="doc04" value="掲示板" class="mfp" /> 掲示板</label></li>
+									<li><label for="doc05" id="doc05_label" class="mfp"><input type="checkbox" name="資料請求(必須)3" id="doc05" value="ホームページ制作" class="mfp" /> ホームページ制作</label></li>
+									<li><label for="doc06" id="doc06_label" class="mfp"><input type="checkbox" name="資料請求(必須)3" id="doc06" value="会社概要" class="mfp" /> 会社概要</label></li>
+								</ol>
+								<p>※３個以上必ずチェックしてください。</p>
+								<div id="errormsg_資料請求" class="mfp_err"></div>
+								<!--checkboxを配置する場合、CSVのログズレを防ぐために同名のhiddenを配置してください。-->
+								<input type="hidden" name="資料請求(必須)3" />
+							</dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />ご用件<span>inquiry body</span></dt>
+							<dd class="mfptr"><textarea name="ご用件(必須)" rows="10" cols="60" class="mfp"></textarea><div id="errormsg_ご用件" class="mfp_err"></div></dd>
+							<dt><img src="images/mfp_must.gif" width="30" height="16" alt="必須" class="must" />送信確認<span>sending confirm</span></dt>
+							<dd class="mfptr"><label for="send_confirm" id="send_confirm_label" class="mfp"><input type="checkbox" id="send_confirm" name="送信確認(必須)" value="送信チェック済み" class="mfp" /> 上記送信内容を確認したらチェックを入れてください</label><div id="errormsg_送信確認" class="mfp_err"></div></dd>
+						</dl>
+						<div id="mfp_buttons">
+							<ul>
+								<li><input type="button" value="" id="button_mfp_reset" onclick="mfp_reset(this.form)" onkeypress="mfp_reset(this.form)" onmouseover="mfp_bt(this,1)" onmouseout="mfp_bt(this,0)" /></li>
+								<li><input type="button" value="" id="button_mfp_goconfirm" onclick="sendMail(this.form)" onkeypress="sendMail(this.form)" onmouseover="mfp_bt(this,1)" onmouseout="mfp_bt(this,0)" /></li>
+							</ul>
+						</div>
+					</form>
+					<!--[ここまでメールフォームプロ・本体]-->
+				</div>
+			</div>
+			<div id="footer">
+				<span>Copyright&copy; 2008 All Rights Reserved.</span>
+			</div>
+		</div>
+	</body>
+</html>

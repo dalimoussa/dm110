@@ -1,0 +1,88 @@
+###ê›íËÉtÉ@ÉCÉã2###
+
+sub check_browser{
+
+$useragent = $ENV{'HTTP_USER_AGENT'};
+$browser="Other";
+$osversion="Other";
+if( $useragent =~/Opera/ ){
+      $browser="Opera";
+      if( $useragent =~/Opera/ ){$browser="Opera";}
+      if( $useragent =~/Opera\/6/ ){$browser="Opera 6";}
+      if( $useragent =~/Opera 6/ ){$browser="Opera 6";}
+      if( $useragent =~/Opera 5/ ){$browser="Opera 5";}
+      if( $useragent =~/Windows XP/ ){$osversion="WIN XP";}
+      elsif( $useragent =~/Windows 2000/ ){$osversion="WIN 2000";}
+      elsif( $useragent =~/Windows ME/ ){$osversion="WIN ME";}
+      elsif( $useragent =~/Windows 98/ ){$osversion="WIN 98";}
+      elsif( $useragent =~/Mac_PowerPC/ ){$osversion="Mac OS";}
+      elsif( $useragent =~/Linux/ ){$osversion="Linux";}
+      else{$osversion="Other";}
+
+}elsif(($useragent =~/MSIE/) && ($useragent =~/Mozilla/) && ($useragent =~/compatible/)){
+      $browser="IE";
+      if( $useragent =~/MSIE 2/ ){$browser="IE 2";}
+      if( $useragent =~/MSIE 3/ ){$browser="IE 3";}
+      if( $useragent =~/MSIE 4/ ){$browser="IE 4";}
+      if( $useragent =~/MSIE 5/ ){$browser="IE 5.x";}
+      if( $useragent =~/MSIE 5.0/ ){$browser="IE 5.0";}
+      if( $useragent =~/MSIE 5.5/ ){$browser="IE 5.5";}
+      if( $useragent =~/MSIE 6/ ){$browser="IE 6";}
+      if( $useragent =~/Windows 95/ ){$osversion="WIN 95";}
+      elsif( $useragent =~/Win 9x/ ){$osversion="WIN ME";}
+      elsif( $useragent =~/Windows 98/ ){$osversion="WIN 98";}
+      elsif( $useragent =~/Windows NT 5.0/ ){$osversion="WIN 2000";}
+      elsif( $useragent =~/Windows NT 5.1/ ){$osversion="WIN XP";}
+      elsif( $useragent =~/Windows NT/ ){$osversion="WIN NT";}
+      elsif( $useragent =~/Windows XP/ ){$osversion="WIN XP";}
+      elsif( $useragent =~/Windows CE/ ){$osversion="WIN CE";}
+      elsif( $useragent =~/Mac/ ){$osversion="Mac OS";}
+      elsif( $useragent =~/Linux/ ){$osversion="Linux";}
+      elsif( $useragent =~/SunOS/ ){$osversion="SunOS";}
+      elsif( $useragent =~/FreeBSD/ ){$osversion="FreeBSD";}
+      else{$osversion="Other";}
+
+}elsif(($useragent =~/Mozilla/) && ($useragent !~/Compatible/)){
+      $browser="NN";
+      if( $useragent =~/Mozilla\/2/ ){$browser="NN 2";}
+      if( $useragent =~/Mozilla\/3/ ){$browser="NN 3";}
+      if( $useragent =~/Mozilla\/4/ ){$browser="NN 4";}
+      if( $useragent =~/Mozilla\/5/ ){$browser="NN 5";}
+      if( $useragent =~/Mozilla\/6/ ){$browser="NN 6";}
+      if( $useragent =~/Netscape6/ ){$osversion="NN 6";}
+      if (($useragent =~/Gecko/) && ($useragent !~/Netscape/)){$osversion="Mozilla";}
+      if( $useragent =~/Win95/ ){$osversion="WIN 95";}
+      elsif( $useragent =~/Win98/ ){$osversion="WIN 98";}
+      elsif( $useragent =~/Windows NT 5.0/ ){$osversion="WIN 2000";}
+      elsif( $useragent =~/Windows NT 5.1/ ){$osversion="WIN XP";}
+      elsif( $useragent =~/WinNT/ ){$osversion="WIN NT";}
+      elsif( $useragent =~/Windows NT/ ){$osversion="WIN NT";}
+      elsif( $useragent =~/Windows XP/ ){$osversion="WIN XP";}
+      elsif( $useragent =~/Macintosh/ ){$osversion="Mac OS";}
+      elsif( $useragent =~/Linux/ ){$osversion="Linux";}
+      elsif( $useragent =~/SunOS/ ){$osversion="SunOS";}
+      elsif( $useragent =~/FreeBSD/ ){$osversion="FreeBSD";}
+      else{$osversion="Other";}
+
+}elsif( $useragent =~/Nutscrape\/1/ ){$browser="Nutscrape1";
+}elsif( $useragent =~/Cuam\/1/ ){$browser="Cuam";
+}
+
+}
+
+
+
+sub check_keywordsub{
+if($url =~ /google\.yahoo\.co\.jp/) {$keyword = $keyvalue{'p'};$searchengin="Yahoo! Japan(google)";}
+elsif($url =~ /google\.yahoo\.co\.jp/) {$keyword = $keyvalue{'p'};$searchengin="Yahoo! Japan(google)";}
+elsif($url =~ /google\.com/) {$keyword = $keyvalue{'q'};$searchengin="Google";}
+elsif($url =~ /google\.co\.jp/) {$keyword = $keyvalue{'q'};$searchengin="Google";}
+else {$searchengin="";}
+}
+
+
+
+#-----------------------------#
+# êGÇËÇ‹ÇπÇÒ#
+#-----------------------------#
+1;

@@ -1,0 +1,2 @@
+[Sun Mar 12 12:06:16.805711 2017] [:error] [pid 32687] [client 176.104.53.78:49993] script '/home/kir019184/public_html/searchreplacedb2.php' not found or unable to stat, referer: http://dm110.jp/searchreplacedb2.php
+[Sun Mar 12 22:12:56.733137 2017] [autoindex:error] [pid 3326] [client 185.8.236.222:36791] AH01276: Cannot serve directory /home/kir019184/public_html/form/: No matching DirectoryIndex (index.html,index.htm,index.shtml,index.cgi,index.php,default.php) found, and server-generated directory index forbidden by Options directive
