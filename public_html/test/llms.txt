@@ -1,12 +1,25 @@
-# test.dm110.jp (staging)
-# This host is a test environment and is blocked from indexing.
+# DM発送代行センター (Test Environment)
 
-Project: DM発送代行センター (staging)
-Primary URL: https://test.dm110.jp/
-Sitemap (XML): https://test.dm110.jp/sitemap.xml
-Sitemap (PHP): https://test.dm110.jp/sitemap.php
-Robots policy: https://test.dm110.jp/robots.txt
+## Provider
+株式会社メディアボックス
+Location: 〒470-0164 愛知県愛知郡東郷町三ツ池4-5-2
+Contact: 0561-37-2027
 
-Notes:
-- Content and routes may change without notice.
-- Use production domain policies only on www.dm110.jp.
+## Services
+* 封筒に封入発送コース(基本)
+* 黒一色印刷（A3・A4・B4・B5）
+* カラー印刷（A3・A4・B4・B5）
+* A4（ジャンボ）はがき印刷発送
+* A4圧着ハガキ印刷発送
+* カタログ発送（1kg以上小分け）
+
+## Key Differentiators
+1. プライバシーマーク取得済み
+2. 信書確認無料
+3. 宛名データ削除通知無料
+4. 最初から最後まで同じ担当者がサポート
+5. 100通～10万通まで対応
+
+## Authoritative Information
+* サイトマップ: https://test.dm110.jp/sitemap.php
+* 代表の著書: バカ売れDM集客術（中経出版）
