@@ -1,20 +1,72 @@
 <?php header("Content-Type: text/html; charset=UTF-8");
-$file_path ='../../../aggre-data-test.php';
-if (filemtime($file_path) < filemtime('../../../koe-aggregate-test.xlsx')) include('./xlsconvert_agg.php');
-include($file_path);
+$test_doc_root = dirname(__DIR__);
+$file_path = $test_doc_root . '/aggre-data.php';
+$aggregate_file = $test_doc_root . '/koe-aggregate.xlsx';
+
+// Keep aggregate data dependencies inside /public_html/test.
+if (is_file($aggregate_file) && (!is_file($file_path) || filemtime($file_path) < filemtime($aggregate_file))) include('./xlsconvert_agg.php');
+if (is_file($file_path)) include($file_path);
+
+if (!isset($aggArray) || !is_array($aggArray)) $aggArray = [];
+for ($i = 0; $i <= 35; $i++) {
+	if (!isset($aggArray[$i])) $aggArray[$i] = 0;
+}
+if (!isset($agg) || !is_numeric($agg)) $agg = 0;
 
 $num = file_get_contents('../common/inc_new/num_koe.inc');
 $qnum = file_get_contents('../common/inc_new/num_enquete.inc');
+$page_title = 'お客様アンケート集計結果｜DM発送代行センター';
+$page_description = '2006年9月よりDM発送代行センターを利用いただいたお客様にアンケートをお願いしています。'.date("Y").'年現在までに'.$qnum.'件のアンケート返信を頂きました。頂いたアンケート結果を分かり易くするため、表とグラフにまとめました。';
+$canonical_url = 'https://test.dm110.jp/enquete/aggregate/';
+
+$json_ld_payload = [
+	[
+		'@context' => 'https://schema.org',
+		'@type' => 'CollectionPage',
+		'name' => 'お客様アンケート集計結果',
+		'url' => $canonical_url,
+		'description' => $page_description,
+		'inLanguage' => 'ja',
+	],
+	[
+		'@context' => 'https://schema.org',
+		'@type' => 'BreadcrumbList',
+		'itemListElement' => [
+			[
+				'@type' => 'ListItem',
+				'position' => 1,
+				'name' => 'DM発送代行センター TOP',
+				'item' => 'https://test.dm110.jp/',
+			],
+			[
+				'@type' => 'ListItem',
+				'position' => 2,
+				'name' => 'アンケート原本',
+				'item' => 'https://test.dm110.jp/enquete/',
+			],
+			[
+				'@type' => 'ListItem',
+				'position' => 3,
+				'name' => 'アンケート集計結果',
+				'item' => $canonical_url,
+			],
+		],
+	],
+];
 ?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>DM発送代行センターに寄せられたお客様アンケート集計結果</title>
+<title><?=$page_title; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=yes">
 <meta name="keywords" content="アンケート,DM(ダイレクトメール)発送,DM(ダイレクトメール)発送代行">
-<meta name="description" content="2006年9月よりDM発送代行センターを利用いただいたお客様にアンケートをお願いしています。<?= date("Y"); ?>年現在までに<?=$qnum ?>件のアンケート返信を頂きました。頂いたアンケート結果を分かり易くするため、表とグラフにまとめました。">
-<link rel="canonical" href="https://test.dm110.jp/enquete/aggregate/">
+<meta name="description" content="<?=htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>">
+<link rel="canonical" href="<?=$canonical_url; ?>">
 <?php include("../common/inc_new03/html5_head.php"); ?>
+<?php
+$json_ld = json_encode($json_ld_payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+if ($json_ld !== false) echo '<script type="application/ld+json">'.$json_ld.'</script>';
+?>
 <style type="text/css">
 <!--
 #main .box_voi table{width:100%;background:#ddd;font-size:14px;border-collapse:separate;border-spacing:1px;line-height:1.4}

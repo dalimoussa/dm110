@@ -35,11 +35,11 @@ foreach($xls_a as $key => $v){
 */
 
 
-$spreadsheet = $reader->load('../../../koe-list-test.xlsx'); // ファイル名を指定
+$spreadsheet = $reader->load('../koe-list.xlsx'); // ファイル名を指定
 $sheet = $spreadsheet->getSheetByName('WEB書き出し用'); // 読み込むシートを指定
 $xls_l = $sheet->rangeToArray('A2:K1300'); // 配列で取得したい範囲を指定
 
-$file_path ='../../../koe-data-test.php';
+$file_path ='../koe-data.php';
 $i = 0;
 $k = 0;
 $AggScore = 0;

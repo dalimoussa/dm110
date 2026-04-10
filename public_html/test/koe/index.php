@@ -1,19 +1,28 @@
 <?php header("Content-Type: text/html; charset=UTF-8");
-$file_path ='../../koe-data.php';
-if (!file_exists($file_path) && !file_exists('../../koe-list.xlsx')){
-	if (!file_exists($file_path)) include($_SERVER['DOCUMENT_ROOT'].'/enquete/xlsconvert.php');
-	else if (!file_exists('../../koe-list.xlsx')) if(filemtime($file_path) < filemtime('../../koe-list.xlsx')) include($_SERVER['DOCUMENT_ROOT'].'/enquete/xlsconvert.php');
-}
-include($file_path);
+$file_path = $_SERVER['DOCUMENT_ROOT'].'/koe-data.php';
+$list_file = $_SERVER['DOCUMENT_ROOT'].'/koe-list.xlsx';
+
+// Keep voice data dependencies inside /public_html/test.
+if (is_file($list_file) && (!is_file($file_path) || filemtime($file_path) < filemtime($list_file))) include($_SERVER['DOCUMENT_ROOT'].'/enquete/xlsconvert.php');
+if (is_file($file_path)) include($file_path);
+
+if (!isset($enqArray) || !is_array($enqArray)) $enqArray = [];
+if (!isset($koeArray) || !is_array($koeArray)) $koeArray = [];
+
+// Allow alias routes (e.g. /case/) to reuse this page safely.
+if (!isset($route_base_path) || !preg_match('#^/[0-9A-Za-z_/-]+/$#', $route_base_path)) $route_base_path = '/koe/';
+if (!isset($canonical_base_url) || strpos($canonical_base_url, 'https://') !== 0) $canonical_base_url = 'https://test.dm110.jp'.$route_base_path;
+$canonical_base_url = rtrim($canonical_base_url, '/').'/';
 
 $num = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/common/inc_new/num_koe.inc');
-$maxp  = ceil($num / 50);
+$maxp  = max(1, (int)ceil(((int)$num) / 50));
 if(!empty($_GET['p'])){
-	$page = filter_var($_GET['p'], FILTER_SANITIZE_NUMBER_INT) ?? 1;
+	$page = (int)(filter_var($_GET['p'], FILTER_SANITIZE_NUMBER_INT) ?? 1);
+	if($page < 1) $page = 1;
 	$robots_noindex = True;
 }
 else $page = $maxp;
-if($page > $maxp){ header("Location:/koe/"); exit;}
+if($page > $maxp){ header('Location:'.$route_base_path); exit;}
 
 //	$Published   = '2022-11-22T00:00:00+09:00';
 	$meta_title  = $num.'件のお客様の声';
@@ -21,7 +30,7 @@ if($page > $maxp){ header("Location:/koe/"); exit;}
 	$str_descrip = 'メディアボックス DM発送代行センターをご利用なさった会社様より感想をいただきました。'.$page.'ページ目';
 	$str_keyword = 'お客様の声,DM発送代行,DMトラッカー,DM110';
 //	$og_image    = 'cover.jpg';
-	$canonical = ($page==$maxp) ? 'https://test.dm110.jp/koe/' : 'https://test.dm110.jp/koe/'.$page.'/';
+	$canonical = ($page==$maxp) ? $canonical_base_url : $canonical_base_url.$page.'/';
 
 include($_SERVER['DOCUMENT_ROOT'].'/common/inc_2022/head.php');
 ?>
@@ -89,18 +98,18 @@ $nextp = ($page != $maxp) ? ($page +1) : $maxp;
 $str_pager = '
 <div class="toc"><!--p class="all"><span>'.(($page-1)*50+1).'</span>件～<span>'.$maxnum.'</span>件表示（全'.$num.'件）</p-->
 <ul class="koe_pager uk-flex uk-flex-center">';
-if($page != 1) $str_pager .= '<li><a href="/koe/'.($page -1).'/" class="koe_pager_prev">前へ</a></li>
+if($page != 1) $str_pager .= '<li><a href="'.$route_base_path.($page -1).'/" class="koe_pager_prev">前へ</a></li>
 ';
 $str_pager .= '<li><label class="select-box"><select name="select" onChange="location.href=value;">
 ';
 for($i=1;$i<=$maxp;$i++){
 	$active = ($i==$page) ? ' selected' :'';
 	$maxnum = ($i == $maxp) ? $num : $i*50;
-	$str_pager .= '<option value="/koe/'.$i.'/"'.$active.'>'.(($i-1)*50+1).'件 ～ '.$maxnum.'件目</option>';
+	$str_pager .= '<option value="'.$route_base_path.$i.'/"'.$active.'>'.(($i-1)*50+1).'件 ～ '.$maxnum.'件目</option>';
 }
 $str_pager .= '</select></label></li>
 ';
-if($page != $maxp) $str_pager .= '<li><a href="/koe/'.$nextp.'/" class="koe_pager_next">次へ</a></li>
+if($page != $maxp) $str_pager .= '<li><a href="'.$route_base_path.$nextp.'/" class="koe_pager_next">次へ</a></li>
 ';
 $str_pager .= '</ul></div>
 ';

@@ -1,0 +1,12 @@
+# test.dm110.jp (staging)
+# This host is a test environment and is blocked from indexing.
+
+Project: DM発送代行センター (staging)
+Primary URL: https://test.dm110.jp/
+Sitemap (XML): https://test.dm110.jp/sitemap.xml
+Sitemap (PHP): https://test.dm110.jp/sitemap.php
+Robots policy: https://test.dm110.jp/robots.txt
+
+Notes:
+- Content and routes may change without notice.
+- Use production domain policies only on www.dm110.jp.

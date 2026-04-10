@@ -1,20 +1,62 @@
 <?php header("Content-Type: text/html; charset=UTF-8");
-$file_path ='../../../koe-data-test.php';
-if (filemtime($file_path) < filemtime('../../../koe-list-test.xlsx')) include('./xlsconvert.php');
-include($file_path);
+$test_doc_root = dirname(__DIR__);
+$file_path = $test_doc_root . '/koe-data.php';
+$list_file = $test_doc_root . '/koe-list.xlsx';
+
+// Keep enquete data dependencies inside /public_html/test.
+if (is_file($list_file) && (!is_file($file_path) || filemtime($file_path) < filemtime($list_file))) include('./xlsconvert.php');
+if (is_file($file_path)) include($file_path);
+
+if (!isset($enqArray) || !is_array($enqArray)) $enqArray = [];
 
 $num = file_get_contents('../common/inc_new/num_enquete.inc');
+$page_title = 'お客様アンケート原本｜DM発送代行センター';
+$page_description = '2006年9月よりDM発送代行センターに寄せられたお客様の声'.$num.'件を掲載しています。お客様自身からの生の声を株式会社メディアボックスDM発送代行センター事業部に頂きました。当社の良いところ悪いとこをそのまま掲載しています。たくさんのご意見を頂きありがとうございます。';
+$canonical_url = 'https://test.dm110.jp/enquete/';
+
+$json_ld_payload = [
+	[
+		'@context' => 'https://schema.org',
+		'@type' => 'CollectionPage',
+		'name' => 'お客様アンケート原本',
+		'url' => $canonical_url,
+		'description' => $page_description,
+		'inLanguage' => 'ja',
+	],
+	[
+		'@context' => 'https://schema.org',
+		'@type' => 'BreadcrumbList',
+		'itemListElement' => [
+			[
+				'@type' => 'ListItem',
+				'position' => 1,
+				'name' => 'DM発送代行センター TOP',
+				'item' => 'https://test.dm110.jp/',
+			],
+			[
+				'@type' => 'ListItem',
+				'position' => 2,
+				'name' => 'アンケート原本',
+				'item' => $canonical_url,
+			],
+		],
+	],
+];
 ?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>DM発送代行センターに寄せられたお客様の声の原本</title>
+<title><?=$page_title; ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3, user-scalable=yes">
 <meta name="keywords" content="アンケート,DM(ダイレクトメール)発送,DM(ダイレクトメール)発送代行">
-<meta name="description" content="2006年9月よりDM発送代行センターに寄せられたお客様の声<?=$num; ?>件を掲載しています。お客様自身からの生の声を株式会社メディアボックスDM発送代行センター事業部に頂きました。当社の良いところ悪いとこをそのまま掲載しています。たくさんのご意見を頂きありがとうございます。">
+<meta name="description" content="<?=htmlspecialchars($page_description, ENT_QUOTES, 'UTF-8'); ?>">
 <meta name="robots" content="noindex">
-<link rel="canonical" href="https://test.dm110.jp/enquete/">
+<link rel="canonical" href="<?=$canonical_url; ?>">
 <?php include("../common/inc_new03/html5_head.php"); ?>
+<?php
+$json_ld = json_encode($json_ld_payload, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+if ($json_ld !== false) echo '<script type="application/ld+json">'.$json_ld.'</script>';
+?>
 <link rel="stylesheet" href="/common/js/lightbox.min.css">
 <style type="text/css">
 <!--
@@ -58,7 +100,7 @@ foreach($enqArray as $v){
 </ul>
 
 							<p>その他、アンケートの集計表もご覧になれます。<br>
-								<a href="/enquete/aggregate/"">アンケート集計表はコチラ</a></p>
+								<a href="/enquete/aggregate/">アンケート集計表はコチラ</a></p>
 							<br>
 						</div>
 

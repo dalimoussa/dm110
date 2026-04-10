@@ -5,26 +5,40 @@
 //	$str_descrip = 'DM発送代行センター、サンプル・大量封入・多数パターンOK、100通より個人のお客様OK、見積3時間、専任担当者制、ゆうメール「発送証明書」、「信書チェック・信書対策」「進捗メール５回以上」営業電話無し、お客様の声'.$num.'、取引実績8123社、東証プライム上場会社102社';
 //	$str_keyword = '無料サービス,ＤＭ発送担当者,負担軽減';
 //	$og_image    = 'cover.jpg';
+// Keep review data dependency inside /public_html/test.
+$data_file = $_SERVER['DOCUMENT_ROOT'].'/koe-data.php';
+if (is_file($data_file)) include($data_file);
 
-include($_SERVER['DOCUMENT_ROOT'].'/../koe-data.php');
+if (!isset($enqArray) || !is_array($enqArray)) $enqArray = [];
+if (!isset($AggCount) || !is_array($AggCount)) $AggCount = [0,0,0,0,0,0];
+for ($i = 0; $i <= 5; $i++) {
+	if (!isset($AggCount[$i])) $AggCount[$i] = 0;
+}
 
 $AggCount['all'] = $AggCount[1]+$AggCount[2]+$AggCount[3]+$AggCount[4]+$AggCount[5];
-$AggPercent[5] = round($AggCount[5]/$AggCount['all']*100,1);
-$AggPercent[4] = round($AggCount[4]/$AggCount['all']*100,1);
-$AggPercent[3] = round($AggCount[3]/$AggCount['all']*100,1);
-$AggPercent[2] = round($AggCount[2]/$AggCount['all']*100,1);
-$AggPercent[1] = round($AggCount[1]/$AggCount['all']*100,1);
+if($AggCount['all'] > 0){
+	$AggPercent[5] = round($AggCount[5]/$AggCount['all']*100,1);
+	$AggPercent[4] = round($AggCount[4]/$AggCount['all']*100,1);
+	$AggPercent[3] = round($AggCount[3]/$AggCount['all']*100,1);
+	$AggPercent[2] = round($AggCount[2]/$AggCount['all']*100,1);
+	$AggPercent[1] = round($AggCount[1]/$AggCount['all']*100,1);
+}else{
+	$AggPercent = [1=>0,2=>0,3=>0,4=>0,5=>0];
+}
 
 $limit = 20;
-if($_GET['p']) $page = filter_var($_GET['p'], FILTER_SANITIZE_NUMBER_INT) ?? 1;
+if($_GET['p']) $page = (int)(filter_var($_GET['p'], FILTER_SANITIZE_NUMBER_INT) ?? 1);
 else $page = 1;
+if($page < 1) $page = 1;
 $revs = 1 + ($page-1) * $limit;
 
-if($_GET['s']) $lv = filter_var($_GET['s'], FILTER_SANITIZE_NUMBER_INT) ?? null;
+if($_GET['s']) $lv = (int)(filter_var($_GET['s'], FILTER_SANITIZE_NUMBER_INT) ?? null);
 else $lv = null;
+if(!in_array($lv, [1,2,3,4,5], true)) $lv = null;
 $link_s = (!empty($lv)) ? $lv.'/' : '';
 $lvc = ($lv) ?? 'all';
-$maxp = ceil($AggCount[$lvc] / $limit);
+$maxp = max(1, (int)ceil(($AggCount[$lvc] ?? 0) / $limit));
+if($page > $maxp) $page = $maxp;
 
 function echo_star($s){
 	for ($i=0;$i<5;$i++){
