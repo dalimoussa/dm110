@@ -51,40 +51,6 @@ ErrorDocument 404 default
         RewriteRule ^sitemap\.php$ - [L]
         RewriteRule ^llms\.txt$ - [L]
 </IfModule>
-# Staging protection: enforce for test.dm110.jp regardless Apache IfDefine flags.
-AuthUserFile /usr/local/etc/httpd/htdocs/pass/.htpasswd
-AuthGroupFile /dev/null
-AuthName "test.dm110.jp staging"
-AuthType Basic
-Satisfy All
-<RequireAll>
-Require valid-user
-</RequireAll>
-
-<IfModule mod_headers.c>
-        Header always set X-Robots-Tag "noindex, nofollow, noarchive"
-</IfModule>
-ErrorDocument 404 default
-
-<IfModule mod_rewrite.c>
-        RewriteEngine On
-
-        # Redirect old URLs to new URLs
-        RewriteRule ^koe/?$ https://test.dm110.jp/case/ [R=301,L]
-        RewriteRule ^koe/([0-9]+)/?$ https://test.dm110.jp/case/$1/ [R=301,L]
-        RewriteRule ^koe\.htm$ https://test.dm110.jp/case/ [R=301,L]
-        RewriteRule ^koe_([0-9]+)\.htm$ https://test.dm110.jp/case/$1/ [R=301,L]
-        RewriteRule ^Customer-reviews/([0-9]+)/?$ https://test.dm110.jp/case/$1/ [R=301,L]
-
-        # Keep key alias routes available
-        RewriteRule ^case/?$ case/index.php [L,QSA]
-        RewriteRule ^case/([0-9]+)/?$ case/index.php?p=$1 [L,QSA]
-        RewriteRule ^column/?$ column/index.php [L,QSA]
-        RewriteRule ^column/([0-9A-Za-z_-]+)/?$ column/index.php?pages=$1 [L,QSA]
-        RewriteRule ^recruit/?$ recruit/index.php [L,QSA]
-        RewriteRule ^sitemap\.php$ - [L]
-        RewriteRule ^llms\.txt$ - [L]
-</IfModule>
 <IfDefine DEVELOPMENT>
 </IfDefine>
 
