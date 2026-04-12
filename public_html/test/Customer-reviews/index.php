@@ -27,12 +27,12 @@ if($AggCount['all'] > 0){
 }
 
 $limit = 20;
-if($_GET['p']) $page = (int)(filter_var($_GET['p'], FILTER_SANITIZE_NUMBER_INT) ?? 1);
+if(isset($_GET['p']) && $_GET['p']) $page = (int)(filter_var($_GET['p'], FILTER_SANITIZE_NUMBER_INT) ?? 1);
 else $page = 1;
 if($page < 1) $page = 1;
 $revs = 1 + ($page-1) * $limit;
 
-if($_GET['s']) $lv = (int)(filter_var($_GET['s'], FILTER_SANITIZE_NUMBER_INT) ?? null);
+if(isset($_GET['s']) && $_GET['s']) $lv = (int)(filter_var($_GET['s'], FILTER_SANITIZE_NUMBER_INT) ?? null);
 else $lv = null;
 if(!in_array($lv, [1,2,3,4,5], true)) $lv = null;
 $link_s = (!empty($lv)) ? $lv.'/' : '';

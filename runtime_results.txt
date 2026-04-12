@@ -1,0 +1,11 @@
+https://test.dm110.jp/ => 200
+https://test.dm110.jp/enquete/ => 200
+https://test.dm110.jp/enquete/aggregate/ => 200
+https://test.dm110.jp/case/ => 200
+https://test.dm110.jp/case/2/ => 200
+https://test.dm110.jp/column/ => 302
+https://test.dm110.jp/column/DM_size/ => 302
+https://test.dm110.jp/recruit/ => 200
+https://test.dm110.jp/sitemap.php => 302
+https://test.dm110.jp/llms.txt => 302
+https://test.dm110.jp/robots.txt => 200

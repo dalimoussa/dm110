@@ -18,7 +18,8 @@
 </IfModule>
 
 # Staging protection: enforce for test.dm110.jp regardless Apache IfDefine flags.
-AuthUserFile /usr/local/etc/httpd/htdocs/pass/.htpasswd
+# Use co-located .htpasswd — the external path may not exist on this server.
+AuthUserFile /home/kir019184/public_html/test/.htpasswd
 AuthGroupFile /dev/null
 AuthName "test.dm110.jp staging"
 AuthType Basic
@@ -118,6 +119,15 @@ ErrorDocument 404 default
 	RewriteEngine on
 	RewriteBase /
 
+	# Key alias routes (must be present here to survive RewriteEngine re-init)
+	RewriteRule ^case/?$ case/index.php [L,QSA]
+	RewriteRule ^case/([0-9]+)/?$ case/index.php?p=$1 [L,QSA]
+	RewriteRule ^column/?$ column/index.php [L,QSA]
+	RewriteRule ^column/([0-9A-Za-z_-]+)/?$ column/index.php?pages=$1 [L,QSA]
+	RewriteRule ^recruit/?$ recruit/index.php [L,QSA]
+	RewriteRule ^sitemap\.php$ - [L]
+	RewriteRule ^llms\.txt$ - [L]
+
 	RewriteRule ^koe.htm$ https://test.dm110.jp/koe/ [R=301,L]
 	RewriteRule ^koe_([0-9]).htm$ https://test.dm110.jp/koe/$1/ [R=301,L]
 
@@ -139,7 +149,8 @@ ErrorDocument 404 default
 	RewriteCond %{REQUEST_FILENAME}\.php -f
 	RewriteRule  ^([0-9A-Za-z_\-]*)/$ $1.php [L]
 
-	ErrorDocument 404 https://test.dm110.jp/
+	# DISABLED: was forcing all 404s to homepage redirect, breaking valid routes
+	# ErrorDocument 404 https://test.dm110.jp/
 
 # kagoya edit by 2021/05/11
 	#RewriteCond %{HTTPS} off
@@ -626,8 +637,9 @@ Redirect 301 /DM_yuryokokyaku_teigi.html /column/
 Redirect 301 /DM_zyozu_benkyohou.html /
 Redirect 301 /DM_zyozu_benkyohou_2.html /
 Redirect 301 /DM_zyozu_benkyohou_3.html /
-Redirect 301 /enquete/ /case/
-Redirect 301 /enquete/aggregate /column/
+# DISABLED: /enquete/ is a live page on test, do not redirect
+# Redirect 301 /enquete/ /case/
+# Redirect 301 /enquete/aggregate /column/
 Redirect 301 /Midori_3.htm /
 Redirect 301 /Midori_4.htm /
 Redirect 301 /Midori_TOP.htm /
